@@ -131,10 +131,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div id="map"></div>
 <script>
 var places = [
-  {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'default', note: '16 Allerheiligenplatz, 20. Brigittenau, 1200 Wien'},
-  {name: 'Handelskai', lat: 48.23681, lng: 16.38393, cat: 'Trasporti', type: 'default', note: 'U6 + S45 + REX2/REX3 + S1/S2/S3 — ~180m dall\'appartamento'},
-  {name: 'Dresdner Straße', lat: 48.2368, lng: 16.3792, cat: 'Trasporti', type: 'default', note: 'U6 — ~340m dall\'appartamento'},
-  {name: 'Allerheiligenplatz', lat: 48.23803, lng: 16.3864, cat: 'Trasporti', type: 'default', note: 'Bus 37A — fermata sulla piazza'},
+  {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'home', note: '16 Allerheiligenplatz, 20. Brigittenau, 1200 Wien'},
+  {name: 'Handelskai', lat: 48.23681, lng: 16.38393, cat: 'Trasporti', type: 'transport', note: 'U6 + S45 + REX2/REX3 + S1/S2/S3 — ~180m dall\'appartamento'},
+  {name: 'Dresdner Straße', lat: 48.2368, lng: 16.3792, cat: 'Trasporti', type: 'transport', note: 'U6 — ~340m dall\'appartamento'},
+  {name: 'Allerheiligenplatz', lat: 48.23803, lng: 16.3864, cat: 'Trasporti', type: 'transport', note: 'Bus 37A — fermata sulla piazza'},
   {name: 'Feuerwehr Wagner', lat: 48.2720184, lng: 16.3417133, cat: 'Ristorazione', type: 'default', note: 'Heuriger, vegetariano-friendly'},
   {name: 'Thermalbad Bad Vöslau', lat: 47.9669319, lng: 16.2103357, cat: 'Gite fuori porta', type: 'default', note: 'Sorgente termale fredda, ~30 min da Vienna'},
   {name: 'Haus der Musik', lat: 48.203792, lng: 16.3731547, cat: 'Musei', type: 'default', vcc: '–€4 / –21%', note: '4.5/5. Dirigere orchestra virtuale, scale musicali, comporre. Nora 9 adorera. Ada 4 si diverte. 1.5-2h. Prenotazione: no. Famiglia VCC (–21%): 40.80 euro (7 euro bimbi 3-12). Abbinare: St. Stephans 5min, Hofburg 10min, Albertina 10min.'},
@@ -149,7 +149,7 @@ var places = [
   {name: 'Kombucha Manufaktur', lat: 48.1915364, lng: 16.347035, cat: 'Shopping / Souvenir', type: 'default', note: 'Kombucha artigianale locale'},
   {name: 'Naschmarkt', lat: 48.1985039, lng: 16.3634982, cat: 'Ristorazione', type: 'default', note: 'Mercato storico, cibi dal mondo'},
   {name: 'Kindermuseum Schönbrunn', lat: 48.1853494, lng: 16.311561, cat: 'Musei', type: 'default', vcc: '–€1 / –8%', note: 'Bimbi si vestono da principesse, giochi imperiali. Nora 9 e Ada 4. 1-1.5h. Prenotazione: no. Famiglia VCC (–8%): 27.60 euro (Nora 9 e Ada 4 pagano 9.20 euro ciascuna). Abbinare: Schönbrunn + Marionette stessa giornata.'},
-  {name: 'Schloss Schönbrunn', lat: 48.1849894, lng: 16.3115684, cat: 'Musei', type: 'default', vcc: '–€2/–5% (Classic)', note: '4.6/5. Classic Pass: castello 22 stanze + labirinto + Gloriette + giardini. 3-4h. Prenotazione: SI orario fisso. Famiglia VCC (–5%): 93.20 euro (Nora 9 paga 36 euro da 6 anni, Ada 4 gratis <6). Abbinare: Kindermuseum + Teatro Marionette stesso complesso.'},
+  {name: 'Schloss Schönbrunn', lat: 48.1849894, lng: 16.3115684, cat: 'Musei', type: 'default', vcc: '–€2/–5% (Classic)', note: '4.6/5. Opzione senza interni: parco (gratuito) + labirinto + Gloriette. Prenotazione: SI se Classic Pass, no solo parco. Famiglia VCC: combo Kindermuseum + labirinto ~44 euro (non il castello). Abbinare: Kindermuseum + Teatro Marionette stesso complesso.'},
   {name: 'Spanish Riding School', lat: 48.2073067, lng: 16.3667068, cat: 'Musei', type: 'default', vcc: '–€2 / –11%', note: 'Morning Exercise o Performance Hofburg'},
   {name: 'Schloss Hof', lat: 48.2144494, lng: 16.9342749, cat: 'Gite fuori porta', type: 'default', vcc: '–20%', note: 'Adventure path, petting zoo, ~1h'},
   {name: 'Apple Strudel Studio', lat: 48.18529, lng: 16.31291, cat: 'Musei', type: 'default', note: 'Corso strudel famiglia'},
@@ -244,17 +244,17 @@ function createMarker(place) {
   if (place.type === 'ring_tram') {
     var size = 30, half = size/2;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'">'
-      + '<polygon points="'+half+',2 '+(size-2)+','+half+' '+half+','+(size-2)+' 2,'+half+'" fill="'+color+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<polygon points="'+half+',2 '+(size-2)+','+half+' '+half+','+(size-2)+' 2,'+half+'" fill="#f59e0b" stroke="#fff" stroke-width="1.5"/>'
       + '<text x="'+half+'" y="'+(half+1)+'" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="11" font-weight="bold">&#x1F69C;</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[size,size], iconAnchor:[half,half]});
     return L.marker([place.lat,place.lng],{icon:icon}).bindPopup(popupContent(place));
   }
 
-  if (place.type === 'apartment') {
+  if (place.type === 'home') {
     var s = 32;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
-      + '<rect x="2" y="2" width="'+(s-4)+'" height="'+(s-4)+'" rx="4" fill="'+color+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<rect x="2" y="2" width="'+(s-4)+'" height="'+(s-4)+'" rx="4" fill="#e74c3c" stroke="#fff" stroke-width="1.5"/>'
       + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="16">&#x2302;</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
@@ -264,7 +264,7 @@ function createMarker(place) {
   if (place.type === 'transport') {
     var s = 24;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
-      + '<circle cx="'+(s/2)+'" cy="'+(s/2)+'" r="'+(s/2-2)+'" fill="'+color+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<circle cx="'+(s/2)+'" cy="'+(s/2)+'" r="'+(s/2-2)+'" fill="#3498db" stroke="#fff" stroke-width="1.5"/>'
       + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" fill="#fff" font-size="12" font-weight="bold">M</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
