@@ -76,6 +76,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Kurpark Oberlaa"><span class="place-dot" style="background:#1abc9c"></span> Kurpark Oberlaa</div>
     <div class="place-item" data-name="Therme Wien"><span class="place-dot" style="background:#1abc9c"></span> Therme Wien</div>
     <div class="place-item" data-name="Waldseilpark Kahlenberg"><span class="place-dot" style="background:#1abc9c"></span> Waldseilpark Kahlenberg</div>
+    <div class="cat-header" style="color:#95a5a6">Meno turistico</div>
+    <div class="place-item" data-name="Ankeruhr (Orologio Anker)"><span class="place-dot" style="background:#95a5a6"></span> Ankeruhr (Orologio Anker) <span style="color:#f59e0b">&#x1F69C;</span></div>
     <div class="cat-header" style="color:#3498db">Musei</div>
     <div class="place-item" data-name="Haus der Musik"><span class="place-dot" style="background:#3498db"></span> Haus der Musik</div>
     <div class="place-item" data-name="Kindermuseum Schönbrunn"><span class="place-dot" style="background:#3498db"></span> Kindermuseum Schönbrunn</div>
@@ -90,6 +92,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Technisches Museum"><span class="place-dot" style="background:#3498db"></span> Technisches Museum</div>
     <div class="place-item" data-name="Belvedere — Il Bacio di Klimt"><span class="place-dot" style="background:#3498db"></span> Belvedere — Il Bacio di Klimt</div>
     <div class="place-item" data-name="Schmetterlinghaus"><span class="place-dot" style="background:#3498db"></span> Schmetterlinghaus</div>
+    <div class="place-item" data-name="Sisi Museum"><span class="place-dot" style="background:#3498db"></span> Sisi Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
+    <div class="place-item" data-name="Albertina Museum"><span class="place-dot" style="background:#3498db"></span> Albertina Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
     <div class="cat-header" style="color:#27ae60">Parchi</div>
     <div class="place-item" data-name="Pier 22 Copa Beach"><span class="place-dot" style="background:#27ae60"></span> Pier 22 Copa Beach</div>
     <div class="place-item" data-name="Lagerwiese Romaplatz"><span class="place-dot" style="background:#27ae60"></span> Lagerwiese Romaplatz</div>
@@ -193,7 +197,10 @@ var places = [
   {name: 'Parlamento Austriaco', lat: 48.2084028, lng: 16.3589028, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Palazzo del Parlamento, neogreco, con Athena quadriga. Fermata tram \'Dr.-Karl-Renner-Ring\'. Visita gratuita con audioguida.'},
   {name: 'Hofburg (Residenza Imperiale)', lat: 48.2069167, lng: 16.3646111, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Palazzo imperiale degli Asburgo. Sissi Museum, Kaiserappartements, Silberkammer. Fermata tram \'Burgring\' poi 7 min a piedi. VCC: non in elenco.'},
   {name: 'Burgtheater', lat: 48.2090278, lng: 16.3577778, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Teatro di Corte, uno dei più prestigiosi al mondo. Fermata tram \'Burgring\' o \'Rathaus\'. Esterni imponenti.'},
-  {name: 'Universität Wien', lat: 48.2123056, lng: 16.3613056, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Università di Vienna (1365), la più antica del mondo germanofono. Hauptgebäude neoclassico. Fermata tram \'Rathaus\' o \'Schottentor\'.'}
+  {name: 'Universität Wien', lat: 48.2123056, lng: 16.3613056, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Università di Vienna (1365), la più antica del mondo germanofono. Hauptgebäude neoclassico. Fermata tram \'Rathaus\' o \'Schottentor\'.'},
+  {name: 'Ankeruhr (Orologio Anker)', lat: 48.209722, lng: 16.375, cat: 'Meno turistico', type: 'ring_tram', note: 'Orologio Liberty (1914) di Franz Matsch. Alle 12:00 show con 12 personaggi storici in parata con musica: Joseph Haydn, Marco Aurelio, Carlomagno, Leopoldo VI + Teodora Angelina, Walther von der Vogelweide, Rodolfo d\'Asburgo + Gertrude, Maria Teresa, Giuseppe II, Francesco Giuseppe, Eugenio di Savoia. Piazza piu antica di Vienna (Hoher Markt). Gratuito!'},
+  {name: 'Sisi Museum', lat: 48.204167, lng: 16.363611, cat: 'Musei', type: 'ring_tram', vcc: '–10%', note: 'Museo dedicato a Sissi negli Appartamenti Imperiali della Hofburg. Audioguida ~1.5-2h. In attuale riallestimento (percorsi modificati). Biglietto Sisi Pass (Schonbrunn+Sisi+Mobel): 51 euro anziche 57 con VCC.'},
+  {name: 'Albertina Museum', lat: 48.202778, lng: 16.368611, cat: 'Musei', type: 'ring_tram', vcc: '–25%', note: 'Collezione grafica piu grande del mondo. Capolavori: Durer (Giovane Lepre, Mani in preghiera), Michelangelo, Leonardo, Raffaello, Monet, Degas, Miro, Picasso. Collezione Batliner: dall\'Impressionismo al Cubismo. 22 Sale di Stato Asburgiche restaurate. Tra Opera e Hofburg.'}
 ];
 
 var catColors = {
@@ -203,6 +210,7 @@ var catColors = {
   'Eventi': '#9b59b6',
   'Giro Tram 1/2': '#f59e0b',
   'Gite fuori porta': '#1abc9c',
+  'Meno turistico': '#95a5a6',
   'Musei': '#3498db',
   'Parchi': '#27ae60',
   'Passeggiate': '#16a085',
