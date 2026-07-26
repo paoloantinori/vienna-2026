@@ -18,13 +18,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .filter-item { display:flex; align-items:center; gap:6px; padding:3px 0; font-size:12px; cursor:pointer; color:#cbd5e1; }
 .filter-item input { accent-color:#f59e0b; }
 .cat-count { color:#64748b; font-size:11px; }
+.cat-emoji { font-size:14px; flex-shrink:0; line-height:1; }
 .filter-buttons { display:flex; gap:6px; margin-top:8px; }
 .filter-btn { background:#0f3460; border:none; border-radius:4px; color:#cbd5e1; padding:4px 8px; font-size:11px; cursor:pointer; }
 .filter-btn:hover { background:#1a4a7a; }
 .cat-header { font-size:11px; text-transform:uppercase; letter-spacing:1px; padding:8px 4px 4px; font-weight:700; }
 .place-item { padding:6px 4px 6px 8px; cursor:pointer; font-size:13px; border-radius:4px; display:flex; align-items:center; gap:6px; line-height:1.3; }
 .place-item:hover { background:#16213e; }
-.place-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
 .place-item.highlight { background:#0f3460; }
 .marker-icon { background:none !important; border:none !important; }
 .leaflet-popup-content-wrapper { background:#1a1a2e; color:#cbd5e1; border-radius:8px; }
@@ -49,21 +49,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <input type="text" id="search" placeholder="Cerca luogo...">
   <div id="filter-panel">
     <div class="filter-title">Filtra categorie</div>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Caffè / Bibita" checked><span class="place-dot" style="background:#e67e22"></span> Caffè / Bibita <span class="cat-count">(6)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Dolci" checked><span class="place-dot" style="background:#f39c12"></span> Dolci <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Eventi" checked><span class="place-dot" style="background:#9b59b6"></span> Eventi <span class="cat-count">(5)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Giro Tram 1/2" checked><span class="place-dot" style="background:#f59e0b"></span> Giro Tram 1/2 <span class="cat-count">(10)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Gite fuori porta" checked><span class="place-dot" style="background:#1abc9c"></span> Gite fuori porta <span class="cat-count">(5)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Meno turistico" checked><span class="place-dot" style="background:#95a5a6"></span> Meno turistico <span class="cat-count">(3)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Monumenti" checked><span class="place-dot" style="background:#95a5a6"></span> Monumenti <span class="cat-count">(2)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="place-dot" style="background:#3498db"></span> Musei <span class="cat-count">(16)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(5)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Passeggiate" checked><span class="place-dot" style="background:#16a085"></span> Passeggiate <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Ristorazione" checked><span class="place-dot" style="background:#d35400"></span> Ristorazione <span class="cat-count">(8)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping / Souvenir" checked><span class="place-dot" style="background:#8e44ad"></span> Shopping / Souvenir <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="place-dot" style="background:#3b82f6"></span> Trasporti <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Vegano / Vegetariano" checked><span class="place-dot" style="background:#95a5a6"></span> Vegano / Vegetariano <span class="cat-count">(14)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="cat-emoji">🏠</span> Appartamento <span class="cat-count">(1)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Caffè / Bibita" checked><span class="cat-emoji">☕</span> Caffè / Bibita <span class="cat-count">(6)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Dolci" checked><span class="cat-emoji">🍰</span> Dolci <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Eventi" checked><span class="cat-emoji">🎪</span> Eventi <span class="cat-count">(5)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Giro Tram 1/2" checked><span class="cat-emoji">🚋</span> Giro Tram 1/2 <span class="cat-count">(10)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Gite fuori porta" checked><span class="cat-emoji">🧳</span> Gite fuori porta <span class="cat-count">(5)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Meno turistico" checked><span class="cat-emoji">🤫</span> Meno turistico <span class="cat-count">(3)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Monumenti" checked><span class="cat-emoji">🗿</span> Monumenti <span class="cat-count">(2)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="cat-emoji">🏛️</span> Musei <span class="cat-count">(16)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="cat-emoji">🌳</span> Parchi <span class="cat-count">(5)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Passeggiate" checked><span class="cat-emoji">🥾</span> Passeggiate <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Ristorazione" checked><span class="cat-emoji">🍴</span> Ristorazione <span class="cat-count">(8)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping / Souvenir" checked><span class="cat-emoji">🛍️</span> Shopping / Souvenir <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="cat-emoji">🚇</span> Trasporti <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Vegano / Vegetariano" checked><span class="cat-emoji">🌱</span> Vegano / Vegetariano <span class="cat-count">(14)</span></label>
     <div class="filter-buttons">
       <button id="filter-all" class="filter-btn">Tutti</button>
       <button id="filter-none" class="filter-btn">Nessuno</button>
@@ -71,112 +71,112 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     </div>
   </div>
   <div id="place-list">
-    <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">Appartamento</div>
-    <div class="place-item" data-name="Appartamento" data-cat="Appartamento"><span class="place-dot" style="background:#e74c3c"></span> Appartamento</div>
-    <div class="cat-header" data-cat="Caffè / Bibita" style="color:#e67e22">Caffè / Bibita</div>
-    <div class="place-item" data-name="Palmenhaus Burggarten" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Palmenhaus Burggarten</div>
-    <div class="place-item" data-name="Museumsquartier bars" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Museumsquartier bars</div>
-    <div class="place-item" data-name="Dascafe" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Dascafe</div>
-    <div class="place-item" data-name="Demmer’s Teehaus — Mölker Bastei" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Demmer’s Teehaus — Mölker Bastei</div>
-    <div class="place-item" data-name="Demmer’s Teehaus — Donauzentrum" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Demmer’s Teehaus — Donauzentrum</div>
-    <div class="place-item" data-name="Demmer's Teehaus — Hauptbahnhof" data-cat="Caffè / Bibita"><span class="place-dot" style="background:#e67e22"></span> Demmer's Teehaus — Hauptbahnhof</div>
-    <div class="cat-header" data-cat="Dolci" style="color:#f39c12">Dolci</div>
-    <div class="place-item" data-name="Hotel Sacher" data-cat="Dolci"><span class="place-dot" style="background:#f39c12"></span> Hotel Sacher</div>
-    <div class="place-item" data-name="Demel" data-cat="Dolci"><span class="place-dot" style="background:#f39c12"></span> Demel</div>
-    <div class="place-item" data-name="Konditorei Aida" data-cat="Dolci"><span class="place-dot" style="background:#f39c12"></span> Konditorei Aida</div>
-    <div class="place-item" data-name="Julius Meinl am Graben" data-cat="Dolci"><span class="place-dot" style="background:#f39c12"></span> Julius Meinl am Graben</div>
-    <div class="cat-header" data-cat="Eventi" style="color:#9b59b6">Eventi</div>
-    <div class="place-item" data-name="Film Festival Rathausplatz" data-cat="Eventi"><span class="place-dot" style="background:#9b59b6"></span> Film Festival Rathausplatz</div>
-    <div class="place-item" data-name="MQ Summer Stage" data-cat="Eventi"><span class="place-dot" style="background:#9b59b6"></span> MQ Summer Stage</div>
-    <div class="place-item" data-name="ImPulsTanz Public Moves" data-cat="Eventi"><span class="place-dot" style="background:#9b59b6"></span> ImPulsTanz Public Moves</div>
-    <div class="place-item" data-name="Kultursommer Wien" data-cat="Eventi"><span class="place-dot" style="background:#9b59b6"></span> Kultursommer Wien</div>
-    <div class="place-item" data-name="Museum of Change" data-cat="Eventi"><span class="place-dot" style="background:#9b59b6"></span> Museum of Change</div>
-    <div class="cat-header" data-cat="Giro Tram 1/2" style="color:#f59e0b">Giro Tram 1/2</div>
-    <div class="place-item" data-name="Naturhistorisches Museum" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Naturhistorisches Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Votivkirche (Chiesa Votiva)" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Votivkirche (Chiesa Votiva) <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Wiener Staatsoper" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Wiener Staatsoper <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Postsparkasse (Otto Wagner)" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Postsparkasse (Otto Wagner) <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Börse (Vecchia Borsa)" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Börse (Vecchia Borsa) <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Kunsthistorisches Museum" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Kunsthistorisches Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Parlamento Austriaco" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Parlamento Austriaco <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Hofburg (Residenza Imperiale)" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Hofburg (Residenza Imperiale) <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Burgtheater" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Burgtheater <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Universität Wien" data-cat="Giro Tram 1/2"><span class="place-dot" style="background:#f59e0b"></span> Universität Wien <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="cat-header" data-cat="Gite fuori porta" style="color:#1abc9c">Gite fuori porta</div>
-    <div class="place-item" data-name="Thermalbad Bad Vöslau" data-cat="Gite fuori porta"><span class="place-dot" style="background:#1abc9c"></span> Thermalbad Bad Vöslau</div>
-    <div class="place-item" data-name="Schloss Hof" data-cat="Gite fuori porta"><span class="place-dot" style="background:#1abc9c"></span> Schloss Hof</div>
-    <div class="place-item" data-name="Kurpark Oberlaa" data-cat="Gite fuori porta"><span class="place-dot" style="background:#1abc9c"></span> Kurpark Oberlaa</div>
-    <div class="place-item" data-name="Therme Wien" data-cat="Gite fuori porta"><span class="place-dot" style="background:#1abc9c"></span> Therme Wien</div>
-    <div class="place-item" data-name="Waldseilpark Kahlenberg" data-cat="Gite fuori porta"><span class="place-dot" style="background:#1abc9c"></span> Waldseilpark Kahlenberg</div>
-    <div class="cat-header" data-cat="Meno turistico" style="color:#95a5a6">Meno turistico</div>
-    <div class="place-item" data-name="Ankeruhr (Orologio Anker)" data-cat="Meno turistico"><span class="place-dot" style="background:#95a5a6"></span> Ankeruhr (Orologio Anker) <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Karmelitermarkt" data-cat="Meno turistico"><span class="place-dot" style="background:#95a5a6"></span> Karmelitermarkt</div>
-    <div class="place-item" data-name="Gemma Market — Open Air Painting" data-cat="Meno turistico"><span class="place-dot" style="background:#95a5a6"></span> Gemma Market — Open Air Painting</div>
-    <div class="cat-header" data-cat="Monumenti" style="color:#95a5a6">Monumenti</div>
-    <div class="place-item" data-name="Minoritenkirche" data-cat="Monumenti"><span class="place-dot" style="background:#95a5a6"></span> Minoritenkirche</div>
-    <div class="place-item" data-name="Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)" data-cat="Monumenti"><span class="place-dot" style="background:#95a5a6"></span> Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)</div>
-    <div class="cat-header" data-cat="Musei" style="color:#3498db">Musei</div>
-    <div class="place-item" data-name="Haus der Musik" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Haus der Musik</div>
-    <div class="place-item" data-name="Kindermuseum Schönbrunn" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Kindermuseum Schönbrunn</div>
-    <div class="place-item" data-name="Schloss Schönbrunn" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Schloss Schönbrunn</div>
-    <div class="place-item" data-name="Spanish Riding School" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Spanish Riding School</div>
-    <div class="place-item" data-name="Apple Strudel Studio" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Apple Strudel Studio</div>
-    <div class="place-item" data-name="Marionettentheater Schönbrunn" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Marionettentheater Schönbrunn</div>
-    <div class="place-item" data-name="ZOOM Kindermuseum" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> ZOOM Kindermuseum</div>
-    <div class="place-item" data-name="Kletterpark Donauinsel" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Kletterpark Donauinsel</div>
-    <div class="place-item" data-name="Museum der Illusionen" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Museum der Illusionen</div>
-    <div class="place-item" data-name="Heindl SchokoMuseum" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Heindl SchokoMuseum</div>
-    <div class="place-item" data-name="Technisches Museum" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Technisches Museum</div>
-    <div class="place-item" data-name="Belvedere — Il Bacio di Klimt" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Belvedere — Il Bacio di Klimt</div>
-    <div class="place-item" data-name="Schmetterlinghaus" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Schmetterlinghaus</div>
-    <div class="place-item" data-name="Sisi Museum" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Sisi Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Albertina Museum" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Albertina Museum <span style="color:#f59e0b">&#x1F69C;</span></div>
-    <div class="place-item" data-name="Technisches Museum Wien" data-cat="Musei"><span class="place-dot" style="background:#3498db"></span> Technisches Museum Wien</div>
-    <div class="cat-header" data-cat="Parchi" style="color:#27ae60">Parchi</div>
-    <div class="place-item" data-name="Pier 22 Copa Beach" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Pier 22 Copa Beach</div>
-    <div class="place-item" data-name="Lagerwiese Romaplatz" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Lagerwiese Romaplatz</div>
-    <div class="place-item" data-name="Kaiserwasser" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Kaiserwasser</div>
-    <div class="place-item" data-name="Grosse Bucht" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Grosse Bucht</div>
-    <div class="place-item" data-name="Strandbad Alte Donau" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Strandbad Alte Donau</div>
-    <div class="cat-header" data-cat="Passeggiate" style="color:#16a085">Passeggiate</div>
-    <div class="place-item" data-name="MQ Libelle" data-cat="Passeggiate"><span class="place-dot" style="background:#16a085"></span> MQ Libelle</div>
-    <div class="place-item" data-name="Grinzing Heuriger" data-cat="Passeggiate"><span class="place-dot" style="background:#16a085"></span> Grinzing Heuriger</div>
-    <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Passeggiate"><span class="place-dot" style="background:#16a085"></span> Donauinsel passeggiata</div>
-    <div class="place-item" data-name="Memoriale Antonio Vivaldi" data-cat="Passeggiate"><span class="place-dot" style="background:#16a085"></span> Memoriale Antonio Vivaldi</div>
-    <div class="cat-header" data-cat="Ristorazione" style="color:#d35400">Ristorazione</div>
-    <div class="place-item" data-name="Feuerwehr Wagner" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Feuerwehr Wagner</div>
-    <div class="place-item" data-name="Veganista Ice Cream" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Veganista Ice Cream</div>
-    <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> 7Stern Bräu</div>
-    <div class="place-item" data-name="Naschmarkt" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Naschmarkt</div>
-    <div class="place-item" data-name="Vollpension" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Vollpension</div>
-    <div class="place-item" data-name="Figlmüller" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Figlmüller</div>
-    <div class="place-item" data-name="Plachutta" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Plachutta</div>
-    <div class="place-item" data-name="Schweizerhaus" data-cat="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Schweizerhaus</div>
-    <div class="cat-header" data-cat="Shopping / Souvenir" style="color:#8e44ad">Shopping / Souvenir</div>
-    <div class="place-item" data-name="Joseph Brot" data-cat="Shopping / Souvenir"><span class="place-dot" style="background:#8e44ad"></span> Joseph Brot</div>
-    <div class="place-item" data-name="Kombucha Manufaktur" data-cat="Shopping / Souvenir"><span class="place-dot" style="background:#8e44ad"></span> Kombucha Manufaktur</div>
-    <div class="place-item" data-name="Grünberger" data-cat="Shopping / Souvenir"><span class="place-dot" style="background:#8e44ad"></span> Grünberger</div>
-    <div class="place-item" data-name="Siebensternbäckerei" data-cat="Shopping / Souvenir"><span class="place-dot" style="background:#8e44ad"></span> Siebensternbäckerei</div>
-    <div class="cat-header" data-cat="Trasporti" style="color:#3b82f6">Trasporti</div>
-    <div class="place-item" data-name="Handelskai" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Handelskai</div>
-    <div class="place-item" data-name="Dresdner Straße" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Dresdner Straße</div>
-    <div class="place-item" data-name="Allerheiligenplatz" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Allerheiligenplatz</div>
-    <div class="place-item" data-name="Wien Hauptbahnhof (Stazione Centrale)" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Wien Hauptbahnhof (Stazione Centrale)</div>
-    <div class="cat-header" data-cat="Vegano / Vegetariano" style="color:#95a5a6">Vegano / Vegetariano</div>
-    <div class="place-item" data-name="Cafe Harvest" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Cafe Harvest</div>
-    <div class="place-item" data-name="Swing Kitchen" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Swing Kitchen</div>
-    <div class="place-item" data-name="Gorilla Kitchen" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Gorilla Kitchen</div>
-    <div class="place-item" data-name="Pizzi's &amp; Cream" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Pizzi's &amp; Cream</div>
-    <div class="place-item" data-name="Vevi" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Vevi</div>
-    <div class="place-item" data-name="Pepper &amp; Ginny" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Pepper &amp; Ginny</div>
-    <div class="place-item" data-name="Veggiezz" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Veggiezz</div>
-    <div class="place-item" data-name="Veganista" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Veganista</div>
-    <div class="place-item" data-name="Maran" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Maran</div>
-    <div class="place-item" data-name="Tau" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Tau</div>
-    <div class="place-item" data-name="TIAN" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> TIAN</div>
-    <div class="place-item" data-name="TIAN Bistro" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> TIAN Bistro</div>
-    <div class="place-item" data-name="Venuss" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Venuss</div>
-    <div class="place-item" data-name="Karma" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Karma</div>
+    <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">🏠 Appartamento</div>
+    <div class="place-item" data-name="Appartamento" data-cat="Appartamento">🏠 Appartamento</div>
+    <div class="cat-header" data-cat="Caffè / Bibita" style="color:#e67e22">☕ Caffè / Bibita</div>
+    <div class="place-item" data-name="Palmenhaus Burggarten" data-cat="Caffè / Bibita">☕ Palmenhaus Burggarten</div>
+    <div class="place-item" data-name="Museumsquartier bars" data-cat="Caffè / Bibita">☕ Museumsquartier bars</div>
+    <div class="place-item" data-name="Dascafe" data-cat="Caffè / Bibita">☕ Dascafe</div>
+    <div class="place-item" data-name="Demmer’s Teehaus — Mölker Bastei" data-cat="Caffè / Bibita">☕ Demmer’s Teehaus — Mölker Bastei</div>
+    <div class="place-item" data-name="Demmer’s Teehaus — Donauzentrum" data-cat="Caffè / Bibita">☕ Demmer’s Teehaus — Donauzentrum</div>
+    <div class="place-item" data-name="Demmer's Teehaus — Hauptbahnhof" data-cat="Caffè / Bibita">☕ Demmer's Teehaus — Hauptbahnhof</div>
+    <div class="cat-header" data-cat="Dolci" style="color:#f39c12">🍰 Dolci</div>
+    <div class="place-item" data-name="Hotel Sacher" data-cat="Dolci">🍰 Hotel Sacher</div>
+    <div class="place-item" data-name="Demel" data-cat="Dolci">🍰 Demel</div>
+    <div class="place-item" data-name="Konditorei Aida" data-cat="Dolci">🍰 Konditorei Aida</div>
+    <div class="place-item" data-name="Julius Meinl am Graben" data-cat="Dolci">🍰 Julius Meinl am Graben</div>
+    <div class="cat-header" data-cat="Eventi" style="color:#9b59b6">🎪 Eventi</div>
+    <div class="place-item" data-name="Film Festival Rathausplatz" data-cat="Eventi">🎪 Film Festival Rathausplatz</div>
+    <div class="place-item" data-name="MQ Summer Stage" data-cat="Eventi">🎪 MQ Summer Stage</div>
+    <div class="place-item" data-name="ImPulsTanz Public Moves" data-cat="Eventi">🎪 ImPulsTanz Public Moves</div>
+    <div class="place-item" data-name="Kultursommer Wien" data-cat="Eventi">🎪 Kultursommer Wien</div>
+    <div class="place-item" data-name="Museum of Change" data-cat="Eventi">🎪 Museum of Change</div>
+    <div class="cat-header" data-cat="Giro Tram 1/2" style="color:#f59e0b">🚋 Giro Tram 1/2</div>
+    <div class="place-item" data-name="Naturhistorisches Museum" data-cat="Giro Tram 1/2">🚋 Naturhistorisches Museum</div>
+    <div class="place-item" data-name="Votivkirche (Chiesa Votiva)" data-cat="Giro Tram 1/2">🚋 Votivkirche (Chiesa Votiva)</div>
+    <div class="place-item" data-name="Wiener Staatsoper" data-cat="Giro Tram 1/2">🚋 Wiener Staatsoper</div>
+    <div class="place-item" data-name="Postsparkasse (Otto Wagner)" data-cat="Giro Tram 1/2">🚋 Postsparkasse (Otto Wagner)</div>
+    <div class="place-item" data-name="Börse (Vecchia Borsa)" data-cat="Giro Tram 1/2">🚋 Börse (Vecchia Borsa)</div>
+    <div class="place-item" data-name="Kunsthistorisches Museum" data-cat="Giro Tram 1/2">🚋 Kunsthistorisches Museum</div>
+    <div class="place-item" data-name="Parlamento Austriaco" data-cat="Giro Tram 1/2">🚋 Parlamento Austriaco</div>
+    <div class="place-item" data-name="Hofburg (Residenza Imperiale)" data-cat="Giro Tram 1/2">🚋 Hofburg (Residenza Imperiale)</div>
+    <div class="place-item" data-name="Burgtheater" data-cat="Giro Tram 1/2">🚋 Burgtheater</div>
+    <div class="place-item" data-name="Universität Wien" data-cat="Giro Tram 1/2">🚋 Universität Wien</div>
+    <div class="cat-header" data-cat="Gite fuori porta" style="color:#1abc9c">🧳 Gite fuori porta</div>
+    <div class="place-item" data-name="Thermalbad Bad Vöslau" data-cat="Gite fuori porta">🧳 Thermalbad Bad Vöslau</div>
+    <div class="place-item" data-name="Schloss Hof" data-cat="Gite fuori porta">🧳 Schloss Hof</div>
+    <div class="place-item" data-name="Kurpark Oberlaa" data-cat="Gite fuori porta">🧳 Kurpark Oberlaa</div>
+    <div class="place-item" data-name="Therme Wien" data-cat="Gite fuori porta">🧳 Therme Wien</div>
+    <div class="place-item" data-name="Waldseilpark Kahlenberg" data-cat="Gite fuori porta">🧳 Waldseilpark Kahlenberg</div>
+    <div class="cat-header" data-cat="Meno turistico" style="color:#95a5a6">🤫 Meno turistico</div>
+    <div class="place-item" data-name="Ankeruhr (Orologio Anker)" data-cat="Meno turistico">🤫 Ankeruhr (Orologio Anker)</div>
+    <div class="place-item" data-name="Karmelitermarkt" data-cat="Meno turistico">🤫 Karmelitermarkt</div>
+    <div class="place-item" data-name="Gemma Market — Open Air Painting" data-cat="Meno turistico">🤫 Gemma Market — Open Air Painting</div>
+    <div class="cat-header" data-cat="Monumenti" style="color:#95a5a6">🗿 Monumenti</div>
+    <div class="place-item" data-name="Minoritenkirche" data-cat="Monumenti">🗿 Minoritenkirche</div>
+    <div class="place-item" data-name="Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)" data-cat="Monumenti">🗿 Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)</div>
+    <div class="cat-header" data-cat="Musei" style="color:#3498db">🏛️ Musei</div>
+    <div class="place-item" data-name="Haus der Musik" data-cat="Musei">🏛️ Haus der Musik</div>
+    <div class="place-item" data-name="Kindermuseum Schönbrunn" data-cat="Musei">🏛️ Kindermuseum Schönbrunn</div>
+    <div class="place-item" data-name="Schloss Schönbrunn" data-cat="Musei">🏛️ Schloss Schönbrunn</div>
+    <div class="place-item" data-name="Spanish Riding School" data-cat="Musei">🏛️ Spanish Riding School</div>
+    <div class="place-item" data-name="Apple Strudel Studio" data-cat="Musei">🏛️ Apple Strudel Studio</div>
+    <div class="place-item" data-name="Marionettentheater Schönbrunn" data-cat="Musei">🏛️ Marionettentheater Schönbrunn</div>
+    <div class="place-item" data-name="ZOOM Kindermuseum" data-cat="Musei">🏛️ ZOOM Kindermuseum</div>
+    <div class="place-item" data-name="Kletterpark Donauinsel" data-cat="Musei">🏛️ Kletterpark Donauinsel</div>
+    <div class="place-item" data-name="Museum der Illusionen" data-cat="Musei">🏛️ Museum der Illusionen</div>
+    <div class="place-item" data-name="Heindl SchokoMuseum" data-cat="Musei">🏛️ Heindl SchokoMuseum</div>
+    <div class="place-item" data-name="Technisches Museum" data-cat="Musei">🏛️ Technisches Museum</div>
+    <div class="place-item" data-name="Belvedere — Il Bacio di Klimt" data-cat="Musei">🏛️ Belvedere — Il Bacio di Klimt</div>
+    <div class="place-item" data-name="Schmetterlinghaus" data-cat="Musei">🏛️ Schmetterlinghaus</div>
+    <div class="place-item" data-name="Sisi Museum" data-cat="Musei">🏛️ Sisi Museum</div>
+    <div class="place-item" data-name="Albertina Museum" data-cat="Musei">🏛️ Albertina Museum</div>
+    <div class="place-item" data-name="Technisches Museum Wien" data-cat="Musei">🏛️ Technisches Museum Wien</div>
+    <div class="cat-header" data-cat="Parchi" style="color:#27ae60">🌳 Parchi</div>
+    <div class="place-item" data-name="Pier 22 Copa Beach" data-cat="Parchi">🌳 Pier 22 Copa Beach</div>
+    <div class="place-item" data-name="Lagerwiese Romaplatz" data-cat="Parchi">🌳 Lagerwiese Romaplatz</div>
+    <div class="place-item" data-name="Kaiserwasser" data-cat="Parchi">🌳 Kaiserwasser</div>
+    <div class="place-item" data-name="Grosse Bucht" data-cat="Parchi">🌳 Grosse Bucht</div>
+    <div class="place-item" data-name="Strandbad Alte Donau" data-cat="Parchi">🌳 Strandbad Alte Donau</div>
+    <div class="cat-header" data-cat="Passeggiate" style="color:#16a085">🥾 Passeggiate</div>
+    <div class="place-item" data-name="MQ Libelle" data-cat="Passeggiate">🥾 MQ Libelle</div>
+    <div class="place-item" data-name="Grinzing Heuriger" data-cat="Passeggiate">🥾 Grinzing Heuriger</div>
+    <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Passeggiate">🥾 Donauinsel passeggiata</div>
+    <div class="place-item" data-name="Memoriale Antonio Vivaldi" data-cat="Passeggiate">🥾 Memoriale Antonio Vivaldi</div>
+    <div class="cat-header" data-cat="Ristorazione" style="color:#d35400">🍴 Ristorazione</div>
+    <div class="place-item" data-name="Feuerwehr Wagner" data-cat="Ristorazione">🍴 Feuerwehr Wagner</div>
+    <div class="place-item" data-name="Veganista Ice Cream" data-cat="Ristorazione">🍴 Veganista Ice Cream</div>
+    <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorazione">🍴 7Stern Bräu</div>
+    <div class="place-item" data-name="Naschmarkt" data-cat="Ristorazione">🍴 Naschmarkt</div>
+    <div class="place-item" data-name="Vollpension" data-cat="Ristorazione">🍴 Vollpension</div>
+    <div class="place-item" data-name="Figlmüller" data-cat="Ristorazione">🍴 Figlmüller</div>
+    <div class="place-item" data-name="Plachutta" data-cat="Ristorazione">🍴 Plachutta</div>
+    <div class="place-item" data-name="Schweizerhaus" data-cat="Ristorazione">🍴 Schweizerhaus</div>
+    <div class="cat-header" data-cat="Shopping / Souvenir" style="color:#8e44ad">🛍️ Shopping / Souvenir</div>
+    <div class="place-item" data-name="Joseph Brot" data-cat="Shopping / Souvenir">🛍️ Joseph Brot</div>
+    <div class="place-item" data-name="Kombucha Manufaktur" data-cat="Shopping / Souvenir">🛍️ Kombucha Manufaktur</div>
+    <div class="place-item" data-name="Grünberger" data-cat="Shopping / Souvenir">🛍️ Grünberger</div>
+    <div class="place-item" data-name="Siebensternbäckerei" data-cat="Shopping / Souvenir">🛍️ Siebensternbäckerei</div>
+    <div class="cat-header" data-cat="Trasporti" style="color:#3b82f6">🚇 Trasporti</div>
+    <div class="place-item" data-name="Handelskai" data-cat="Trasporti">🚇 Handelskai</div>
+    <div class="place-item" data-name="Dresdner Straße" data-cat="Trasporti">🚇 Dresdner Straße</div>
+    <div class="place-item" data-name="Allerheiligenplatz" data-cat="Trasporti">🚇 Allerheiligenplatz</div>
+    <div class="place-item" data-name="Wien Hauptbahnhof (Stazione Centrale)" data-cat="Trasporti">🚇 Wien Hauptbahnhof (Stazione Centrale)</div>
+    <div class="cat-header" data-cat="Vegano / Vegetariano" style="color:#95a5a6">🌱 Vegano / Vegetariano</div>
+    <div class="place-item" data-name="Cafe Harvest" data-cat="Vegano / Vegetariano">🌱 Cafe Harvest</div>
+    <div class="place-item" data-name="Swing Kitchen" data-cat="Vegano / Vegetariano">🌱 Swing Kitchen</div>
+    <div class="place-item" data-name="Gorilla Kitchen" data-cat="Vegano / Vegetariano">🌱 Gorilla Kitchen</div>
+    <div class="place-item" data-name="Pizzi's &amp; Cream" data-cat="Vegano / Vegetariano">🌱 Pizzi's &amp; Cream</div>
+    <div class="place-item" data-name="Vevi" data-cat="Vegano / Vegetariano">🌱 Vevi</div>
+    <div class="place-item" data-name="Pepper &amp; Ginny" data-cat="Vegano / Vegetariano">🌱 Pepper &amp; Ginny</div>
+    <div class="place-item" data-name="Veggiezz" data-cat="Vegano / Vegetariano">🌱 Veggiezz</div>
+    <div class="place-item" data-name="Veganista" data-cat="Vegano / Vegetariano">🌱 Veganista</div>
+    <div class="place-item" data-name="Maran" data-cat="Vegano / Vegetariano">🌱 Maran</div>
+    <div class="place-item" data-name="Tau" data-cat="Vegano / Vegetariano">🌱 Tau</div>
+    <div class="place-item" data-name="TIAN" data-cat="Vegano / Vegetariano">🌱 TIAN</div>
+    <div class="place-item" data-name="TIAN Bistro" data-cat="Vegano / Vegetariano">🌱 TIAN Bistro</div>
+    <div class="place-item" data-name="Venuss" data-cat="Vegano / Vegetariano">🌱 Venuss</div>
+    <div class="place-item" data-name="Karma" data-cat="Vegano / Vegetariano">🌱 Karma</div>
   </div>
 </div>
 <div id="map"></div>
@@ -330,12 +330,13 @@ function popupContent(place) {
 function createMarker(place) {
   var color = catColors[place.cat] || '#95a5a6';
   var emoji = catEmojis[place.cat] || '📍';
-  var bgOpacity = 0.5;
+  var bgOpacity = 0.7;
 
   if (place.type === 'ring_tram') {
     var size = 30, half = size/2;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'">'
       + '<polygon points="'+half+',2 '+(size-2)+','+half+' '+half+','+(size-2)+' 2,'+half+'" fill="#f59e0b" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+half+'" y="'+(half+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="14" paint-order="stroke" stroke="#1a1a2e" stroke-width="2" stroke-linejoin="round" fill="none">' + emoji + '</text>'
       + '<text x="'+half+'" y="'+(half+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="14">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[size,size], iconAnchor:[half,half]});
@@ -346,6 +347,7 @@ function createMarker(place) {
     var s = 32;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
       + '<rect x="2" y="2" width="'+(s-4)+'" height="'+(s-4)+'" rx="4" fill="#e74c3c" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="18" paint-order="stroke" stroke="#1a1a2e" stroke-width="2" stroke-linejoin="round" fill="none">' + emoji + '</text>'
       + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="18">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
@@ -356,6 +358,7 @@ function createMarker(place) {
     var s = 24;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
       + '<circle cx="'+(s/2)+'" cy="'+(s/2)+'" r="'+(s/2-2)+'" fill="#3498db" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="13" paint-order="stroke" stroke="#1a1a2e" stroke-width="2" stroke-linejoin="round" fill="none">' + emoji + '</text>'
       + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="13">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
@@ -364,6 +367,7 @@ function createMarker(place) {
 
   var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 28 34">'
     + '<path d="M14 0C7.4 0 2 5.4 2 12c0 9 12 22 12 22s12-13 12-22C26 5.4 20.6 0 14 0z" fill="' + color + '" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+    + '<text x="14" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13" paint-order="stroke" stroke="#1a1a2e" stroke-width="2" stroke-linejoin="round" fill="none">' + emoji + '</text>'
     + '<text x="14" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13">' + emoji + '</text>'
     + '</svg>';
   var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[28,34], iconAnchor:[14,34]});
