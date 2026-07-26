@@ -63,6 +63,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Ristorazione" checked><span class="place-dot" style="background:#d35400"></span> Ristorazione <span class="cat-count">(8)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping / Souvenir" checked><span class="place-dot" style="background:#8e44ad"></span> Shopping / Souvenir <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="place-dot" style="background:#3b82f6"></span> Trasporti <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Vegano / Vegetariano" checked><span class="place-dot" style="background:#95a5a6"></span> Vegano / Vegetariano <span class="cat-count">(14)</span></label>
     <div class="filter-buttons">
       <button id="filter-all" class="filter-btn">Tutti</button>
       <button id="filter-none" class="filter-btn">Nessuno</button>
@@ -161,6 +162,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Dresdner Straße" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Dresdner Straße</div>
     <div class="place-item" data-name="Allerheiligenplatz" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Allerheiligenplatz</div>
     <div class="place-item" data-name="Wien Hauptbahnhof (Stazione Centrale)" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Wien Hauptbahnhof (Stazione Centrale)</div>
+    <div class="cat-header" data-cat="Vegano / Vegetariano" style="color:#95a5a6">Vegano / Vegetariano</div>
+    <div class="place-item" data-name="Cafe Harvest" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Cafe Harvest</div>
+    <div class="place-item" data-name="Swing Kitchen" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Swing Kitchen</div>
+    <div class="place-item" data-name="Gorilla Kitchen" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Gorilla Kitchen</div>
+    <div class="place-item" data-name="Pizzi's &amp; Cream" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Pizzi's &amp; Cream</div>
+    <div class="place-item" data-name="Vevi" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Vevi</div>
+    <div class="place-item" data-name="Pepper &amp; Ginny" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Pepper &amp; Ginny</div>
+    <div class="place-item" data-name="Veggiezz" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Veggiezz</div>
+    <div class="place-item" data-name="Veganista" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Veganista</div>
+    <div class="place-item" data-name="Maran" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Maran</div>
+    <div class="place-item" data-name="Tau" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Tau</div>
+    <div class="place-item" data-name="TIAN" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> TIAN</div>
+    <div class="place-item" data-name="TIAN Bistro" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> TIAN Bistro</div>
+    <div class="place-item" data-name="Venuss" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Venuss</div>
+    <div class="place-item" data-name="Karma" data-cat="Vegano / Vegetariano"><span class="place-dot" style="background:#95a5a6"></span> Karma</div>
   </div>
 </div>
 <div id="map"></div>
@@ -242,7 +258,21 @@ var places = [
   {name: 'Technisches Museum Wien', lat: 48.1975, lng: 16.3486, cat: 'Musei', type: 'default', vcc: '–€3.60 / –20%', note: '4.7/5. 22.000mq. Treni, aerei, satelliti, mine. minTi (1.5-5 anni, Ada 4), miniXplore + In Motion (Nora 9). 2-3h. Prenotazione: slot minTi. Famiglia VCC (–20%): 24 euro (bimbe gratis <19). U1 Penzinger Strasse. Abbinare: giornata dedicata (fuori centro).'},
   {name: 'Gemma Market — Open Air Painting', lat: 48.2086, lng: 16.372, cat: 'Meno turistico', type: '', note: 'MER-DOM 14:00-22:00 (chiuso lun-mar). Pittura open air, perfetto per Nora. Bauernmarkt 21, 1010 centro. Prenotazione solo gruppi 8+.'},
   {name: 'Minoritenkirche', lat: 48.2106, lng: 16.3617, cat: 'Monumenti', type: '', note: 'GRATIS. Chiesa gotica (1276-1350) con il mosaico piu accurato dell\'Ultima Cena di Leonardo da Vinci, opera di Giacomo Raffaelli (XIX sec). Life-size! Minoritenplatz 2A, 1010. Abbinare: Hofburg 5min, Volksgarten 5min.'},
-  {name: 'Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)', lat: 48.2085, lng: 16.375, cat: 'Monumenti', type: '', note: 'GRATIS. Chiesa ortodossa greca, atmosfera unica e cupole dorate. Fleischmarkt 13, 1010. Accessibile U3 Stubentor, tram. Abbinare: St. Stephans 5min, Haus der Musik 10min.'}
+  {name: 'Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)', lat: 48.2085, lng: 16.375, cat: 'Monumenti', type: '', note: 'GRATIS. Chiesa ortodossa greca, atmosfera unica e cupole dorate. Fleischmarkt 13, 1010. Accessibile U3 Stubentor, tram. Abbinare: St. Stephans 5min, Haus der Musik 10min.'},
+  {name: 'Cafe Harvest', lat: 48.2186, lng: 16.3735, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Swing Kitchen', lat: 48.1992, lng: 16.3686, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Gorilla Kitchen', lat: 48.1985, lng: 16.371, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Pizzi\'s &amp; Cream', lat: 48.2065, lng: 16.3518, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Vevi', lat: 48.2035, lng: 16.3525, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Pepper &amp; Ginny', lat: 48.2085, lng: 16.3708, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Veggiezz', lat: 48.2098, lng: 16.3705, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Veganista', lat: 48.1885, lng: 16.361, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Maran', lat: 48.1905, lng: 16.3458, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Tau', lat: 48.2235, lng: 16.4355, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'TIAN', lat: 48.2075, lng: 16.3695, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'TIAN Bistro', lat: 48.211, lng: 16.365, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Venuss', lat: 48.209, lng: 16.372, cat: 'Vegano / Vegetariano', type: 'default'},
+  {name: 'Karma', lat: 48.2165, lng: 16.385, cat: 'Vegano / Vegetariano', type: 'default'}
 ];
 
 var catColors = {
@@ -259,7 +289,8 @@ var catColors = {
   'Passeggiate': '#16a085',
   'Ristorazione': '#d35400',
   'Shopping / Souvenir': '#8e44ad',
-  'Trasporti': '#3b82f6'
+  'Trasporti': '#3b82f6',
+  'Vegano / Vegetariano': '#95a5a6'
 };
 
 var map = L.map('map',{zoomControl:true}).setView([48.2082,16.3738],13);
