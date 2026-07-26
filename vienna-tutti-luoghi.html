@@ -374,10 +374,22 @@ document.querySelectorAll('.place-item').forEach(function(el) {
   });
 });
 
+function normalizeStr(s) {
+  return s.toLowerCase()
+    .replace(/ä/g,'a').replace(/ö/g,'o').replace(/ü/g,'u').replace(/ß/g,'ss')
+    .replace(/é/g,'e').replace(/è/g,'e').replace(/ê/g,'e')
+    .replace(/á/g,'a').replace(/à/g,'a')
+    .replace(/ó/g,'o').replace(/ò/g,'o')
+    .replace(/í/g,'i').replace(/ì/g,'i')
+    .replace(/ú/g,'u').replace(/ù/g,'u')
+    .replace(/ñ/g,'n').replace(/ç/g,'c')
+    .replace(/[^a-z0-9\s]/g,'');
+}
 document.getElementById('search').addEventListener('input', function() {
-  var q = this.value.toLowerCase();
+  var q = normalizeStr(this.value);
   document.querySelectorAll('.place-item').forEach(function(el) {
-    var match = el.dataset.name.toLowerCase().indexOf(q) >= 0;
+    var nameNorm = normalizeStr(el.dataset.name);
+    var match = nameNorm.indexOf(q) >= 0;
     el.style.display = match ? '' : 'none';
   });
   document.querySelectorAll('.cat-header').forEach(function(el) {
