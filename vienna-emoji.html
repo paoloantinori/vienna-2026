@@ -418,21 +418,65 @@ function updateTooltips() {
 
   var shouldShow = zoom >= TOOLTIP_ZOOM_THRESHOLD && visibleMarkers.length <= TOOLTIP_MAX_VISIBLE;
 
-  // Always unbind ALL tooltips first, then re-bind to current visible set
+  // Always unbind ALL tooltips first
   markers.eachLayer(function(m) {
     if (m.getTooltip()) m.unbindTooltip();
   });
   tooltipActive = false;
 
   if (shouldShow) {
-    visibleMarkers.forEach(function(m) {
-      m.bindTooltip(tooltipContent(m.place), {
-        className: 'vienna-tooltip',
-        direction: 'top',
-        offset: [0, -10],
-        permanent: true
+    var NEARBY_PX = 130;
+    var pts = visibleMarkers.map(function(m) {
+      var p = map.latLngToContainerPoint(m.getLatLng());
+      return { marker: m, x: p.x, y: p.y };
+    });
+
+    // Union-Find to cluster nearby markers
+    var par = pts.map(function(_, i) { return i; });
+    function find(i) { while (par[i] !== i) { par[i] = par[par[i]]; i = par[i]; } return i; }
+    function uni(a, b) { var ra = find(a), rb = find(b); if (ra !== rb) par[ra] = rb; }
+    for (var i = 0; i < pts.length; i++) {
+      for (var j = i + 1; j < pts.length; j++) {
+        var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y;
+        if (Math.sqrt(dx*dx + dy*dy) < NEARBY_PX) uni(i, j);
+      }
+    }
+
+    // Group into clusters
+    var clusters = {};
+    pts.forEach(function(p, i) { var r = find(i); (clusters[r] = clusters[r] || []).push(p); });
+
+    // For each cluster, distribute tooltip positions on a grid
+    Object.keys(clusters).forEach(function(key) {
+      var cl = clusters[key].sort(function(a, b) { return a.x - b.x; });
+      var n = cl.length;
+
+      cl.forEach(function(p, idx) {
+        var direction, offset;
+        if (n === 1) {
+          direction = 'top'; offset = [0, -12];
+        } else {
+          var isTop = idx % 2 === 0;
+          direction = isTop ? 'top' : 'bottom';
+          var yOff = isTop ? -12 : 12;
+          var xOff = 0;
+          if (n > 2) {
+            var col = Math.floor(idx / 2);
+            var cols = Math.ceil(n / 2);
+            xOff = Math.round((col - (cols - 1) / 2) * 85);
+          }
+          offset = [xOff, yOff];
+        }
+
+        p.marker.bindTooltip(tooltipContent(p.marker.place), {
+          className: 'vienna-tooltip',
+          direction: direction,
+          offset: offset,
+          permanent: true
+        });
       });
     });
+
     tooltipActive = true;
   }
 }
