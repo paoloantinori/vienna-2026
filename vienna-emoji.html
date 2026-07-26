@@ -182,97 +182,97 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div id="map"></div>
 <script>
 var places = [
-  {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'home', emoji: '🏠', note: '16 Allerheiligenplatz, 20. Brigittenau, 1200 Wien'},
-  {name: 'Handelskai', lat: 48.23681, lng: 16.38393, cat: 'Trasporti', type: 'transport', emoji: '🚇', note: 'U6 + S45 + REX2/REX3 + S1/S2/S3 — ~180m dall\'appartamento'},
-  {name: 'Dresdner Straße', lat: 48.2368, lng: 16.3792, cat: 'Trasporti', type: 'transport', emoji: '🚇', note: 'U6 — ~340m dall\'appartamento'},
-  {name: 'Allerheiligenplatz', lat: 48.23803, lng: 16.3864, cat: 'Trasporti', type: 'transport', emoji: '🚌', note: 'Bus 37A — fermata sulla piazza'},
-  {name: 'Feuerwehr Wagner', lat: 48.2720184, lng: 16.3417133, cat: 'Ristorazione', type: 'default', emoji: '🍖', note: 'Heuriger, vegetariano-friendly'},
-  {name: 'Thermalbad Bad Vöslau', lat: 47.9669319, lng: 16.2103357, cat: 'Gite fuori porta', type: 'default', emoji: '♨', note: 'Sorgente termale fredda, ~30 min da Vienna'},
-  {name: 'Haus der Musik', lat: 48.203792, lng: 16.3731547, cat: 'Musei', type: 'default', emoji: '🎼', vcc: '–€4 / –21%', note: '4.5/5. Dirigere orchestra virtuale, scale musicali, comporre. Nora 9 adorera. Ada 4 si diverte. 1.5-2h. Prenotazione: no. Famiglia VCC (–21%): 40.80 euro (7 euro bimbi 3-12). Abbinare: St. Stephans 5min, Hofburg 10min, Albertina 10min.'},
-  {name: 'Film Festival Rathausplatz', lat: 48.2088692, lng: 16.3586105, cat: 'Eventi', type: 'default', emoji: '🎬', note: 'Film Festival 4 lug-6 set 2026: maxischermo + decine di bancarelle di cibo internazionale davanti al municipio. Cinema GRATIS. Ven 17h: concerto opera per bambini (evento Kultursommer).'},
-  {name: 'Veganista Ice Cream', lat: 48.20301, lng: 16.3586, cat: 'Ristorazione', type: 'default', emoji: '🍦', note: 'Gelato MQ, must per Chiara'},
-  {name: 'MQ Libelle', lat: 48.2026156, lng: 16.3592037, cat: 'Passeggiate', type: 'default', emoji: '🐞', note: 'Terrazza panoramica gratuita Leopold Museum'},
-  {name: 'MQ Summer Stage', lat: 48.2031834, lng: 16.3583461, cat: 'Eventi', type: 'default', emoji: '🎵', note: 'Eventi aperto, mini-golf, cinema MQ'},
-  {name: 'ImPulsTanz Public Moves', lat: 48.2031934, lng: 16.3593419, cat: 'Eventi', type: 'default', emoji: '💃', note: 'Fino al 9 agosto, lezioni danza gratuite'},
-  {name: 'Kultursommer Wien', lat: 48.2108257, lng: 16.3565728, cat: 'Eventi', type: 'default', emoji: '🎶', note: 'Concerti gratuiti quartieri, fino 16 agosto'},
-  {name: '7Stern Bräu', lat: 48.2021962, lng: 16.3535215, cat: 'Ristorazione', type: 'default', emoji: '🍺', note: 'Micro birrificio artigianale'},
-  {name: 'Joseph Brot', lat: 48.2102115, lng: 16.3675385, cat: 'Shopping / Souvenir', type: 'default', emoji: '🍞', note: 'Panificio artigianale d\'eccellenza'},
-  {name: 'Kombucha Manufaktur', lat: 48.1915364, lng: 16.347035, cat: 'Shopping / Souvenir', type: 'default', emoji: '🫖', note: 'Kombucha artigianale locale'},
-  {name: 'Naschmarkt', lat: 48.1985039, lng: 16.3634982, cat: 'Ristorazione', type: 'default', emoji: '🍲', note: 'Mercato alimentare lun-sab. MERCATINO DELLE PULCI SABATO ONLY 6:30-14:00. U4 Kettenbruckengasse. VCC non necessaria (gratis). Abbinare: Haus der Musik 10min, Secession 5min.'},
-  {name: 'Kindermuseum Schönbrunn', lat: 48.1853494, lng: 16.311561, cat: 'Musei', type: 'default', emoji: '🧒', vcc: '–€1 / –8%', note: '4.5/5. APERTO TUTTI I GIORNI 10:00-17:00 (orario estivo ago). Bimbi 3-12. Costo famiglia VCC: €27.60 (€9.20×4, tutti da 3 anni). Prenotazione consigliata online. Abbinare: Schönbrunn parco+labirinto, Teatro Marionette.'},
-  {name: 'Schloss Schönbrunn', lat: 48.1849894, lng: 16.3115684, cat: 'Musei', type: 'default', emoji: '🏰', vcc: '–€2/–5% (Classic)', note: '4.6/5. Opzione senza interni: parco (gratuito) + labirinto + Gloriette. Prenotazione: SI se Classic Pass, no solo parco. Famiglia VCC: combo Kindermuseum + labirinto ~44 euro (non il castello). Abbinare: Kindermuseum + Teatro Marionette stesso complesso.'},
-  {name: 'Spanish Riding School', lat: 48.2073067, lng: 16.3667068, cat: 'Musei', type: 'default', emoji: '🐴', vcc: '–€2 / –11%', note: 'Morning Exercise o Performance Hofburg'},
-  {name: 'Schloss Hof', lat: 48.2144494, lng: 16.9342749, cat: 'Gite fuori porta', type: 'default', emoji: '🏰', vcc: '–20%', note: 'Adventure path, petting zoo, ~1h'},
-  {name: 'Apple Strudel Studio', lat: 48.18529, lng: 16.31291, cat: 'Musei', type: 'default', emoji: '🥮', note: 'Corso strudel famiglia'},
-  {name: 'Vollpension', lat: 48.1976603, lng: 16.365035, cat: 'Ristorazione', type: 'default', emoji: '🍰', vcc: '–20% consumazioni', note: 'Caffè torte nonne'},
-  {name: 'Kurpark Oberlaa', lat: 48.1412725, lng: 16.407221, cat: 'Gite fuori porta', type: 'default', emoji: '🌸', note: 'Giardino Giapponese, solo mer/sab'},
-  {name: 'Marionettentheater Schönbrunn', lat: 48.1849457, lng: 16.3154107, cat: 'Musei', type: 'default', emoji: '🎭', vcc: '–20%', note: '4.5/5. Marionette Fluto Magico. Nora 9 e Ada 4 incantate. 1h. Prenotazione: consigliata. Famiglia VCC (–20%): 60 euro (Nora 9 paga 15.20 euro, Ada 4 gratis <6). Abbinare: Schönbrunn stesso complesso.'},
-  {name: 'Pier 22 Copa Beach', lat: 48.2266, lng: 16.419, cat: 'Parchi', type: 'default', emoji: '🏖', note: 'Piattaforme, fitness outdoor'},
-  {name: 'Lagerwiese Romaplatz', lat: 48.2245, lng: 16.42, cat: 'Parchi', type: 'default', emoji: '🌳', note: 'Balneazione naturale, prato relax'},
-  {name: 'Kaiserwasser', lat: 48.2322454, lng: 16.4212738, cat: 'Parchi', type: 'default', emoji: '🏖', note: '⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato. | 🚇 Come arrivare: U6 da Handelskai (casa) → Neue Donau (3 fermate, ~6 min). Uscita, 5 min a piedi. Solo metro, niente traghetti.'},
-  {name: 'Grosse Bucht', lat: 48.2382709, lng: 16.4247729, cat: 'Parchi', type: 'default', emoji: '🏖', note: 'Panorama + balneazione'},
-  {name: 'ZOOM Kindermuseum', lat: 48.2020802, lng: 16.3595804, cat: 'Musei', type: 'default', emoji: '🧸', vcc: '–€0.50 / fino a –7%', note: '4.6/5. ZOOM Ocean per Ada 4 (0-6 anni), laboratori per Nora 9 (6-12). Niente tedesco. 1h a slot. Prenotazione: fortemente consigliata. Famiglia VCC (–7%): 19.40 euro (Nora 9 paga 4.60 euro, Ada 9 paga 7.40 euro). Abbinare: NHM MQ 5min, Haus der Musik 15min.'},
-  {name: 'Grünberger', lat: 48.210288, lng: 16.3463776, cat: 'Shopping / Souvenir', type: 'default', emoji: '🥃', note: 'Pane bio lievitazione naturale'},
-  {name: 'Siebensternbäckerei', lat: 48.2021286, lng: 16.3527253, cat: 'Shopping / Souvenir', type: 'default', emoji: '🍞', note: 'Forno a legna, bio'},
-  {name: 'Therme Wien', lat: 48.14344, lng: 16.40062, cat: 'Gite fuori porta', type: 'default', emoji: '🛀', note: 'Alternativa meteo avverso'},
-  {name: 'Waldseilpark Kahlenberg', lat: 48.2806863, lng: 16.3360543, cat: 'Gite fuori porta', type: 'default', emoji: '🧗', note: 'Parco avventura corde'},
-  {name: 'Figlmüller', lat: 48.2094207, lng: 16.3748431, cat: 'Ristorazione', type: 'default', emoji: '🍗', note: 'Schnitzel — da Eleonora | 🌱 Schnitzel vegana (proteina di pisello) disponibile!'},
-  {name: 'Plachutta', lat: 48.2075481, lng: 16.378755, cat: 'Ristorazione', type: 'default', emoji: '🍲', note: 'Tafelspitz — da Eleonora'},
-  {name: 'Schweizerhaus', lat: 48.2139213, lng: 16.401556, cat: 'Ristorazione', type: 'default', emoji: '🌭', note: 'Specialità viennesi — da Eleonora'},
-  {name: 'Hotel Sacher', lat: 48.2040427, lng: 16.3697708, cat: 'Dolci', type: 'default', emoji: '🍰', note: 'Sacher torte originale — da Eleonora. 🎵 Vivaldi morì qui il 28/7/1741 nell\'appartamento che occupava l\'edificio (targa sulla facciata). Era di fronte al Kärntnertortheater, oggi la Wiener Staatsoper.'},
-  {name: 'Demel', lat: 48.2086, lng: 16.3672, cat: 'Dolci', type: 'default', emoji: '🧁', note: 'Sacher torte — da Eleonora'},
-  {name: 'Konditorei Aida', lat: 48.2045, lng: 16.37, cat: 'Dolci', type: 'default', emoji: '🥧', note: 'Torte e caffè — da Eleonora'},
-  {name: 'Palmenhaus Burggarten', lat: 48.20173, lng: 16.36587, cat: 'Caffè / Bibita', type: 'default', emoji: '🌴', vcc: '–€1 / –11%', note: 'Serra bellissima — da Eleonora'},
-  {name: 'Museumsquartier bars', lat: 48.2035, lng: 16.358, cat: 'Caffè / Bibita', type: 'default', emoji: '🍸', note: 'Bar all\'aperto — da Eleonora'},
-  {name: 'Dascafe', lat: 48.2053, lng: 16.3565, cat: 'Caffè / Bibita', type: 'default', emoji: '☕', note: 'Caffè carino — da Eleonora'},
-  {name: 'Grinzing Heuriger', lat: 48.256, lng: 16.34181, cat: 'Passeggiate', type: 'default', emoji: '🍇', note: 'Villaggio colline — da Eleonora'},
-  {name: 'Donauinsel passeggiata', lat: 48.2265, lng: 16.422, cat: 'Passeggiate', type: 'default', emoji: '🚶', note: 'Passeggiata sull\'isola — da Eleonora'},
-  {name: 'Strandbad Alte Donau', lat: 48.24285, lng: 16.41841, cat: 'Parchi', type: 'default', emoji: '🛀', note: 'Bagno ramo morto Danubio — da Eleonora'},
-  {name: 'Museum of Change', lat: 48.20885, lng: 16.3679, cat: 'Eventi', type: 'default', emoji: '🔄', note: 'Spettacolo immersivo gratuito 19-22'},
-  {name: 'Kletterpark Donauinsel', lat: 48.2260568, lng: 16.4203052, cat: 'Musei', type: 'default', emoji: '🧗', note: 'Parco avventura corde sull\'isola — piano d\'emergenza (da Chiara)'},
-  {name: 'Museum der Illusionen', lat: 48.2118707, lng: 16.3730573, cat: 'Musei', type: 'default', emoji: '👁', vcc: '–19%', note: 'Illusioni ottiche, ologrammi, stanza obliqua — ok senza tedesco — da Chiara'},
-  {name: 'Naturhistorisches Museum', lat: 48.2052692, lng: 16.3597554, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🦕', vcc: '–€4 / –22%', note: '4.7/5. Dinosauri, meteori, animaletti. 2-3h. Prenotazione: no. Famiglia VCC (–22%): 28 euro (bimbe gratis <19). Abbinare: ZOOM Kindermuseum MQ 5min, Haus der Musik centro 10min.'},
-  {name: 'Heindl SchokoMuseum', lat: 48.183614, lng: 16.3249083, cat: 'Musei', type: 'default', emoji: '🍫', vcc: '–10%', note: '⚠️ CHIUSO fino al 10 agosto 2026 (ferie). Riapre lun 11 agosto. Normale: mar-ven 9-16, sab 9-17. Laboratorio cioccolato con workshop per bambini (ok senza tedesco). VCC –10%.'},
-  {name: 'Technisches Museum', lat: 48.2025896, lng: 16.3590667, cat: 'Musei', type: 'default', emoji: '⚙', vcc: '–€3.60 / –20%', note: 'Scienza interattiva, miniera, locomotive, volo VR Birdly — da Chiara'},
-  {name: 'Belvedere — Il Bacio di Klimt', lat: 48.1912, lng: 16.3798, cat: 'Musei', type: 'default', emoji: '💋', vcc: '–€1.50 singolo / –€2.50 2in1', note: 'Il Bacio di Klimt (180x180cm, oro e argento) — Galleria Austriaca nell\'Oberes Belvedere — da Chiara'},
-  {name: 'Schmetterlinghaus', lat: 48.2054592, lng: 16.3664449, cat: 'Musei', type: 'default', emoji: '🦋', vcc: '–€1 / –11%', note: '4.0/5. TUTTI I GIORNI 10:00-16:45 (apr-ott, ultima entrata 16:45). ~400 farfalle tropicali in serra Art Nouveau. Burggarten, 1010. VCC -€1 (€10→€9 adulti). Bambini <6 gratis (Ada), Nora €9. Famiglia VCC: €16.80. Abbinare: Hofburg 5min, Albertina 10min.'},
-  {name: 'Julius Meinl am Graben', lat: 48.2094582, lng: 16.3682371, cat: 'Dolci', type: 'default', emoji: '🍫', note: 'Souvenir edibili viennesi: Manner Wafers, Staud\'s sottaceti &amp; composta di prugne, caffè viennese Meinl, cacao caldo, pane artigianale, Wiener Schnecken (Gugumuk), Schwedenbomben. Delicatessen dal 1862.'},
-  {name: 'Memoriale Antonio Vivaldi', lat: 48.1986, lng: 16.3686, cat: 'Passeggiate', type: 'default', emoji: '🎵', note: 'Compositore delle "Quattro Stagioni". Si trasferì a Vienna nel 1740 su invito dell\'imperatore Carlo VI, che lo aveva nominato cavaliere a Trieste nel 1728. Morì il 28 luglio 1741 in un appartamento dell\'edificio che oggi ospita l\'Hotel Sacher (targa sulla facciata). Fu sepolto nel cimitero Spitaller Gottsacker dei poveri stranieri davanti alla Karlskirche — ora area della TU Wien, tomba perduta. Targa commemorativa sul muro verso la chiesa. Monumento a Rooseveltplatz e "Vivaldi Star" sulla Musikmeile. D\'estate: concerti delle Quattro Stagioni nella Karlskirche. Fonte: see-vienna.com'},
-  {name: 'Votivkirche (Chiesa Votiva)', lat: 48.215278, lng: 16.358611, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '⛪', note: 'Chiesa neogotica sulla Ringstraße, costruita come votiva dopo il fallito attentato all’imperatore Franz Joseph nel 1853. Facciata imponente con guglie e rosoni. Interno con altare in alabastro e mosaici.'},
-  {name: 'Wien Hauptbahnhof (Stazione Centrale)', lat: 48.186667, lng: 16.38, cat: 'Trasporti', type: 'default', emoji: '🚉', note: 'Stazione centrale di Vienna (2015). Treni per tutta l’Austria e l’Europa: RailJet, Nightjet, EuroCity. Connessa alla U1 (Südtiroler Platz). Shopping center nel Belvedere quartier.'},
-  {name: 'Demmer’s Teehaus — Mölker Bastei', lat: 48.2095, lng: 16.3628, cat: 'Caffè / Bibita', type: 'default', emoji: '☕', note: 'Specialista viennese del té dal 1925. Centinaia di varietà di té sfuso, degustazione e consulenza personale. Ambiance elegante nel 1° distretto.'},
-  {name: 'Demmer’s Teehaus — Donauzentrum', lat: 48.232, lng: 16.4258, cat: 'Caffè / Bibita', type: 'default', emoji: '☕', note: 'Filiale nel Donauzentrum (centro commerciale nel 22° distretto). Té sfuso, accessori e consulenza.'},
-  {name: 'Demmer\'s Teehaus — Hauptbahnhof', lat: 48.1866, lng: 16.3804, cat: 'Caffè / Bibita', type: 'default', emoji: '🍵', note: 'Filiale nella BahnhofCity Wien Hauptbahnhof (Shop 00.102). Teé sfuso + mini Trzesniewski (brötchen viennesi). Perfetto per teé souvenir prima di partire.'},
-  {name: 'Wiener Staatsoper', lat: 48.2025093, lng: 16.3687996, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🎭', note: 'Teatro dell\'Opera di Vienna. Per tram 1/2 fermata \'Oper/Karlsplatz\'. VCC: sconto posto non disponibile, ma esterni gratuiti.'},
-  {name: 'Postsparkasse (Otto Wagner)', lat: 48.2063194, lng: 16.3729167, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🏛', note: 'Cassa di Risparmio delle Poste, capolavoro Jugendstil di Otto Wagner (1906). Esterni spettacolari. Perno: Georg-Coch-Platz.'},
-  {name: 'Börse (Vecchia Borsa)', lat: 48.2077778, lng: 16.3738889, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '📈', note: 'Palazzo della Borsa di Vienna su Stubenring. Architettura neoclassica. Attaccata alla Postsparkasse (3 min).'},
-  {name: 'Kunsthistorisches Museum', lat: 48.2040833, lng: 16.3588889, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🖼', note: 'Museo di Storia dell\'Arte. VCC: non in elenco sconti ufficiali. Fermata tram \'Burgring\'. Davanti: NHM e Maria-Theresien-Denkmal.'},
-  {name: 'Parlamento Austriaco', lat: 48.2084028, lng: 16.3589028, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🏛', note: 'Palazzo del Parlamento, neogreco, con Athena quadriga. Fermata tram \'Dr.-Karl-Renner-Ring\'. Visita gratuita con audioguida.'},
-  {name: 'Hofburg (Residenza Imperiale)', lat: 48.2069167, lng: 16.3646111, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '👑', note: 'Palazzo imperiale degli Asburgo. Sissi Museum, Kaiserappartements, Silberkammer. Fermata tram \'Burgring\' poi 7 min a piedi. VCC: non in elenco.'},
-  {name: 'Burgtheater', lat: 48.2090278, lng: 16.3577778, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🎭', note: 'Teatro di Corte, uno dei più prestigiosi al mondo. Fermata tram \'Burgring\' o \'Rathaus\'. Esterni imponenti.'},
-  {name: 'Universität Wien', lat: 48.2123056, lng: 16.3613056, cat: 'Giro Tram 1/2', type: 'ring_tram', emoji: '🎓', note: 'Università di Vienna (1365), la più antica del mondo germanofono. Hauptgebäude neoclassico. Fermata tram \'Rathaus\' o \'Schottentor\'.'},
-  {name: 'Ankeruhr (Orologio Anker)', lat: 48.209722, lng: 16.375, cat: 'Meno turistico', type: 'ring_tram', emoji: '⏰', note: 'Orologio Liberty (1914) di Franz Matsch. Alle 12:00 show con 12 personaggi storici in parata con musica: Joseph Haydn, Marco Aurelio, Carlomagno, Leopoldo VI + Teodora Angelina, Walther von der Vogelweide, Rodolfo d\'Asburgo + Gertrude, Maria Teresa, Giuseppe II, Francesco Giuseppe, Eugenio di Savoia. Piazza piu antica di Vienna (Hoher Markt). Gratuito!'},
-  {name: 'Sisi Museum', lat: 48.204167, lng: 16.363611, cat: 'Musei', type: 'ring_tram', emoji: '👸', vcc: '–10%', note: '4.3/5. Storia di Sissi + Appartamenti Imperiali Hofburg. Più per adulti. 1.5-2h. Prenotazione: no. Famiglia VCC (–10%): 70.20 euro (Nora 9 paga 34.20 euro da 6 anni, Ada 4 gratis <6). Abbinare: Hofburg, Casa Farfalle, Albertina centro storico.'},
-  {name: 'Albertina Museum', lat: 48.202778, lng: 16.368611, cat: 'Musei', type: 'ring_tram', emoji: '🎨', vcc: '–25%', note: '4.6/5. Durer, Monet, Picasso, 22 Sale Asburgiche. Più per adulti, con bimbe 45min. 1.5-2h. Prenotazione: no. Famiglia VCC (–25%): 31.40 euro (bimbe gratis <19). Abbinare: Opera 5min, Haus der Musik 10min, Hofburg 10min.'},
-  {name: 'Karmelitermarkt', lat: 48.2147, lng: 16.3763, cat: 'Meno turistico', type: 'place', emoji: '🥬', note: 'Mercato contadino VEN+SAB (giorni feriali solo ristoranti/bar). 2° distretto Leopoldstadt. U2 Karmeliterplatz. Abbinare: Prater 15min, Karmeliterviertel cafe.'},
-  {name: 'Technisches Museum Wien', lat: 48.1975, lng: 16.3486, cat: 'Musei', type: 'default', emoji: '⚙', vcc: '–€3.60 / –20%', note: '4.7/5. 22.000mq. Treni, aerei, satelliti, mine. minTi (1.5-5 anni, Ada 4), miniXplore + In Motion (Nora 9). 2-3h. Prenotazione: slot minTi. Famiglia VCC (–20%): 24 euro (bimbe gratis <19). U1 Penzinger Strasse. Abbinare: giornata dedicata (fuori centro).'},
-  {name: 'Gemma Market — Open Air Painting', lat: 48.2086, lng: 16.372, cat: 'Meno turistico', type: '', emoji: '🎨', note: 'MER-DOM 14:00-22:00 (chiuso lun-mar). Pittura open air, perfetto per Nora. Bauernmarkt 21, 1010 centro. Prenotazione solo gruppi 8+.'},
-  {name: 'Minoritenkirche', lat: 48.2106, lng: 16.3617, cat: 'Monumenti', type: '', emoji: '⛪', note: 'GRATIS. Chiesa gotica (1276-1350) con il mosaico piu accurato dell\'Ultima Cena di Leonardo da Vinci, opera di Giacomo Raffaelli (XIX sec). Life-size! Minoritenplatz 2A, 1010. Abbinare: Hofburg 5min, Volksgarten 5min.'},
-  {name: 'Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)', lat: 48.2085, lng: 16.375, cat: 'Monumenti', type: '', emoji: '⛪', note: 'GRATIS. Chiesa ortodossa greca, atmosfera unica e cupole dorate. Fleischmarkt 13, 1010. Accessibile U3 Stubentor, tram. Abbinare: St. Stephans 5min, Haus der Musik 10min.'},
-  {name: 'Cafe Harvest', lat: 48.2186, lng: 16.3735, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🌱', desc: '100% vegano | Cucina: brunch/soul food | € | Karmeliterplatz 1, 1020. Jackfruit BBQ, tagliatelle polpette vegetali. Aperto fino a mezzanotte.'},
-  {name: 'Swing Kitchen', lat: 48.1992, lng: 16.3686, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍔', desc: '100% vegano | Cucina: burger/schnitzel | €€ | Operngasse 24, 1040. Kraut Pleaser: schnitzel vegano con crauti. Nugget, salse homemade.'},
-  {name: 'Gorilla Kitchen', lat: 48.1985, lng: 16.371, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🥙', desc: '100% vegano | Cucina: messicana/fusion | €€ | Karlskirche. Burritos e bowl (tofu lotus, chard chickpeas), 4 salse. Self-service.'},
-  {name: 'Pizzi\'s &amp; Cream', lat: 48.2065, lng: 16.3518, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍕', desc: '100% vegano | Cucina: pizza/gelato | €€ | Burggasse 25, 1070. Mozzarella di anacardi, impasto 2 giorni. Gelato vegano.'},
-  {name: 'Vevi', lat: 48.2035, lng: 16.3525, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍜', desc: '100% vegano | Cucina: vietnamita | € | Stollgasse 5, 1070. Bahn Mi, Pho. Pranzo sotto 10€.'},
-  {name: 'Pepper &amp; Ginny', lat: 48.2085, lng: 16.3708, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🥗', desc: '100% vegano | Cucina: delicatessen internazionale | €€ | Ballgasse 5, 1010. Lox di carota con cream cheese di anacardi.'},
-  {name: 'Veggiezz', lat: 48.2098, lng: 16.3705, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🥣', desc: '100% vegano | Cucina: bowl/insalate | € | Salzgries 9, 1010. Crunchy Pumpkin: zucca, quinoa, senape arancia.'},
-  {name: 'Veganista', lat: 48.1885, lng: 16.361, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍦', desc: '100% vegano | Cucina: gelato artigianale | €€ | Margaretenstrasse 51, 1050. Papavero, nocciola, matcha. Inbetwiener sandwich.'},
-  {name: 'Maran', lat: 48.1905, lng: 16.3458, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🛒', desc: '100% vegano | Cucina: bistro/alimentari | € | Stumpergasse 57, 1060. Menu rotante, sandwich, dolci. Vendita alimentari vegani.'},
-  {name: 'Tau', lat: 48.2235, lng: 16.4355, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🥟', desc: '100% vegano | Cucina: asian-fusion | €€ | Erzherzog-Karl-Str. 38, 1220. Spring rolls, dumplings, crispy duck vegetale.'},
-  {name: 'TIAN', lat: 48.2075, lng: 16.3695, cat: 'Vegano / Vegetariano', type: 'default', emoji: '⭐', desc: 'Vegetariano (menu vegano) | Cucina: fine dining stellato Michelin | €€€ | Himmelpfortgasse 23, 1010. Degustazione 8 portate. Prenotazione obbligatoria.'},
-  {name: 'TIAN Bistro', lat: 48.211, lng: 16.365, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', desc: 'Vegetariano (menu vegano) | Cucina: bistro | €€ | Centro. Versione bistro del TIAN stellato. Giardino/conservatorio. Polenta, tarte flambée.'},
-  {name: 'Venuss', lat: 48.209, lng: 16.372, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍲', desc: 'Vegetariano con opzioni vegane | Cucina: austriaca bio | €€ | Centro. Goulash chanterelle, stufato fagioli. Schnitzel vegetale. Buffet a mezzogiorno.'},
-  {name: 'Karma', lat: 48.2165, lng: 16.385, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍛', desc: 'Vegetariano con opzioni vegane | Cucina: indiano-fusion/all-day breakfast | €€ | 2° distretto. Thali indiano, vegan salmon sandwich. Daal della settimana.'}
+  {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'home', note: '16 Allerheiligenplatz, 20. Brigittenau, 1200 Wien'},
+  {name: 'Handelskai', lat: 48.23681, lng: 16.38393, cat: 'Trasporti', type: 'transport', note: 'U6 + S45 + REX2/REX3 + S1/S2/S3 — ~180m dall\'appartamento'},
+  {name: 'Dresdner Straße', lat: 48.2368, lng: 16.3792, cat: 'Trasporti', type: 'transport', note: 'U6 — ~340m dall\'appartamento'},
+  {name: 'Allerheiligenplatz', lat: 48.23803, lng: 16.3864, cat: 'Trasporti', type: 'transport', note: 'Bus 37A — fermata sulla piazza'},
+  {name: 'Feuerwehr Wagner', lat: 48.2720184, lng: 16.3417133, cat: 'Ristorazione', type: 'default', note: 'Heuriger, vegetariano-friendly'},
+  {name: 'Thermalbad Bad Vöslau', lat: 47.9669319, lng: 16.2103357, cat: 'Gite fuori porta', type: 'default', note: 'Sorgente termale fredda, ~30 min da Vienna'},
+  {name: 'Haus der Musik', lat: 48.203792, lng: 16.3731547, cat: 'Musei', type: 'default', vcc: '–€4 / –21%', note: '4.5/5. Dirigere orchestra virtuale, scale musicali, comporre. Nora 9 adorera. Ada 4 si diverte. 1.5-2h. Prenotazione: no. Famiglia VCC (–21%): 40.80 euro (7 euro bimbi 3-12). Abbinare: St. Stephans 5min, Hofburg 10min, Albertina 10min.'},
+  {name: 'Film Festival Rathausplatz', lat: 48.2088692, lng: 16.3586105, cat: 'Eventi', type: 'default', note: 'Film Festival 4 lug-6 set 2026: maxischermo + decine di bancarelle di cibo internazionale davanti al municipio. Cinema GRATIS. Ven 17h: concerto opera per bambini (evento Kultursommer).'},
+  {name: 'Veganista Ice Cream', lat: 48.20301, lng: 16.3586, cat: 'Ristorazione', type: 'default', note: 'Gelato MQ, must per Chiara'},
+  {name: 'MQ Libelle', lat: 48.2026156, lng: 16.3592037, cat: 'Passeggiate', type: 'default', note: 'Terrazza panoramica gratuita Leopold Museum'},
+  {name: 'MQ Summer Stage', lat: 48.2031834, lng: 16.3583461, cat: 'Eventi', type: 'default', note: 'Eventi aperto, mini-golf, cinema MQ'},
+  {name: 'ImPulsTanz Public Moves', lat: 48.2031934, lng: 16.3593419, cat: 'Eventi', type: 'default', note: 'Fino al 9 agosto, lezioni danza gratuite'},
+  {name: 'Kultursommer Wien', lat: 48.2108257, lng: 16.3565728, cat: 'Eventi', type: 'default', note: 'Concerti gratuiti quartieri, fino 16 agosto'},
+  {name: '7Stern Bräu', lat: 48.2021962, lng: 16.3535215, cat: 'Ristorazione', type: 'default', note: 'Micro birrificio artigianale'},
+  {name: 'Joseph Brot', lat: 48.2102115, lng: 16.3675385, cat: 'Shopping / Souvenir', type: 'default', note: 'Panificio artigianale d\'eccellenza'},
+  {name: 'Kombucha Manufaktur', lat: 48.1915364, lng: 16.347035, cat: 'Shopping / Souvenir', type: 'default', note: 'Kombucha artigianale locale'},
+  {name: 'Naschmarkt', lat: 48.1985039, lng: 16.3634982, cat: 'Ristorazione', type: 'default', note: 'Mercato alimentare lun-sab. MERCATINO DELLE PULCI SABATO ONLY 6:30-14:00. U4 Kettenbruckengasse. VCC non necessaria (gratis). Abbinare: Haus der Musik 10min, Secession 5min.'},
+  {name: 'Kindermuseum Schönbrunn', lat: 48.1853494, lng: 16.311561, cat: 'Musei', type: 'default', vcc: '–€1 / –8%', note: '4.5/5. APERTO TUTTI I GIORNI 10:00-17:00 (orario estivo ago). Bimbi 3-12. Costo famiglia VCC: €27.60 (€9.20×4, tutti da 3 anni). Prenotazione consigliata online. Abbinare: Schönbrunn parco+labirinto, Teatro Marionette.'},
+  {name: 'Schloss Schönbrunn', lat: 48.1849894, lng: 16.3115684, cat: 'Musei', type: 'default', vcc: '–€2/–5% (Classic)', note: '4.6/5. Opzione senza interni: parco (gratuito) + labirinto + Gloriette. Prenotazione: SI se Classic Pass, no solo parco. Famiglia VCC: combo Kindermuseum + labirinto ~44 euro (non il castello). Abbinare: Kindermuseum + Teatro Marionette stesso complesso.'},
+  {name: 'Spanish Riding School', lat: 48.2073067, lng: 16.3667068, cat: 'Musei', type: 'default', vcc: '–€2 / –11%', note: 'Morning Exercise o Performance Hofburg'},
+  {name: 'Schloss Hof', lat: 48.2144494, lng: 16.9342749, cat: 'Gite fuori porta', type: 'default', vcc: '–20%', note: 'Adventure path, petting zoo, ~1h'},
+  {name: 'Apple Strudel Studio', lat: 48.18529, lng: 16.31291, cat: 'Musei', type: 'default', note: 'Corso strudel famiglia'},
+  {name: 'Vollpension', lat: 48.1976603, lng: 16.365035, cat: 'Ristorazione', type: 'default', vcc: '–20% consumazioni', note: 'Caffè torte nonne'},
+  {name: 'Kurpark Oberlaa', lat: 48.1412725, lng: 16.407221, cat: 'Gite fuori porta', type: 'default', note: 'Giardino Giapponese, solo mer/sab'},
+  {name: 'Marionettentheater Schönbrunn', lat: 48.1849457, lng: 16.3154107, cat: 'Musei', type: 'default', vcc: '–20%', note: '4.5/5. Marionette Fluto Magico. Nora 9 e Ada 4 incantate. 1h. Prenotazione: consigliata. Famiglia VCC (–20%): 60 euro (Nora 9 paga 15.20 euro, Ada 4 gratis <6). Abbinare: Schönbrunn stesso complesso.'},
+  {name: 'Pier 22 Copa Beach', lat: 48.2266, lng: 16.419, cat: 'Parchi', type: 'default', note: 'Piattaforme, fitness outdoor'},
+  {name: 'Lagerwiese Romaplatz', lat: 48.2245, lng: 16.42, cat: 'Parchi', type: 'default', note: 'Balneazione naturale, prato relax'},
+  {name: 'Kaiserwasser', lat: 48.2322454, lng: 16.4212738, cat: 'Parchi', type: 'default', note: '⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato. | 🚇 Come arrivare: U6 da Handelskai (casa) → Neue Donau (3 fermate, ~6 min). Uscita, 5 min a piedi. Solo metro, niente traghetti.'},
+  {name: 'Grosse Bucht', lat: 48.2382709, lng: 16.4247729, cat: 'Parchi', type: 'default', note: 'Panorama + balneazione'},
+  {name: 'ZOOM Kindermuseum', lat: 48.2020802, lng: 16.3595804, cat: 'Musei', type: 'default', vcc: '–€0.50 / fino a –7%', note: '4.6/5. ZOOM Ocean per Ada 4 (0-6 anni), laboratori per Nora 9 (6-12). Niente tedesco. 1h a slot. Prenotazione: fortemente consigliata. Famiglia VCC (–7%): 19.40 euro (Nora 9 paga 4.60 euro, Ada 9 paga 7.40 euro). Abbinare: NHM MQ 5min, Haus der Musik 15min.'},
+  {name: 'Grünberger', lat: 48.210288, lng: 16.3463776, cat: 'Shopping / Souvenir', type: 'default', note: 'Pane bio lievitazione naturale'},
+  {name: 'Siebensternbäckerei', lat: 48.2021286, lng: 16.3527253, cat: 'Shopping / Souvenir', type: 'default', note: 'Forno a legna, bio'},
+  {name: 'Therme Wien', lat: 48.14344, lng: 16.40062, cat: 'Gite fuori porta', type: 'default', note: 'Alternativa meteo avverso'},
+  {name: 'Waldseilpark Kahlenberg', lat: 48.2806863, lng: 16.3360543, cat: 'Gite fuori porta', type: 'default', note: 'Parco avventura corde'},
+  {name: 'Figlmüller', lat: 48.2094207, lng: 16.3748431, cat: 'Ristorazione', type: 'default', note: 'Schnitzel — da Eleonora | 🌱 Schnitzel vegana (proteina di pisello) disponibile!'},
+  {name: 'Plachutta', lat: 48.2075481, lng: 16.378755, cat: 'Ristorazione', type: 'default', note: 'Tafelspitz — da Eleonora'},
+  {name: 'Schweizerhaus', lat: 48.2139213, lng: 16.401556, cat: 'Ristorazione', type: 'default', note: 'Specialità viennesi — da Eleonora'},
+  {name: 'Hotel Sacher', lat: 48.2040427, lng: 16.3697708, cat: 'Dolci', type: 'default', note: 'Sacher torte originale — da Eleonora. 🎵 Vivaldi morì qui il 28/7/1741 nell\'appartamento che occupava l\'edificio (targa sulla facciata). Era di fronte al Kärntnertortheater, oggi la Wiener Staatsoper.'},
+  {name: 'Demel', lat: 48.2086, lng: 16.3672, cat: 'Dolci', type: 'default', note: 'Sacher torte — da Eleonora'},
+  {name: 'Konditorei Aida', lat: 48.2045, lng: 16.37, cat: 'Dolci', type: 'default', note: 'Torte e caffè — da Eleonora'},
+  {name: 'Palmenhaus Burggarten', lat: 48.20173, lng: 16.36587, cat: 'Caffè / Bibita', type: 'default', vcc: '–€1 / –11%', note: 'Serra bellissima — da Eleonora'},
+  {name: 'Museumsquartier bars', lat: 48.2035, lng: 16.358, cat: 'Caffè / Bibita', type: 'default', note: 'Bar all\'aperto — da Eleonora'},
+  {name: 'Dascafe', lat: 48.2053, lng: 16.3565, cat: 'Caffè / Bibita', type: 'default', note: 'Caffè carino — da Eleonora'},
+  {name: 'Grinzing Heuriger', lat: 48.256, lng: 16.34181, cat: 'Passeggiate', type: 'default', note: 'Villaggio colline — da Eleonora'},
+  {name: 'Donauinsel passeggiata', lat: 48.2265, lng: 16.422, cat: 'Passeggiate', type: 'default', note: 'Passeggiata sull\'isola — da Eleonora'},
+  {name: 'Strandbad Alte Donau', lat: 48.24285, lng: 16.41841, cat: 'Parchi', type: 'default', note: 'Bagno ramo morto Danubio — da Eleonora'},
+  {name: 'Museum of Change', lat: 48.20885, lng: 16.3679, cat: 'Eventi', type: 'default', note: 'Spettacolo immersivo gratuito 19-22'},
+  {name: 'Kletterpark Donauinsel', lat: 48.2260568, lng: 16.4203052, cat: 'Musei', type: 'default', note: 'Parco avventura corde sull\'isola — piano d\'emergenza (da Chiara)'},
+  {name: 'Museum der Illusionen', lat: 48.2118707, lng: 16.3730573, cat: 'Musei', type: 'default', vcc: '–19%', note: 'Illusioni ottiche, ologrammi, stanza obliqua — ok senza tedesco — da Chiara'},
+  {name: 'Naturhistorisches Museum', lat: 48.2052692, lng: 16.3597554, cat: 'Giro Tram 1/2', type: 'ring_tram', vcc: '–€4 / –22%', note: '4.7/5. Dinosauri, meteori, animaletti. 2-3h. Prenotazione: no. Famiglia VCC (–22%): 28 euro (bimbe gratis <19). Abbinare: ZOOM Kindermuseum MQ 5min, Haus der Musik centro 10min.'},
+  {name: 'Heindl SchokoMuseum', lat: 48.183614, lng: 16.3249083, cat: 'Musei', type: 'default', vcc: '–10%', note: '⚠️ CHIUSO fino al 10 agosto 2026 (ferie). Riapre lun 11 agosto. Normale: mar-ven 9-16, sab 9-17. Laboratorio cioccolato con workshop per bambini (ok senza tedesco). VCC –10%.'},
+  {name: 'Technisches Museum', lat: 48.2025896, lng: 16.3590667, cat: 'Musei', type: 'default', vcc: '–€3.60 / –20%', note: 'Scienza interattiva, miniera, locomotive, volo VR Birdly — da Chiara'},
+  {name: 'Belvedere — Il Bacio di Klimt', lat: 48.1912, lng: 16.3798, cat: 'Musei', type: 'default', vcc: '–€1.50 singolo / –€2.50 2in1', note: 'Il Bacio di Klimt (180x180cm, oro e argento) — Galleria Austriaca nell\'Oberes Belvedere — da Chiara'},
+  {name: 'Schmetterlinghaus', lat: 48.2054592, lng: 16.3664449, cat: 'Musei', type: 'default', vcc: '–€1 / –11%', note: '4.0/5. TUTTI I GIORNI 10:00-16:45 (apr-ott, ultima entrata 16:45). ~400 farfalle tropicali in serra Art Nouveau. Burggarten, 1010. VCC -€1 (€10→€9 adulti). Bambini <6 gratis (Ada), Nora €9. Famiglia VCC: €16.80. Abbinare: Hofburg 5min, Albertina 10min.'},
+  {name: 'Julius Meinl am Graben', lat: 48.2094582, lng: 16.3682371, cat: 'Dolci', type: 'default', note: 'Souvenir edibili viennesi: Manner Wafers, Staud\'s sottaceti &amp; composta di prugne, caffè viennese Meinl, cacao caldo, pane artigianale, Wiener Schnecken (Gugumuk), Schwedenbomben. Delicatessen dal 1862.'},
+  {name: 'Memoriale Antonio Vivaldi', lat: 48.1986, lng: 16.3686, cat: 'Passeggiate', type: 'default', note: 'Compositore delle "Quattro Stagioni". Si trasferì a Vienna nel 1740 su invito dell\'imperatore Carlo VI, che lo aveva nominato cavaliere a Trieste nel 1728. Morì il 28 luglio 1741 in un appartamento dell\'edificio che oggi ospita l\'Hotel Sacher (targa sulla facciata). Fu sepolto nel cimitero Spitaller Gottsacker dei poveri stranieri davanti alla Karlskirche — ora area della TU Wien, tomba perduta. Targa commemorativa sul muro verso la chiesa. Monumento a Rooseveltplatz e "Vivaldi Star" sulla Musikmeile. D\'estate: concerti delle Quattro Stagioni nella Karlskirche. Fonte: see-vienna.com'},
+  {name: 'Votivkirche (Chiesa Votiva)', lat: 48.215278, lng: 16.358611, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Chiesa neogotica sulla Ringstraße, costruita come votiva dopo il fallito attentato all’imperatore Franz Joseph nel 1853. Facciata imponente con guglie e rosoni. Interno con altare in alabastro e mosaici.'},
+  {name: 'Wien Hauptbahnhof (Stazione Centrale)', lat: 48.186667, lng: 16.38, cat: 'Trasporti', type: 'default', note: 'Stazione centrale di Vienna (2015). Treni per tutta l’Austria e l’Europa: RailJet, Nightjet, EuroCity. Connessa alla U1 (Südtiroler Platz). Shopping center nel Belvedere quartier.'},
+  {name: 'Demmer’s Teehaus — Mölker Bastei', lat: 48.2095, lng: 16.3628, cat: 'Caffè / Bibita', type: 'default', note: 'Specialista viennese del té dal 1925. Centinaia di varietà di té sfuso, degustazione e consulenza personale. Ambiance elegante nel 1° distretto.'},
+  {name: 'Demmer’s Teehaus — Donauzentrum', lat: 48.232, lng: 16.4258, cat: 'Caffè / Bibita', type: 'default', note: 'Filiale nel Donauzentrum (centro commerciale nel 22° distretto). Té sfuso, accessori e consulenza.'},
+  {name: 'Demmer\'s Teehaus — Hauptbahnhof', lat: 48.1866, lng: 16.3804, cat: 'Caffè / Bibita', type: 'default', note: 'Filiale nella BahnhofCity Wien Hauptbahnhof (Shop 00.102). Teé sfuso + mini Trzesniewski (brötchen viennesi). Perfetto per teé souvenir prima di partire.'},
+  {name: 'Wiener Staatsoper', lat: 48.2025093, lng: 16.3687996, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Teatro dell\'Opera di Vienna. Per tram 1/2 fermata \'Oper/Karlsplatz\'. VCC: sconto posto non disponibile, ma esterni gratuiti.'},
+  {name: 'Postsparkasse (Otto Wagner)', lat: 48.2063194, lng: 16.3729167, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Cassa di Risparmio delle Poste, capolavoro Jugendstil di Otto Wagner (1906). Esterni spettacolari. Perno: Georg-Coch-Platz.'},
+  {name: 'Börse (Vecchia Borsa)', lat: 48.2077778, lng: 16.3738889, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Palazzo della Borsa di Vienna su Stubenring. Architettura neoclassica. Attaccata alla Postsparkasse (3 min).'},
+  {name: 'Kunsthistorisches Museum', lat: 48.2040833, lng: 16.3588889, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Museo di Storia dell\'Arte. VCC: non in elenco sconti ufficiali. Fermata tram \'Burgring\'. Davanti: NHM e Maria-Theresien-Denkmal.'},
+  {name: 'Parlamento Austriaco', lat: 48.2084028, lng: 16.3589028, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Palazzo del Parlamento, neogreco, con Athena quadriga. Fermata tram \'Dr.-Karl-Renner-Ring\'. Visita gratuita con audioguida.'},
+  {name: 'Hofburg (Residenza Imperiale)', lat: 48.2069167, lng: 16.3646111, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Palazzo imperiale degli Asburgo. Sissi Museum, Kaiserappartements, Silberkammer. Fermata tram \'Burgring\' poi 7 min a piedi. VCC: non in elenco.'},
+  {name: 'Burgtheater', lat: 48.2090278, lng: 16.3577778, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Teatro di Corte, uno dei più prestigiosi al mondo. Fermata tram \'Burgring\' o \'Rathaus\'. Esterni imponenti.'},
+  {name: 'Universität Wien', lat: 48.2123056, lng: 16.3613056, cat: 'Giro Tram 1/2', type: 'ring_tram', note: 'Università di Vienna (1365), la più antica del mondo germanofono. Hauptgebäude neoclassico. Fermata tram \'Rathaus\' o \'Schottentor\'.'},
+  {name: 'Ankeruhr (Orologio Anker)', lat: 48.209722, lng: 16.375, cat: 'Meno turistico', type: 'ring_tram', note: 'Orologio Liberty (1914) di Franz Matsch. Alle 12:00 show con 12 personaggi storici in parata con musica: Joseph Haydn, Marco Aurelio, Carlomagno, Leopoldo VI + Teodora Angelina, Walther von der Vogelweide, Rodolfo d\'Asburgo + Gertrude, Maria Teresa, Giuseppe II, Francesco Giuseppe, Eugenio di Savoia. Piazza piu antica di Vienna (Hoher Markt). Gratuito!'},
+  {name: 'Sisi Museum', lat: 48.204167, lng: 16.363611, cat: 'Musei', type: 'ring_tram', vcc: '–10%', note: '4.3/5. Storia di Sissi + Appartamenti Imperiali Hofburg. Più per adulti. 1.5-2h. Prenotazione: no. Famiglia VCC (–10%): 70.20 euro (Nora 9 paga 34.20 euro da 6 anni, Ada 4 gratis <6). Abbinare: Hofburg, Casa Farfalle, Albertina centro storico.'},
+  {name: 'Albertina Museum', lat: 48.202778, lng: 16.368611, cat: 'Musei', type: 'ring_tram', vcc: '–25%', note: '4.6/5. Durer, Monet, Picasso, 22 Sale Asburgiche. Più per adulti, con bimbe 45min. 1.5-2h. Prenotazione: no. Famiglia VCC (–25%): 31.40 euro (bimbe gratis <19). Abbinare: Opera 5min, Haus der Musik 10min, Hofburg 10min.'},
+  {name: 'Karmelitermarkt', lat: 48.2147, lng: 16.3763, cat: 'Meno turistico', type: 'place', note: 'Mercato contadino VEN+SAB (giorni feriali solo ristoranti/bar). 2° distretto Leopoldstadt. U2 Karmeliterplatz. Abbinare: Prater 15min, Karmeliterviertel cafe.'},
+  {name: 'Technisches Museum Wien', lat: 48.1975, lng: 16.3486, cat: 'Musei', type: 'default', vcc: '–€3.60 / –20%', note: '4.7/5. 22.000mq. Treni, aerei, satelliti, mine. minTi (1.5-5 anni, Ada 4), miniXplore + In Motion (Nora 9). 2-3h. Prenotazione: slot minTi. Famiglia VCC (–20%): 24 euro (bimbe gratis <19). U1 Penzinger Strasse. Abbinare: giornata dedicata (fuori centro).'},
+  {name: 'Gemma Market — Open Air Painting', lat: 48.2086, lng: 16.372, cat: 'Meno turistico', type: '', note: 'MER-DOM 14:00-22:00 (chiuso lun-mar). Pittura open air, perfetto per Nora. Bauernmarkt 21, 1010 centro. Prenotazione solo gruppi 8+.'},
+  {name: 'Minoritenkirche', lat: 48.2106, lng: 16.3617, cat: 'Monumenti', type: '', note: 'GRATIS. Chiesa gotica (1276-1350) con il mosaico piu accurato dell\'Ultima Cena di Leonardo da Vinci, opera di Giacomo Raffaelli (XIX sec). Life-size! Minoritenplatz 2A, 1010. Abbinare: Hofburg 5min, Volksgarten 5min.'},
+  {name: 'Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)', lat: 48.2085, lng: 16.375, cat: 'Monumenti', type: '', note: 'GRATIS. Chiesa ortodossa greca, atmosfera unica e cupole dorate. Fleischmarkt 13, 1010. Accessibile U3 Stubentor, tram. Abbinare: St. Stephans 5min, Haus der Musik 10min.'},
+  {name: 'Cafe Harvest', lat: 48.2186, lng: 16.3735, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: brunch/soul food | € | Karmeliterplatz 1, 1020. Jackfruit BBQ, tagliatelle polpette vegetali. Aperto fino a mezzanotte.'},
+  {name: 'Swing Kitchen', lat: 48.1992, lng: 16.3686, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: burger/schnitzel | €€ | Operngasse 24, 1040. Kraut Pleaser: schnitzel vegano con crauti. Nugget, salse homemade.'},
+  {name: 'Gorilla Kitchen', lat: 48.1985, lng: 16.371, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: messicana/fusion | €€ | Karlskirche. Burritos e bowl (tofu lotus, chard chickpeas), 4 salse. Self-service.'},
+  {name: 'Pizzi\'s &amp; Cream', lat: 48.2065, lng: 16.3518, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: pizza/gelato | €€ | Burggasse 25, 1070. Mozzarella di anacardi, impasto 2 giorni. Gelato vegano.'},
+  {name: 'Vevi', lat: 48.2035, lng: 16.3525, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: vietnamita | € | Stollgasse 5, 1070. Bahn Mi, Pho. Pranzo sotto 10€.'},
+  {name: 'Pepper &amp; Ginny', lat: 48.2085, lng: 16.3708, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: delicatessen internazionale | €€ | Ballgasse 5, 1010. Lox di carota con cream cheese di anacardi.'},
+  {name: 'Veggiezz', lat: 48.2098, lng: 16.3705, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: bowl/insalate | € | Salzgries 9, 1010. Crunchy Pumpkin: zucca, quinoa, senape arancia.'},
+  {name: 'Veganista', lat: 48.1885, lng: 16.361, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: gelato artigianale | €€ | Margaretenstrasse 51, 1050. Papavero, nocciola, matcha. Inbetwiener sandwich.'},
+  {name: 'Maran', lat: 48.1905, lng: 16.3458, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: bistro/alimentari | € | Stumpergasse 57, 1060. Menu rotante, sandwich, dolci. Vendita alimentari vegani.'},
+  {name: 'Tau', lat: 48.2235, lng: 16.4355, cat: 'Vegano / Vegetariano', type: 'default', desc: '100% vegano | Cucina: asian-fusion | €€ | Erzherzog-Karl-Str. 38, 1220. Spring rolls, dumplings, crispy duck vegetale.'},
+  {name: 'TIAN', lat: 48.2075, lng: 16.3695, cat: 'Vegano / Vegetariano', type: 'default', desc: 'Vegetariano (menu vegano) | Cucina: fine dining stellato Michelin | €€€ | Himmelpfortgasse 23, 1010. Degustazione 8 portate. Prenotazione obbligatoria.'},
+  {name: 'TIAN Bistro', lat: 48.211, lng: 16.365, cat: 'Vegano / Vegetariano', type: 'default', desc: 'Vegetariano (menu vegano) | Cucina: bistro | €€ | Centro. Versione bistro del TIAN stellato. Giardino/conservatorio. Polenta, tarte flambée.'},
+  {name: 'Venuss', lat: 48.209, lng: 16.372, cat: 'Vegano / Vegetariano', type: 'default', desc: 'Vegetariano con opzioni vegane | Cucina: austriaca bio | €€ | Centro. Goulash chanterelle, stufato fagioli. Schnitzel vegetale. Buffet a mezzogiorno.'},
+  {name: 'Karma', lat: 48.2165, lng: 16.385, cat: 'Vegano / Vegetariano', type: 'default', desc: 'Vegetariano con opzioni vegane | Cucina: indiano-fusion/all-day breakfast | €€ | 2° distretto. Thali indiano, vegan salmon sandwich. Daal della settimana.'}
 ];
 
 var catColors = {
@@ -293,6 +293,24 @@ var catColors = {
   'Vegano / Vegetariano': '#95a5a6'
 };
 
+var catEmojis = {
+  'Appartamento': '🏠',
+  'Caffè / Bibita': '☕',
+  'Dolci': '🍰',
+  'Eventi': '🎪',
+  'Giro Tram 1/2': '🚋',
+  'Gite fuori porta': '🧳',
+  'Meno turistico': '🤫',
+  'Monumenti': '🗿',
+  'Musei': '🏛️',
+  'Parchi': '🌳',
+  'Passeggiate': '🥾',
+  'Ristorazione': '🍴',
+  'Shopping / Souvenir': '🛍️',
+  'Trasporti': '🚇',
+  'Vegano / Vegetariano': '🌱'
+};
+
 var map = L.map('map',{zoomControl:true}).setView([48.2082,16.3738],13);
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',{
   attribution:'&copy; <a href="https://carto.com/">CARTO</a>',
@@ -306,17 +324,19 @@ function popupContent(place) {
   var ring = place.type === 'ring_tram' ? ' <span class="ring-badge">Giro Tram 1/2</span>' : '';
   var note = place.note ? '<br><small>' + place.note + '</small>' : '';
   var desc = place.desc ? '<br><small>' + place.desc + '</small>' : '';
-  return (place.emoji ? place.emoji + ' ' : '') + '<b>' + place.name + '</b>' + vcc + ring + note + desc;
+  return (catEmojis[place.cat] ? catEmojis[place.cat] + ' ' : '') + '<b>' + place.name + '</b>' + vcc + ring + note + desc;
 }
 
 function createMarker(place) {
   var color = catColors[place.cat] || '#95a5a6';
+  var emoji = catEmojis[place.cat] || '📍';
+  var bgOpacity = 0.5;
 
   if (place.type === 'ring_tram') {
     var size = 30, half = size/2;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'">'
-      + '<polygon points="'+half+',2 '+(size-2)+','+half+' '+half+','+(size-2)+' 2,'+half+'" fill="#f59e0b" stroke="#fff" stroke-width="1.5"/>'
-      + '<text x="'+half+'" y="'+(half+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="14">' + (place.emoji || '🚃') + '</text>'
+      + '<polygon points="'+half+',2 '+(size-2)+','+half+' '+half+','+(size-2)+' 2,'+half+'" fill="#f59e0b" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+half+'" y="'+(half+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="14">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[size,size], iconAnchor:[half,half]});
     return L.marker([place.lat,place.lng],{icon:icon}).bindPopup(popupContent(place));
@@ -325,8 +345,8 @@ function createMarker(place) {
   if (place.type === 'home') {
     var s = 32;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
-      + '<rect x="2" y="2" width="'+(s-4)+'" height="'+(s-4)+'" rx="4" fill="#e74c3c" stroke="#fff" stroke-width="1.5"/>'
-      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="18">' + (place.emoji || '🏠') + '</text>'
+      + '<rect x="2" y="2" width="'+(s-4)+'" height="'+(s-4)+'" rx="4" fill="#e74c3c" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="18">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
     return L.marker([place.lat,place.lng],{icon:icon}).bindPopup(popupContent(place));
@@ -335,16 +355,16 @@ function createMarker(place) {
   if (place.type === 'transport') {
     var s = 24;
     var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="'+s+'" height="'+s+'" viewBox="0 0 '+s+' '+s+'">'
-      + '<circle cx="'+(s/2)+'" cy="'+(s/2)+'" r="'+(s/2-2)+'" fill="#3498db" stroke="#fff" stroke-width="1.5"/>'
-      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="13">' + (place.emoji || 'M') + '</text>'
+      + '<circle cx="'+(s/2)+'" cy="'+(s/2)+'" r="'+(s/2-2)+'" fill="#3498db" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+      + '<text x="'+(s/2)+'" y="'+(s/2+1)+'" text-anchor="middle" dominant-baseline="middle" font-size="13">' + emoji + '</text>'
       + '</svg>';
     var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[s,s], iconAnchor:[s/2,s/2]});
     return L.marker([place.lat,place.lng],{icon:icon}).bindPopup(popupContent(place));
   }
 
   var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 28 34">'
-    + '<path d="M14 0C7.4 0 2 5.4 2 12c0 9 12 22 12 22s12-13 12-22C26 5.4 20.6 0 14 0z" fill="' + color + '" stroke="#fff" stroke-width="1.5"/>'
-    + '<text x="14" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13">' + (place.emoji || '') + '</text>'
+    + '<path d="M14 0C7.4 0 2 5.4 2 12c0 9 12 22 12 22s12-13 12-22C26 5.4 20.6 0 14 0z" fill="' + color + '" fill-opacity="'+bgOpacity+'" stroke="#fff" stroke-width="1.5"/>'
+    + '<text x="14" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13">' + emoji + '</text>'
     + '</svg>';
   var icon = L.divIcon({html:svg, className:'marker-icon', iconSize:[28,34], iconAnchor:[14,34]});
   return L.marker([place.lat,place.lng],{icon:icon}).bindPopup(popupContent(place));
