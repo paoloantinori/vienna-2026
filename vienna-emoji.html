@@ -418,7 +418,13 @@ function updateTooltips() {
 
   var shouldShow = zoom >= TOOLTIP_ZOOM_THRESHOLD && visibleMarkers.length <= TOOLTIP_MAX_VISIBLE;
 
-  if (shouldShow && !tooltipActive) {
+  // Always unbind ALL tooltips first, then re-bind to current visible set
+  markers.eachLayer(function(m) {
+    if (m.getTooltip()) m.unbindTooltip();
+  });
+  tooltipActive = false;
+
+  if (shouldShow) {
     visibleMarkers.forEach(function(m) {
       m.bindTooltip(tooltipContent(m.place), {
         className: 'vienna-tooltip',
@@ -428,15 +434,6 @@ function updateTooltips() {
       });
     });
     tooltipActive = true;
-  } else if (!shouldShow && tooltipActive) {
-    visibleMarkers.forEach(function(m) {
-      m.unbindTooltip();
-    });
-    // Also unbind any that were previously bound but are now out of bounds
-    markers.eachLayer(function(m) {
-      if (m.getTooltip()) m.unbindTooltip();
-    });
-    tooltipActive = false;
   }
 }
 
