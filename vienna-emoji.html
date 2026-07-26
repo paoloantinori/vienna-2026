@@ -27,6 +27,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .place-item:hover { background:#16213e; }
 .place-item.highlight { background:#0f3460; }
 .marker-icon { background:none !important; border:none !important; }
+.leaflet-tooltip.vienna-tooltip { background:#1a1a2e; color:#cbd5e1; border:1px solid #0f3460; border-radius:6px; padding:6px 10px; font-size:12px; box-shadow:0 2px 8px rgba(0,0,0,0.4); max-width:220px; }
+.leaflet-tooltip.vienna-tooltip b { color:#e2e8f0; }
+.leaflet-tooltip.vienna-tooltip .tt-cat { color:#f59e0b; font-size:11px; text-transform:uppercase; letter-spacing:0.5px; }
+.leaflet-tooltip.vienna-tooltip .tt-vcc { background:#f59e0b; color:#1a1a2e; padding:0 4px; border-radius:3px; font-size:10px; font-weight:700; margin-left:4px; }
+.leaflet-tooltip-top.vienna-tooltip::before { border-top-color:#1a1a2e; }
+.leaflet-tooltip-bottom.vienna-tooltip::before { border-bottom-color:#1a1a2e; }
 .leaflet-popup-content-wrapper { background:#1a1a2e; color:#cbd5e1; border-radius:8px; }
 .leaflet-popup-tip { background:#1a1a2e; }
 .leaflet-popup-content { margin:10px 14px; font-size:13px; }
@@ -327,6 +333,13 @@ function popupContent(place) {
   return (catEmojis[place.cat] ? catEmojis[place.cat] + ' ' : '') + '<b>' + place.name + '</b>' + vcc + ring + note + desc;
 }
 
+function tooltipContent(place) {
+  var emoji = catEmojis[place.cat] || '';
+  var vcc = place.vcc ? '<span class="tt-vcc">VCC ' + place.vcc + '</span>' : '';
+  var note = place.note ? '<br>' + place.note.substring(0, 100) : '';
+  return '<span class="tt-cat">' + emoji + ' ' + place.cat + '</span>' + vcc + '<br><b>' + place.name + '</b>' + note;
+}
+
 function createMarker(place) {
   var color = catColors[place.cat] || '#95a5a6';
   var emoji = catEmojis[place.cat] || '📍';
@@ -386,6 +399,49 @@ places.forEach(function(place) {
   });
   markers.addLayer(marker);
 });
+
+// Auto-show tooltips when zoomed in and few markers visible
+var TOOLTIP_ZOOM_THRESHOLD = 15;
+var TOOLTIP_MAX_VISIBLE = 8;
+var tooltipActive = false;
+
+function updateTooltips() {
+  var zoom = map.getZoom();
+  var bounds = map.getBounds();
+  var visibleMarkers = [];
+
+  markers.eachLayer(function(m) {
+    if (m.place && map.hasLayer(m) && bounds.contains(m.getLatLng())) {
+      visibleMarkers.push(m);
+    }
+  });
+
+  var shouldShow = zoom >= TOOLTIP_ZOOM_THRESHOLD && visibleMarkers.length <= TOOLTIP_MAX_VISIBLE;
+
+  if (shouldShow && !tooltipActive) {
+    visibleMarkers.forEach(function(m) {
+      m.bindTooltip(tooltipContent(m.place), {
+        className: 'vienna-tooltip',
+        direction: 'top',
+        offset: [0, -10]
+      });
+    });
+    tooltipActive = true;
+  } else if (!shouldShow && tooltipActive) {
+    visibleMarkers.forEach(function(m) {
+      m.unbindTooltip();
+    });
+    // Also unbind any that were previously bound but are now out of bounds
+    markers.eachLayer(function(m) {
+      if (m.getTooltip()) m.unbindTooltip();
+    });
+    tooltipActive = false;
+  }
+}
+
+map.on('moveend', updateTooltips);
+map.on('overlayadd', updateTooltips);
+map.on('overlayremove', updateTooltips);
 
 document.querySelectorAll('.place-item').forEach(function(el) {
   el.addEventListener('click', function() {
@@ -464,6 +520,7 @@ function applyFilters() {
     var visible = checkedCats[cat] !== false;
     el.style.display = visible ? '' : 'none';
   });
+  updateTooltips();
 }
 
 document.querySelectorAll('.cat-filter').forEach(function(cb) {
