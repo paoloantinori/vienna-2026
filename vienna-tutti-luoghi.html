@@ -21,6 +21,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .filter-buttons { display:flex; gap:6px; margin-top:8px; }
 .filter-btn { background:#0f3460; border:none; border-radius:4px; color:#cbd5e1; padding:4px 8px; font-size:11px; cursor:pointer; }
 .filter-btn:hover { background:#1a4a7a; }
+.macro-parent { font-size:13px; padding-top:4px; border-top:1px solid #0f3460; margin-top:4px; }
+.macro-child { padding-left:20px; font-size:12px; }
 .cat-header { font-size:11px; text-transform:uppercase; letter-spacing:1px; padding:8px 4px 4px; font-weight:700; }
 .place-item { padding:6px 4px 6px 8px; cursor:pointer; font-size:13px; border-radius:4px; display:flex; align-items:center; gap:6px; line-height:1.3; }
 .place-item:hover { background:#16213e; }
@@ -52,25 +54,25 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività all’aperto" checked><span class="place-dot" style="background:#2ecc71"></span> Attività all’aperto <span class="cat-count">(3)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Dolci" checked><span class="place-dot" style="background:#e91e63"></span> Dolci <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(33)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Dolci" checked><span class="place-dot" style="background:#e91e63"></span> Dolci <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Ristorante" checked><span class="place-dot" style="background:#d35400"></span> Ristorante <span class="cat-count">(8)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Panificio" checked><span class="place-dot" style="background:#a0522d"></span> Panificio <span class="cat-count">(3)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Vegano / Vegetariano" checked><span class="place-dot" style="background:#27ae60"></span> Vegano / Vegetariano <span class="cat-count">(14)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Eventi" checked><span class="place-dot" style="background:#9b59b6"></span> Eventi <span class="cat-count">(5)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Giro Tram 1/2" checked><span class="place-dot" style="background:#f59e0b"></span> Giro Tram 1/2 <span class="cat-count">(13)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Gite fuori Vienna" checked><span class="place-dot" style="background:#1abc9c"></span> Gite fuori Vienna <span class="cat-count">(5)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Mercati" checked><span class="place-dot" style="background:#f1c40f"></span> Mercati <span class="cat-count">(2)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Monumenti" checked><span class="place-dot" style="background:#7f8c8d"></span> Monumenti <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="place-dot" style="background:#3498db"></span> Musei <span class="cat-count">(12)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Panificio" checked><span class="place-dot" style="background:#a0522d"></span> Panificio <span class="cat-count">(3)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(5)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Ristorante" checked><span class="place-dot" style="background:#d35400"></span> Ristorante <span class="cat-count">(8)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping" checked><span class="place-dot" style="background:#8e44ad"></span> Shopping <span class="cat-count">(3)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Spettacoli" checked><span class="place-dot" style="background:#e74c3c"></span> Spettacoli <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="place-dot" style="background:#3b82f6"></span> Trasporti <span class="cat-count">(4)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Vegano / Vegetariano" checked><span class="place-dot" style="background:#27ae60"></span> Vegano / Vegetariano <span class="cat-count">(14)</span></label>
     <div class="filter-buttons">
       <button id="filter-all" class="filter-btn">Tutti</button>
       <button id="filter-none" class="filter-btn">Nessuno</button>
-      <button id="filter-risto" class="filter-btn">🍽 Ristorazione</button>
     </div>
     <label class="filter-item" style="margin-top:8px;border-top:1px solid #0f3460;padding-top:8px"><input type="checkbox" id="toggle-labels"><span style="font-size:12px">Mostra etichette sulla mappa</span></label>
     <label class="filter-item"><input type="checkbox" id="toggle-tram-route"><span style="font-size:12px">🚋 Percorso tram 1/2</span></label>
@@ -499,12 +501,32 @@ document.getElementById('filter-none').addEventListener('click', function() {
   applyFilters();
 });
 
-document.getElementById('filter-risto').addEventListener('click', function() {
-  var ristoCats = ['Café', 'Dolci', 'Ristorante', 'Panificio', 'Vegano / Vegetariano'];
-  document.querySelectorAll('.cat-filter').forEach(function(cb) {
-    cb.checked = ristoCats.indexOf(cb.dataset.cat) >= 0;
-  });
+// Macro Ristorazione: parent checkbox toggles all subcategories
+document.getElementById('macro-risto').addEventListener('change', function() {
+  document.querySelectorAll('.risto-sub').forEach(function(cb) {
+    cb.checked = this.checked;
+  }.bind(this));
   applyFilters();
+});
+
+// When a subcategory changes, update parent state (checked/unchecked/indeterminate)
+document.querySelectorAll('.risto-sub').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    var subs = document.querySelectorAll('.risto-sub');
+    var checked = 0;
+    subs.forEach(function(s) { if (s.checked) checked++; });
+    var parent = document.getElementById('macro-risto');
+    if (checked === subs.length) {
+      parent.checked = true;
+      parent.indeterminate = false;
+    } else if (checked === 0) {
+      parent.checked = false;
+      parent.indeterminate = false;
+    } else {
+      parent.indeterminate = true;
+    }
+    applyFilters();
+  });
 });
 
 // Tram 1/2 route on Ringstraße
