@@ -27,6 +27,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 .place-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
 .place-item.highlight { background:#0f3460; }
 .marker-icon { background:none !important; border:none !important; }
+.marker-label { background:rgba(26,26,46,0.9); color:#e2e8f0; padding:2px 6px; border-radius:4px; font-size:11px; white-space:nowrap; border:1px solid #0f3460; }
 .leaflet-popup-content-wrapper { background:#1a1a2e; color:#cbd5e1; border-radius:8px; }
 .leaflet-popup-tip { background:#1a1a2e; }
 .leaflet-popup-content { margin:10px 14px; font-size:13px; }
@@ -69,6 +70,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
       <button id="filter-none" class="filter-btn">Nessuno</button>
       <button id="filter-food" class="filter-btn">Solo cibo</button>
     </div>
+    <label class="filter-item" style="margin-top:8px;border-top:1px solid #0f3460;padding-top:8px"><input type="checkbox" id="toggle-labels"><span style="font-size:12px">Mostra etichette sulla mappa</span></label>
   </div>
   <div id="place-list">
     <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">Appartamento</div>
@@ -363,6 +365,27 @@ places.forEach(function(place) {
   markers.addLayer(marker);
 });
 
+// Toggle permanent labels on markers
+var labelsVisible = false;
+var labelMarkers = [];
+document.getElementById('toggle-labels').addEventListener('change', function() {
+  labelsVisible = this.checked;
+  if (labelsVisible) {
+    markers.eachLayer(function(m) {
+      if (m.place) {
+        var labelIcon = L.divIcon({html: '<div class="marker-label">' + m.place.name + '</div>', className: 'marker-icon', iconSize: [100, 20], iconAnchor: [0, -20]});
+        var lm = L.marker(m.getLatLng(), {icon: labelIcon, interactive: false, keyboard: false});
+        lm._parentMarker = m;
+        labelMarkers.push(lm);
+        map.addLayer(lm);
+      }
+    });
+  } else {
+    labelMarkers.forEach(function(lm) { map.removeLayer(lm); });
+    labelMarkers = [];
+  }
+});
+
 document.querySelectorAll('.place-item').forEach(function(el) {
   el.addEventListener('click', function() {
     var name = this.dataset.name;
@@ -429,6 +452,20 @@ function applyFilters() {
       }
     }
   });
+  // Update labels visibility to match filtered markers
+  if (labelsVisible) {
+    labelMarkers.forEach(function(lm) { map.removeLayer(lm); });
+    labelMarkers = [];
+    markers.eachLayer(function(m) {
+      if (m.place && map.hasLayer(m)) {
+        var labelIcon = L.divIcon({html: '<div class="marker-label">' + m.place.name + '</div>', className: 'marker-icon', iconSize: [100, 20], iconAnchor: [0, -20]});
+        var lm = L.marker(m.getLatLng(), {icon: labelIcon, interactive: false, keyboard: false});
+        lm._parentMarker = m;
+        labelMarkers.push(lm);
+        map.addLayer(lm);
+      }
+    });
+  }
   // Also filter sidebar items
   document.querySelectorAll('.place-item').forEach(function(el) {
     var cat = el.dataset.cat;
