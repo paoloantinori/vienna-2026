@@ -54,7 +54,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div id="filter-panel">
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(3)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività all’aperto" checked><span class="place-dot" style="background:#2ecc71"></span> Attività all’aperto <span class="cat-count">(3)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
@@ -70,7 +70,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="place-dot" style="background:#3498db"></span> Musei <span class="cat-count">(10)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(5)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping" checked><span class="place-dot" style="background:#8e44ad"></span> Shopping <span class="cat-count">(3)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Spettacoli" checked><span class="place-dot" style="background:#e74c3c"></span> Spettacoli <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="place-dot" style="background:#3b82f6"></span> Trasporti <span class="cat-count">(4)</span></label>
     <div class="filter-buttons">
       <button id="filter-all" class="filter-btn">Tutti</button>
@@ -78,8 +77,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     </div>
     <label class="filter-item" style="margin-top:8px;border-top:1px solid #0f3460;padding-top:8px"><input type="checkbox" id="toggle-labels"><span style="font-size:12px">Mostra etichette sulla mappa</span></label>
     <div style="font-size:10px;color:#64748b;margin-top:2px;padding-left:20px">Automatiche quando zoomi (max 8 luoghi)</div>
-    <label class="filter-item"><input type="checkbox" id="toggle-tram-route"><span style="font-size:12px">🚋 Percorso tram 1/2</span></label>
-    <div style="font-size:10px;color:#64748b;margin-top:2px;padding-left:20px"><span style="color:#1b5e20">●</span> Oraria &nbsp;<span style="color:#1565c0">●</span> Antioraria</div>
+    <label class="filter-item"><input type="checkbox" id="toggle-tram-cw"><span class="place-dot" style="background:#1b5e20"></span><span style="font-size:12px">🚋 Tram oraria</span></label>
+    <label class="filter-item"><input type="checkbox" id="toggle-tram-ccw"><span class="place-dot" style="background:#1565c0"></span><span style="font-size:12px">🚋 Tram antioraria</span></label>
   </div>
   <div id="place-list">
     <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">Appartamento</div>
@@ -88,6 +87,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="MQ Libelle" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> MQ Libelle</div>
     <div class="place-item" data-name="Apple Strudel Studio" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Apple Strudel Studio</div>
     <div class="place-item" data-name="Schmetterlinghaus" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Schmetterlinghaus</div>
+    <div class="place-item" data-name="Spanish Riding School" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Spanish Riding School</div>
     <div class="cat-header" data-cat="Attività all’aperto" style="color:#2ecc71">Attività all’aperto</div>
     <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Donauinsel passeggiata</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Grinzing Heuriger</div>
@@ -170,8 +170,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Demmer's Teehaus — Hauptbahnhof" data-cat="Shopping"><span class="place-dot" style="background:#8e44ad"></span> Demmer's Teehaus — Hauptbahnhof</div>
     <div class="place-item" data-name="Demmer’s Teehaus — Donauzentrum" data-cat="Shopping"><span class="place-dot" style="background:#8e44ad"></span> Demmer’s Teehaus — Donauzentrum</div>
     <div class="place-item" data-name="Demmer’s Teehaus — Mölker Bastei" data-cat="Shopping"><span class="place-dot" style="background:#8e44ad"></span> Demmer’s Teehaus — Mölker Bastei</div>
-    <div class="cat-header" data-cat="Spettacoli" style="color:#e74c3c">Spettacoli</div>
-    <div class="place-item" data-name="Spanish Riding School" data-cat="Spettacoli"><span class="place-dot" style="background:#e74c3c"></span> Spanish Riding School</div>
     <div class="cat-header" data-cat="Trasporti" style="color:#3b82f6">Trasporti</div>
     <div class="place-item" data-name="Allerheiligenplatz" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Allerheiligenplatz</div>
     <div class="place-item" data-name="Dresdner Straße" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Dresdner Straße</div>
@@ -269,7 +267,7 @@ var places = [
   {name: 'Demmer\'s Teehaus — Hauptbahnhof', lat: 48.1866, lng: 16.3804, cat: 'Shopping', type: 'default', emoji: '🛍', note: '📍 BahnhofCity Wien Hauptbahnhof (Shop 00.102) | 🕐 Lun-Dom 5:00-23:00 | Tè sfuso + mini Trzesniewski (brötchen viennesi) | Perfetto per souvenir tè prima di partire'},
   {name: 'Demmer’s Teehaus — Donauzentrum', lat: 48.232, lng: 16.4258, cat: 'Shopping', type: 'default', emoji: '🛍', note: '📍 Donauzentrum, Wagramer Straße 81, 1220 Wien | 🕐 Lun-Mer/Sab 9:00-20:00, Gio-Ven 9:00-21:00 | Tè sfuso, accessori, consulenza | Centro commerciale 22° distretto'},
   {name: 'Demmer’s Teehaus — Mölker Bastei', lat: 48.2095, lng: 16.3628, cat: 'Shopping', type: 'default', emoji: '🛍', note: '📍 Mölker Bastei 7, 1010 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-13:00 | Specialista viennese del tè dal 1925 | Centinaia di varietà sfuso, degustazione, consulenza personale | Ambiance elegante nel 1° distretto'},
-  {name: 'Spanish Riding School', lat: 48.2073067, lng: 16.3667068, cat: 'Spettacoli', type: 'default', emoji: '🎭', vcc: '–€2 / –11%', note: '📍 Michaelerplatz 1, 1010 Wien (Hofburg) | ⭐ 4.7/5 | Morning Exercise o Performance con Lipizzani | 🕐 Morning Exercise: mar-sab 10:00-12:00 (varia) | 🔑 VCC –€2 (–11%) | Prenotazione: consigliata | Abbinare: Hofburg, Sisi Museum'},
+  {name: 'Spanish Riding School', lat: 48.2073067, lng: 16.3667068, cat: 'Attività', type: 'default', emoji: '🎯', vcc: '–€2 / –11%', note: '📍 Michaelerplatz 1, 1010 Wien (Hofburg) | ⭐ 4.7/5 | Morning Exercise o Performance con Lipizzani | 🕐 Morning Exercise: mar-sab 10:00-12:00 (varia) | 🔑 VCC –€2 (–11%) | Prenotazione: consigliata | Abbinare: Hofburg, Sisi Museum'},
   {name: 'Allerheiligenplatz', lat: 48.23803, lng: 16.3864, cat: 'Trasporti', type: 'transport', emoji: '🚇', note: '📍 Allerheiligenplatz, 1200 Wien | 🚌 Bus 37A — fermata sulla piazza | ~2min dall\'appartamento'},
   {name: 'Dresdner Straße', lat: 48.2368, lng: 16.3792, cat: 'Trasporti', type: 'transport', emoji: '🚇', note: '📍 Dresdner Straße, 1200 Wien | 🚇 U6 — ~340m dall\'appartamento (5 min a piedi)'},
   {name: 'Handelskai', lat: 48.23681, lng: 16.38393, cat: 'Trasporti', type: 'transport', emoji: '🚇', note: '📍 Handelskai, 1200 Wien | 🚇 U6 + S45 + REX2/REX3 + S1/S2/S3 | ~180m dall\'appartamento (3 min a piedi) | Hub principale per tutta Vienna'},
@@ -307,7 +305,6 @@ var catColors = {
   'Parchi': '#27ae60',
   'Ristorante': '#d35400',
   'Shopping': '#8e44ad',
-  'Spettacoli': '#e74c3c',
   'Trasporti': '#3b82f6',
   'Vegano / Vegetariano': '#27ae60'
 };
@@ -579,7 +576,7 @@ document.querySelectorAll('.risto-sub').forEach(function(cb) {
   });
 });
 
-// Tram 1/2 routes — two directions with real road paths
+// Tram 1/2 routes — two independent directions with real road paths
 var tramRouteCW = null;
 var tramRouteCCW = null;
 var tramStopsCW = [];
@@ -589,25 +586,39 @@ var tramRouteCoordsCCW = [[48.206371, 16.372672], [48.206352, 16.372663], [48.20
 var tramStopCoordsCW = [[48.2025093, 16.3687996], [48.202778, 16.368611], [48.204167, 16.363611], [48.2069167, 16.3646111], [48.2040833, 16.3588889], [48.2052692, 16.3597554], [48.2084028, 16.3589028], [48.2090278, 16.3577778], [48.2123056, 16.3613056], [48.215278, 16.358611], [48.209722, 16.375], [48.2077778, 16.3738889], [48.2063194, 16.3729167]];
 var tramStopCoordsCCW = [[48.2063194, 16.3729167], [48.2077778, 16.3738889], [48.209722, 16.375], [48.215278, 16.358611], [48.2123056, 16.3613056], [48.2090278, 16.3577778], [48.2084028, 16.3589028], [48.2052692, 16.3597554], [48.2040833, 16.3588889], [48.2069167, 16.3646111], [48.204167, 16.363611], [48.202778, 16.368611], [48.2025093, 16.3687996]];
 
-document.getElementById('toggle-tram-route').addEventListener('change', function() {
+function toggleTramLayer(routeVar, stopsVar, addFn, removeFn) {
+  return function() {
+    if (this.checked) {
+      addFn();
+    } else {
+      removeFn();
+    }
+  };
+}
+
+document.getElementById('toggle-tram-cw').addEventListener('change', function() {
   if (this.checked) {
-    // Clockwise: green
-    tramRouteCW = L.polyline(tramRouteCoordsCW, {color: '#1b5e20', weight: 5, opacity: 0.8, dashArray: null}).addTo(map);
+    tramRouteCW = L.polyline(tramRouteCoordsCW, {color: '#1b5e20', weight: 5, opacity: 0.8}).addTo(map);
     tramStopCoordsCW.forEach(function(s) {
       var stop = L.circleMarker(s, {radius: 5, color: '#1b5e20', fillColor: '#ffffff', fillOpacity: 1, weight: 2}).addTo(map);
       tramStopsCW.push(stop);
     });
-    // Anticlockwise: blue
+  } else {
+    if (tramRouteCW) { map.removeLayer(tramRouteCW); tramRouteCW = null; }
+    tramStopsCW.forEach(function(s) { map.removeLayer(s); });
+    tramStopsCW = [];
+  }
+});
+
+document.getElementById('toggle-tram-ccw').addEventListener('change', function() {
+  if (this.checked) {
     tramRouteCCW = L.polyline(tramRouteCoordsCCW, {color: '#1565c0', weight: 5, opacity: 0.8, dashArray: '8 6'}).addTo(map);
     tramStopCoordsCCW.forEach(function(s) {
       var stop = L.circleMarker(s, {radius: 5, color: '#1565c0', fillColor: '#ffffff', fillOpacity: 1, weight: 2}).addTo(map);
       tramStopsCCW.push(stop);
     });
   } else {
-    if (tramRouteCW) { map.removeLayer(tramRouteCW); tramRouteCW = null; }
     if (tramRouteCCW) { map.removeLayer(tramRouteCCW); tramRouteCCW = null; }
-    tramStopsCW.forEach(function(s) { map.removeLayer(s); });
-    tramStopsCW = [];
     tramStopsCCW.forEach(function(s) { map.removeLayer(s); });
     tramStopsCCW = [];
   }
