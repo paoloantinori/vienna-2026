@@ -54,7 +54,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
   <div id="filter-panel">
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(4)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(5)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività all’aperto" checked><span class="place-dot" style="background:#2ecc71"></span> Attività all’aperto <span class="cat-count">(3)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
@@ -68,7 +68,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Mercati" checked><span class="place-dot" style="background:#f1c40f"></span> Mercati <span class="cat-count">(3)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Monumenti" checked><span class="place-dot" style="background:#7f8c8d"></span> Monumenti <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="place-dot" style="background:#3498db"></span> Musei <span class="cat-count">(10)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(5)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(6)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Shopping" checked><span class="place-dot" style="background:#8e44ad"></span> Shopping <span class="cat-count">(3)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Trasporti" checked><span class="place-dot" style="background:#3b82f6"></span> Trasporti <span class="cat-count">(4)</span></label>
     <div class="filter-buttons">
@@ -89,6 +89,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Apple Strudel Studio" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Apple Strudel Studio</div>
     <div class="place-item" data-name="Schmetterlinghaus" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Schmetterlinghaus</div>
     <div class="place-item" data-name="Spanish Riding School" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Spanish Riding School</div>
+    <div class="place-item" data-name="Riesenrad (Ruota Panoramica)" data-cat="Attività" data-cat2="Parchi"><span class="place-dot" style="background:#ff6b35"></span> Riesenrad (Ruota Panoramica)</div>
     <div class="cat-header" data-cat="Attività all’aperto" style="color:#2ecc71">Attività all’aperto</div>
     <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Donauinsel passeggiata</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Grinzing Heuriger</div>
@@ -161,6 +162,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Lagerwiese Romaplatz" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Lagerwiese Romaplatz</div>
     <div class="place-item" data-name="Pier 22 Copa Beach" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Pier 22 Copa Beach</div>
     <div class="place-item" data-name="Strandbad Alte Donau" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Strandbad Alte Donau</div>
+    <div class="place-item" data-name="Wiener Prater" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Wiener Prater</div>
     <div class="cat-header" data-cat="Ristorante" style="color:#d35400">Ristorante</div>
     <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> 7Stern Bräu</div>
     <div class="place-item" data-name="Feuerwehr Wagner" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Feuerwehr Wagner</div>
@@ -287,7 +289,9 @@ var places = [
   {name: 'Veggiezz', lat: 48.2098, lng: 16.3705, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', cat2: 'Ristorazione', note: '📍 Salzgries 9, 1010 Wien | 100% vegano | 💰 € | Cucina: bowl/insalate | Crunchy Pumpkin: zucca, quinoa, senape arancia'},
   {name: 'Venuss', lat: 48.209, lng: 16.372, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', cat2: 'Ristorazione', note: '📍 Centro, 1010 Wien | Vegetariano con opzioni vegane | 💰 €€ | Cucina: austriaca bio | Goulash chanterelle, stufato fagioli, schnitzel vegetale | Buffet a mezzogiorno'},
   {name: 'Vevi', lat: 48.2035, lng: 16.3525, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', cat2: 'Ristorazione', note: '📍 Stollgasse 5, 1070 Wien | 100% vegano | 💰 € | Cucina: vietnamita | Bahn Mi, Pho | Pranzo sotto €10'},
-  {name: 'Stephansdom (Santo Stefano)', lat: 48.208493, lng: 16.373118, cat: 'Monumenti', type: 'default', emoji: '🏛', note: '📍 Stephansplatz 1, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 | Duomo gotico simbolo di Vienna, tile colorate sul tetto | Torre Sud con vista panoramica | 💰 GRATIS navata, Torre a pagamento | Abbinare: Graben, Hotel Sacher 3min'}
+  {name: 'Stephansdom (Santo Stefano)', lat: 48.208493, lng: 16.373118, cat: 'Monumenti', type: 'default', emoji: '🏛', note: '📍 Stephansplatz 1, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 | Duomo gotico simbolo di Vienna, tile colorate sul tetto | Torre Sud con vista panoramica | 💰 GRATIS navata, Torre a pagamento | Abbinare: Graben, Hotel Sacher 3min'},
+  {name: 'Wiener Prater', lat: 48.2167, lng: 16.3979, cat: 'Parchi', type: 'default', emoji: '🌳', cat2: 'Attività all’aperto', note: '📍 Prater Hauptallee, 1020 Wien | 🕐 Lun-Dom 24h (parco) | Parco storico con luna park, giostre, aree verdi, piste ciclabili lungo il Danubio | 🚂 U1/U2 Praterstern | 🎯 Per Nora: luna park, Spirit of London (simulateur), Prater Turm (torre panoramica 117m) | 💼 GRATIS ingresso parco, giostre a pagamento | 🤝 Abbinare: Riesenrad, Madame Tussauds, Donauinsel'},
+  {name: 'Riesenrad (Ruota Panoramica)', lat: 48.21673, lng: 16.39558, cat: 'Attività', type: 'default', emoji: '🎯', cat2: 'Parchi', note: '📍 Riesenradplatz, 1020 Wien | ⭐ 4.5/5 | 🕐 10:00-21:45 (verificare orario estivo) | Ruota panoramica iconica del 1897, 65m di altezza, cabine panoramiche con vista su tutta Vienna | 🎡 Giro ~15 min | 💳 Adulti ~€14, Bambini ~€7 | 🚂 U2 Praterstern | 🤝 Abbinare: Prater luna park, Madame Tussauds'}
 ];
 
 var catColors = {
