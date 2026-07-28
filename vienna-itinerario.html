@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vienna 2026 — Itinerario</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background:#0f172a; color:#e2e8f0; min-height:100vh; }
+.header { background:linear-gradient(135deg,#1e3a5f,#0f172a); padding:24px 20px; text-align:center; border-bottom:2px solid #1e3a5f; }
+.header h1 { font-size:24px; margin-bottom:4px; }
+.header h1 span { color:#f59e0b; }
+.header p { color:#94a3b8; font-size:14px; }
+.header .dates { color:#64748b; font-size:13px; margin-top:4px; }
+.nav { position:sticky; top:0; z-index:100; background:#1e293b; padding:12px 20px; border-bottom:1px solid #334155; display:flex; gap:12px; overflow-x:auto; }
+.nav a { color:#94a3b8; text-decoration:none; font-size:12px; padding:6px 12px; border-radius:20px; white-space:nowrap; border:1px solid #334155; transition:all .2s; }
+.nav a:hover { color:#f1f5f9; background:#334155; }
+.nav a.map-link { background:#1b5e20; color:#fff; border-color:#1b5e20; }
+.container { max-width:700px; margin:0 auto; padding:16px; }
+.day-card { background:#1e293b; border-radius:12px; margin-bottom:16px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,.3); }
+.day-header { padding:16px 20px; color:#fff; }
+.day-number { font-size:11px; text-transform:uppercase; letter-spacing:1px; opacity:.8; }
+.day-date { font-size:18px; font-weight:700; margin-top:2px; }
+.day-title { font-size:14px; margin-top:4px; opacity:.9; }
+.day-count { font-size:11px; margin-top:4px; opacity:.7; }
+.day-body { padding:12px 16px; }
+.place { padding:8px 12px; border-radius:8px; margin-bottom:4px; background:#0f172a; cursor:pointer; transition:background .15s; }
+.place:hover { background:#1e3a5f; }
+.place-name { font-size:13px; font-weight:600; }
+.place-detail { font-size:11px; color:#64748b; margin-top:2px; }
+.tips { margin-top:12px; padding:10px 12px; background:#0f172a; border-radius:8px; font-size:12px; color:#94a3b8; line-height:1.5; border-left:3px solid #f59e0b; }
+.extra-section { margin-top:24px; }
+.extra-title { font-size:16px; margin-bottom:12px; color:#94a3b8; }
+.extra-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.extra-item { padding:8px 12px; background:#1e293b; border-radius:8px; font-size:12px; }
+@media(max-width:600px) {
+  .header h1 { font-size:20px; }
+  .container { padding:10px; }
+  .extra-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Itinerario <span>Vienna 2026</span> 🇦🇹</h1>
+  <p>6-11 Agosto — Paolo, Chiara, Nora (9) e Ada (4)</p>
+  <div class="dates">92 luoghi · 17 categorie · suggeriti da Eleonora</div>
+</div>
+<div class="nav">
+  <a href="vienna-tutti-luoghi.html" class="map-link">🗺 Mappa interattiva</a>
+  <a href="#d1">G1</a><a href="#d2">G2</a><a href="#d3">G3</a>
+  <a href="#d4">G4</a><a href="#d5">G5</a><a href="#d6">G6</a>
+  <a href="#extra">Extra</a>
+</div>
+<div class="container">
+  <div class="day-card">
+      <div class="day-header" style="background:#f59e0b">
+        <div class="day-number">Giorno 1</div>
+        <div class="day-date">Mercoledì 6 Ago</div>
+        <div class="day-title">🚋 Giro Tram + Centro Storico</div>
+        <div class="day-count">10 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Wiener Staatsoper</div>
+          <div class="place-detail">📍 Opernring 2, 1010 Wien Abbinare: Albertina, Karlskirche</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Albertina Museum <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –25%</span></div>
+          <div class="place-detail">📍 Albertinaplatz 3, 1010 Wien ⭐ 4.6/5 🕐 Lun-Dom 10:00-18:00 (Mer fino 21:00) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Hofburg (Residenza Imperiale)</div>
+          <div class="place-detail">📍 Michaelerplatz 1, 1010 Wien Abbinare: Albertina, Spanish Riding School</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Sisi Museum <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –10%</span></div>
+          <div class="place-detail">📍 Michaelerplatz 1, 1010 Wien (Hofburg) ⭐ 4.3/5 🕐 Lun-Dom 9:00-17:30 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Minoritenkirche</div>
+          <div class="place-detail">📍 Minoritenplatz 2A, 1010 Wien Abbinare: Hofburg 3min, Ankeruhr 5min</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Ankeruhr (Orologio Anker)</div>
+          <div class="place-detail">📍 Hoher Markt 10-11, 1010 Wien 🕐 Show ore 12:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)</div>
+          <div class="place-detail">📍 Fleischmarkt 13, 1010 Wien Abbinare: St. Stephans 5min, Hotel Sacher</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Stephansdom (Santo Stefano)</div>
+          <div class="place-detail">📍 Stephansplatz 1, 1010 Wien ⭐ 4.7/5 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Demel</div>
+          <div class="place-detail">📍 Kohlmarkt 14, 1010 Wien 🕐 Lun-Sab 9:00-19:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍽 Figlmüller</div>
+          <div class="place-detail">📍 Wollzeile 5, 1010 Wien ⭐ 4.4/5 </div>
+        </div>
+
+        <div class="tips">💡 Il giro tram 1/2 percorre il Ringstraße — attiva il percorso sulla mappa. Ankeruhr: lo spettacolo delle 12:00 vale la pena aspettare! Figlmüller per Schnitzel viennese.</div>
+      </div>
+    </div>
+<div class="day-card">
+      <div class="day-header" style="background:#3498db">
+        <div class="day-number">Giorno 2</div>
+        <div class="day-date">Giovedì 7 Ago</div>
+        <div class="day-title">🏛 Musei sul Ring + Prater</div>
+        <div class="day-count">8 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Parlamento Austriaco</div>
+          <div class="place-detail">📍 Dr.-Karl-Renner-Ring 3, 1010 Wien Abbinare: Hofburg, Rathaus</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Burgtheater</div>
+          <div class="place-detail">📍 Universitätsring 2, 1010 Wien Abbinare: Rathaus, Universität</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Universität Wien</div>
+          <div class="place-detail">📍 Universitätsring 1, 1010 Wien Abbinare: Votivkirche, Burgtheater</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Votivkirche (Chiesa Votiva)</div>
+          <div class="place-detail">📍 Rooseveltplatz 8, 1090 Wien Abbinare: Universität, Rathaus</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Kunsthistorisches Museum</div>
+          <div class="place-detail">📍 Maria-Theresien-Platz, 1010 Wien Abbinare: NHM, Parlamento</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Naturhistorisches Museum <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€4 / –22%</span></div>
+          <div class="place-detail">📍 Burgring 7, 1010 Wien ⭐ 4.7/5 🕐 Lun-Dom 9:00-18:30 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Haus der Musik <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€4 / –21%</span></div>
+          <div class="place-detail">📍 Seilerstätte 30, 1010 Wien ⭐ 4.5/5 🕐 Lun-Dom 10:00-22:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍽 Schweizerhaus</div>
+          <div class="place-detail">📍 Prater, 1020 Wien (Zentralschweizerhaus) ⭐ 4.4/5 </div>
+        </div>
+
+        <div class="tips">💡 KHM e NHM sono uno di fronte all'altro. Museo della Musica a 5 min. Pomeriggio: Prater con Schweizerhaus per cena viennese.</div>
+      </div>
+    </div>
+<div class="day-card">
+      <div class="day-header" style="background:#e91e63">
+        <div class="day-number">Giorno 3</div>
+        <div class="day-date">Venerdì 8 Ago</div>
+        <div class="day-title">🏰 Schönbrunn — Giorno Imperiale</div>
+        <div class="day-count">7 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Schloss Schönbrunn <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€2/–5% (Classic)</span></div>
+          <div class="place-detail">📍 Schönbrunner Schlossstraße 47, 1130 Wien ⭐ 4.6/5 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎯 Apple Strudel Studio</div>
+          <div class="place-detail">📍 Schönbrunn, 1130 Wien 🕐 Tutti i giorni </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Kindermuseum Schönbrunn <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€1 / –8%</span></div>
+          <div class="place-detail">📍 Schönbrunn, 1130 Wien ⭐ 4.5/5 🕐 Tutti i giorni 10:00-17:00 (orario estivo) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Marionettentheater Schönbrunn <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –20%</span></div>
+          <div class="place-detail">📍 Schönbrunn, 1130 Wien ⭐ 4.5/5 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Heindl SchokoMuseum <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –10%</span></div>
+          <div class="place-detail">📍 Wilhelmstraße 87, 1120 Wien ⭐ 4.2/5 🕐 Mar-Ven 9:00-16:00, Sab 9:00-17:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 ZOOM Kindermuseum <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€0.50 / fino a –7%</span></div>
+          <div class="place-detail">📍 Museumsquartier, 1070 Wien ⭐ 4.6/5 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Vollpension <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –20% consumazioni</span></div>
+          <div class="place-detail">📍 Amerlingstraße 6, 1060 Wien 🕐 Lun-Dom 9:00-20:00 </div>
+        </div>
+
+        <div class="tips">💡 Mattina intera a Schönbrunn: parco (gratis!) + Gloriette. Strudel Studio nel pomeriggio. Kindermuseum va prenotato. Marionettentheater alle 15:00. Tornando: Vollpension per dolci dalle nonne.</div>
+      </div>
+    </div>
+<div class="day-card">
+      <div class="day-header" style="background:#f1c40f">
+        <div class="day-number">Giorno 4</div>
+        <div class="day-date">Sabato 9 Ago</div>
+        <div class="day-title">🛒 Mercati + MQ + Film Festival</div>
+        <div class="day-count">9 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🛒 Naschmarkt</div>
+          <div class="place-detail">📍 Naschmarkt, 1060 Wien 🕐 Mercato alimentare Lun-Sab </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Veganista Ice Cream</div>
+          <div class="place-detail">📍 Museumsquartier, 1070 Wien Papavero, nocciola, matcha</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Museum der Illusionen <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –19%</span></div>
+          <div class="place-detail">📍 Wallnerstraße 14, 1010 Wien ⭐ 4.4/5 🕐 Lun-Dom 10:00-20:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Postsparkasse (Otto Wagner)</div>
+          <div class="place-detail">📍 Georg-Coch-Platz 2, 1010 Wien Abbinare: Ankeruhr 3min, Börse 5min</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🚋 Börse (Vecchia Borsa)</div>
+          <div class="place-detail">📍 Schottenring 16, 1010 Wien Abbinare: Postsparkasse, Votivkirche</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🛒 Gemma Market — Open Air Painting</div>
+          <div class="place-detail">📍 Bauernmarkt 21, 1010 Wien 🕐 Mer-Dom 14:00-22:00 (chiuso lun-mar) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🛒 Karmelitermarkt</div>
+          <div class="place-detail">📍 Karmelitermarkt, 1020 Wien 🕐 Mercato contadino Ven+Sab (feriali solo ristoranti) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Memoriale Antonio Vivaldi</div>
+          <div class="place-detail">📍 Tiefer Graben, 1010 Wien (targa) Abbinare: Minoritenkirche, Ankeruhr</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎪 Film Festival Rathausplatz</div>
+          <div class="place-detail">📍 Rathausplatz, 1010 Wien 🕐 4 lug-6 set 2026 </div>
+        </div>
+
+        <div class="tips">💡 Naschmarkt mercatino delle pulci 6:30-14:00 — andate presto! Gemma Market solo Sab 14-22. Film Festival al Rathausplatz ogni sera. Karmelitermarkt mercatino contadino il sabato.</div>
+      </div>
+    </div>
+<div class="day-card">
+      <div class="day-header" style="background:#27ae60">
+        <div class="day-number">Giorno 5</div>
+        <div class="day-date">Domenica 10 Ago</div>
+        <div class="day-title">🌊 Fiume + Relax + Giro per Dolci</div>
+        <div class="day-count">11 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🌳 Kaiserwasser</div>
+          <div class="place-detail">📍 Kaiserwasser, 1210 Wien ⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🌳 Grosse Bucht</div>
+          <div class="place-detail">📍 Neue Donau, 1210 Wien Panorama + balneazione, spiaggia sull'isola</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🌳 Lagerwiese Romaplatz</div>
+          <div class="place-detail">📍 Neue Donau, 1210 Wien 🚇 U6 Neue Donau</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🌳 Pier 22 Copa Beach</div>
+          <div class="place-detail">📍 Neue Donau, 1210 Wien Più affollato, Kaiserwasser meglio</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">☕ Palmenhaus Burggarten <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€1 / –11%</span></div>
+          <div class="place-detail">📍 Burggarten 1, 1010 Wien 🕐 Lun-Dom 10:00-24:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎯 Schmetterlinghaus <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€1 / –11%</span></div>
+          <div class="place-detail">📍 Burggarten, 1010 Wien ⭐ 4.0/5 🕐 Tutti i giorni 10:00-16:45 (apr-ott, ultima entrata 16:45) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎯 MQ Libelle</div>
+          <div class="place-detail">📍 Museumsquartier, 1070 Wien (Leopold Museum) Vista su MQ e Hofburg</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎪 MQ Summer Stage</div>
+          <div class="place-detail">📍 Museumsquartier, 1070 Wien Eventi all'aperto, mini-golf, cinema nel MQ</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Hotel Sacher</div>
+          <div class="place-detail">📍 Philharmoniker Str. 4, 1010 Wien 🕐 Lun-Dom 8:00-20:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Julius Meinl am Graben</div>
+          <div class="place-detail">📍 Graben 19, 1010 Wien 🕐 Lun-Sab 8:00-20:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🍰 Konditorei Aida</div>
+          <div class="place-detail">📍 varie sedi centro 🕐 Lun-Sab 7:00-19:00 </div>
+        </div>
+
+        <div class="tips">💡 Giorno relax al fiume: U6 Handelskai → Neue Donau. Kaiserwasser più tranquillo per Ada (4). Pomeriggio: Burggarten (Palmenhaus + Schmetterlinghaus vicine!). MQ Libelle per il tramonto sul tetto (gratuito). Sacher per Sachertorte.</div>
+      </div>
+    </div>
+<div class="day-card">
+      <div class="day-header" style="background:#9b59b6">
+        <div class="day-number">Giorno 6</div>
+        <div class="day-date">Lunedì 11 Ago</div>
+        <div class="day-title">🎯 Attività + Cucina Speciale + Ultime cose</div>
+        <div class="day-count">10 luoghi</div>
+      </div>
+      <div class="day-body">
+        <div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🎯 Spanish Riding School <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€2 / –11%</span></div>
+          <div class="place-detail">📍 Michaelerplatz 1, 1010 Wien (Hofburg) ⭐ 4.7/5 🕐 Morning Exercise: mar-sab 10:00-12:00 (varia) </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🏛 Belvedere — Il Bacio di Klimt <span style="background:#f59e0b;color:#1a1a2e;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700">VCC –€1.50 singolo / –€2.50 2in1</span></div>
+          <div class="place-detail">📍 Prinz-Eugen-Straße 27, 1030 Wien ⭐ 4.6/5 🕐 Lun-Dom 9:00-18:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">☕ Dascafe</div>
+          <div class="place-detail">📍 Caffè carino e accogliente 👥 Da Eleonora</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">☕ Museumsquartier bars</div>
+          <div class="place-detail">📍 Museumsquartier, 1070 Wien 👥 Da Eleonora</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">☕ Kombucha Manufaktur</div>
+          <div class="place-detail">📍 Kombucha artigianale locale, produzione e degustazione 📍 Kombucha artigianale locale, produzione e degustazione</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🥖 Grünberger</div>
+          <div class="place-detail">📍 Grünberger Straße 65, 1020 Wien 🚇 U2 Karmeliterplatz</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🥖 Joseph Brot</div>
+          <div class="place-detail">📍 Wieden, 1040 Wien Panificio artigianale d'eccellenza, bio e sourdough</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🥖 Siebensternbäckerei</div>
+          <div class="place-detail">📍 Siebensterngasse 46, 1070 Wien Forno a legna, bio, pane tradizionale viennese</div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">🛍 Demmer’s Teehaus — Mölker Bastei</div>
+          <div class="place-detail">📍 Mölker Bastei 7, 1010 Wien 🕐 Lun-Ven 9:00-18:00, Sab 9:00-13:00 </div>
+        </div>
+<div class="place" onclick="window.open('vienna-tutti-luoghi.html','_blank')">
+          <div class="place-name">📌 Demmer’s Teehaus — Hauptbahnhof</div>
+          <div class="place-detail"> </div>
+        </div>
+
+        <div class="tips">💡 Spanish Riding School: Morning Exercise 10:00-12:00 (mar-sab). Belvedere per il Bacio di Klimt. Acquisti souvenir: Julius Meinl, Demmer Teehaus. Pane artigianale da portare via.</div>
+      </div>
+    </div>
+
+  <div class="extra-section" id="extra">
+    <div class="extra-title">🎯 Borsa di Opzioni — inserisci dove fa comodo</div>
+    <div class="extra-grid">
+<div class="extra-item">🍽 7Stern Bräu</div>
+<div class="extra-item">🥗 Cafe Harvest</div>
+<div class="extra-item">🏃 Donauinsel passeggiata</div>
+<div class="extra-item">🍽 Feuerwehr Wagner</div>
+<div class="extra-item">🥗 Gorilla Kitchen</div>
+<div class="extra-item">🏃 Grinzing Heuriger</div>
+<div class="extra-item">🎪 ImPulsTanz Public Moves</div>
+<div class="extra-item">🥗 Karma</div>
+<div class="extra-item">🏃 Kletterpark Donauinsel</div>
+<div class="extra-item">🎪 Kultursommer Wien</div>
+<div class="extra-item">🚗 Kurpark Oberlaa</div>
+<div class="extra-item">🥗 Maran</div>
+<div class="extra-item">🎪 Museum of Change</div>
+<div class="extra-item">🥗 Pepper & Ginny</div>
+<div class="extra-item">🥗 Pizzi's & Cream</div>
+<div class="extra-item">🍽 Plachutta</div>
+<div class="extra-item">🚗 Schloss Hof</div>
+<div class="extra-item">🌳 Strandbad Alte Donau</div>
+<div class="extra-item">🥗 Swing Kitchen</div>
+<div class="extra-item">🥗 TIAN</div>
+<div class="extra-item">🥗 TIAN Bistro</div>
+<div class="extra-item">🥗 Tau</div>
+<div class="extra-item">🏛 Technisches Museum Wien</div>
+<div class="extra-item">🚗 Thermalbad Bad Vöslau</div>
+<div class="extra-item">🚗 Therme Wien</div>
+<div class="extra-item">🥗 Veganista</div>
+<div class="extra-item">🥗 Veggiezz</div>
+<div class="extra-item">🥗 Venuss</div>
+<div class="extra-item">🥗 Vevi</div>
+<div class="extra-item">🚗 Waldseilpark Kahlenberg</div>
+</div>
+
+  </div>
+</div>
+</body>
+</html>
