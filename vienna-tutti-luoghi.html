@@ -201,7 +201,7 @@ var places = [
   {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'home', emoji: '🏠', note: '📍 16 Allerheiligenplatz, 1200 Wien | 🚇 U6 Handelskai 180m, U6 Dresdner Straße 340m | 🚌 Bus 37A sulla piazza'},
   {name: 'Donauinsel passeggiata', lat: 48.2265, lng: 16.422, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '📍 Donauinsel, 1210 Wien | Passeggiata sull\'isola del Danubio | 👥 Da Eleonora'},
   {name: 'Grinzing Heuriger', lat: 48.256, lng: 16.34181, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '📍 Grinzing, 1190 Wien | Villaggio sulle colline viennesi, cantine di vino locale (Heuriger) | 👥 Da Eleonora'},
-  {name: 'Kletterpark Donauinsel', lat: 48.2260568, lng: 16.4203052, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '📍 Donauinsel, 1210 Wien | Parco avventura con percorsi corde sull\'isola | Piano di emergenza per maltempo'},
+  {name: 'Kletterpark Donauinsel', lat: 48.2260568, lng: 16.4203052, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '⚠️ CHIUSO PERMANENTEMENTE (segnalato su TripAdvisor). Aveva 2 livelli: principianti (bambini) + avanzati. Cercare alternativa: Waldseilpark Kahlenberg (Kletterwald Vienna).'},
   {name: 'Dascafe', lat: 48.2053, lng: 16.3565, cat: 'Café', type: 'default', emoji: '☕', cat2: 'Ristorazione', note: '📍 Caffè carino e accogliente | 👥 Da Eleonora'},
   {name: 'Kombucha Manufaktur', lat: 48.1915364, lng: 16.347035, cat: 'Café', type: 'default', emoji: '☕', cat2: 'Ristorazione', note: '📍 Kombucha artigianale locale, produzione e degustazione'},
   {name: 'Museumsquartier bars', lat: 48.2035, lng: 16.358, cat: 'Café', type: 'default', emoji: '☕', cat2: 'Ristorazione', note: '📍 Museumsquartier, 1070 Wien | Bar all\'aperto nel cortile del MQ | 👥 Da Eleonora'},
@@ -446,10 +446,15 @@ function normalizeStr(s) {
 }
 document.getElementById('search').addEventListener('input', function() {
   var q = normalizeStr(this.value);
+  var checkedCats = getCheckedCats();
   document.querySelectorAll('.place-item').forEach(function(el) {
     var nameNorm = normalizeStr(el.dataset.name);
-    var match = nameNorm.indexOf(q) >= 0;
-    el.style.display = match ? '' : 'none';
+    var searchMatch = !q || nameNorm.indexOf(q) >= 0;
+    var cat = el.dataset.cat;
+    var cat2 = el.dataset.cat2;
+    var catVisible = checkedCats[cat] !== false;
+    if (!catVisible && cat2 && checkedCats[cat2] !== false) catVisible = true;
+    el.style.display = (searchMatch && catVisible) ? '' : 'none';
   });
   document.querySelectorAll('.cat-header').forEach(function(el) {
     var next = el.nextElementSibling;
@@ -546,11 +551,15 @@ document.querySelectorAll('.cat-filter').forEach(function(cb) {
 
 document.getElementById('filter-all').addEventListener('click', function() {
   document.querySelectorAll('.cat-filter').forEach(function(cb) { cb.checked = true; });
+  var mr = document.getElementById('macro-risto');
+  if (mr) { mr.checked = true; mr.indeterminate = false; }
   applyFilters();
 });
 
 document.getElementById('filter-none').addEventListener('click', function() {
   document.querySelectorAll('.cat-filter').forEach(function(cb) { cb.checked = false; });
+  var mr = document.getElementById('macro-risto');
+  if (mr) { mr.checked = false; mr.indeterminate = false; }
   applyFilters();
 });
 
