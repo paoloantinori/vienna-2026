@@ -55,6 +55,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(5)</span></label>
+    <label class="filter-item macro-parent"><input type="checkbox" id="macro-park" checked><span style="font-size:14px">🏞</span> <b>Parchi</b> <span class="cat-count">(16)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Spiaggia" checked><span class="place-dot" style="background:#0ea5e9"></span> Spiaggia <span class="cat-count">(5)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Divertimenti" checked><span class="place-dot" style="background:#ef4444"></span> Divertimenti <span class="cat-count">(1)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Avventura" checked><span class="place-dot" style="background:#f97316"></span> Avventura <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi e giardini" checked><span class="place-dot" style="background:#22c55e"></span> Parchi e giardini <span class="cat-count">(2)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Dolci" checked><span class="place-dot" style="background:#e91e63"></span> Dolci <span class="cat-count">(5)</span></label>
@@ -67,7 +73,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Mercati" checked><span class="place-dot" style="background:#f1c40f"></span> Mercati <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Monumenti" checked><span class="place-dot" style="background:#7f8c8d"></span> Monumenti <span class="cat-count">(4)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Musei" checked><span class="place-dot" style="background:#3498db"></span> Musei <span class="cat-count">(10)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Parchi" checked><span class="place-dot" style="background:#27ae60"></span> Parchi <span class="cat-count">(16)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-shop" checked><span style="font-size:14px">🛍</span> <b>Shopping</b> <span class="cat-count">(14)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter shop-sub" data-cat="Tè" checked><span class="place-dot" style="background:#d4a574"></span> Tè <span class="cat-count">(3)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter shop-sub" data-cat="Vintage" checked><span class="place-dot" style="background:#c8a2c8"></span> Vintage <span class="cat-count">(10)</span></label>
@@ -92,11 +97,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Schmetterlinghaus" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Schmetterlinghaus</div>
     <div class="place-item" data-name="Spanish Riding School" data-cat="Attività"><span class="place-dot" style="background:#ff6b35"></span> Spanish Riding School</div>
     <div class="place-item" data-name="Riesenrad (Ruota Panoramica)" data-cat="Attività" data-cat2="Parchi"><span class="place-dot" style="background:#ff6b35"></span> Riesenrad (Ruota Panoramica)</div>
+    <div class="cat-header" data-cat="Avventura" style="color:#f97316">Avventura</div>
+    <div class="place-item" data-name="Hochseilklettergarten Gänsehäufelbad" data-cat="Avventura"><span class="place-dot" style="background:#f97316"></span> Hochseilklettergarten Gänsehäufelbad</div>
+    <div class="place-item" data-name="Robinson Insel (Parco avventura)" data-cat="Avventura"><span class="place-dot" style="background:#f97316"></span> Robinson Insel (Parco avventura)</div>
+    <div class="place-item" data-name="Waldseilpark Kahlenberg" data-cat="Avventura"><span class="place-dot" style="background:#f97316"></span> Waldseilpark Kahlenberg</div>
+    <div class="place-item" data-name="Donauinsel-Kletterpark" data-cat="Avventura"><span class="place-dot" style="background:#f97316"></span> Donauinsel-Kletterpark</div>
     <div class="cat-header" data-cat="Café" style="color:#e67e22">Café</div>
     <div class="place-item" data-name="Dascafe" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Dascafe</div>
     <div class="place-item" data-name="Kombucha Manufaktur" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Kombucha Manufaktur</div>
     <div class="place-item" data-name="Museumsquartier bars" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Museumsquartier bars</div>
     <div class="place-item" data-name="Palmenhaus Burggarten" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Palmenhaus Burggarten</div>
+    <div class="cat-header" data-cat="Divertimenti" style="color:#ef4444">Divertimenti</div>
+    <div class="place-item" data-name="Wiener Prater" data-cat="Divertimenti" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#ef4444"></span> Wiener Prater</div>
     <div class="cat-header" data-cat="Dolci" style="color:#e91e63">Dolci</div>
     <div class="place-item" data-name="Demel" data-cat="Dolci" data-cat2="Ristorazione"><span class="place-dot" style="background:#e91e63"></span> Demel</div>
     <div class="place-item" data-name="Hotel Sacher" data-cat="Dolci" data-cat2="Ristorazione"><span class="place-dot" style="background:#e91e63"></span> Hotel Sacher</div>
@@ -153,23 +165,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Grünberger" data-cat="Panificio" data-cat2="Ristorazione"><span class="place-dot" style="background:#a0522d"></span> Grünberger</div>
     <div class="place-item" data-name="Joseph Brot" data-cat="Panificio" data-cat2="Ristorazione"><span class="place-dot" style="background:#a0522d"></span> Joseph Brot</div>
     <div class="place-item" data-name="Siebensternbäckerei" data-cat="Panificio" data-cat2="Ristorazione"><span class="place-dot" style="background:#a0522d"></span> Siebensternbäckerei</div>
-    <div class="cat-header" data-cat="Parchi" style="color:#27ae60">Parchi</div>
-    <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Donauinsel passeggiata</div>
-    <div class="place-item" data-name="Grosse Bucht" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Grosse Bucht</div>
-    <div class="place-item" data-name="Kaiserwasser" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Kaiserwasser</div>
-    <div class="place-item" data-name="Lagerwiese Romaplatz" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Lagerwiese Romaplatz</div>
-    <div class="place-item" data-name="Pier 22 Copa Beach" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Pier 22 Copa Beach</div>
-    <div class="place-item" data-name="Strandbad Alte Donau" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Strandbad Alte Donau</div>
-    <div class="place-item" data-name="Wiener Prater" data-cat="Parchi" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#27ae60"></span> Wiener Prater</div>
-    <div class="place-item" data-name="Hochseilklettergarten Gänsehäufelbad" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Hochseilklettergarten Gänsehäufelbad</div>
-    <div class="place-item" data-name="Wasserspielplatz Donauinsel" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Wasserspielplatz Donauinsel</div>
-    <div class="place-item" data-name="Wasserspielplatz Wasserturm" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Wasserspielplatz Wasserturm</div>
-    <div class="place-item" data-name="Blumengärten Hirschstetten (Insektenspielplatz)" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Blumengärten Hirschstetten (Insektenspielplatz)</div>
-    <div class="place-item" data-name="Türkenschanzpark Wasserspielplatz" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Türkenschanzpark Wasserspielplatz</div>
-    <div class="place-item" data-name="Robinson Insel (Parco avventura)" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Robinson Insel (Parco avventura)</div>
-    <div class="place-item" data-name="Karlsgarten (Giardino di Fischer von Erlach)" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Karlsgarten (Giardino di Fischer von Erlach)</div>
-    <div class="place-item" data-name="Waldseilpark Kahlenberg" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Waldseilpark Kahlenberg</div>
-    <div class="place-item" data-name="Donauinsel-Kletterpark" data-cat="Parchi"><span class="place-dot" style="background:#27ae60"></span> Donauinsel-Kletterpark</div>
+    <div class="cat-header" data-cat="Parchi e giardini" style="color:#22c55e">Parchi e giardini</div>
+    <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Parchi e giardini"><span class="place-dot" style="background:#22c55e"></span> Donauinsel passeggiata</div>
+    <div class="place-item" data-name="Karlsgarten (Giardino di Fischer von Erlach)" data-cat="Parchi e giardini"><span class="place-dot" style="background:#22c55e"></span> Karlsgarten (Giardino di Fischer von Erlach)</div>
+    <div class="cat-header" data-cat="Parchi giochi" style="color:#06b6d4">Parchi giochi</div>
+    <div class="place-item" data-name="Wasserspielplatz Donauinsel" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Wasserspielplatz Donauinsel</div>
+    <div class="place-item" data-name="Wasserspielplatz Wasserturm" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Wasserspielplatz Wasserturm</div>
+    <div class="place-item" data-name="Blumengärten Hirschstetten (Insektenspielplatz)" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Blumengärten Hirschstetten (Insektenspielplatz)</div>
+    <div class="place-item" data-name="Türkenschanzpark Wasserspielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Türkenschanzpark Wasserspielplatz</div>
     <div class="cat-header" data-cat="Ristorante" style="color:#d35400">Ristorante</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Ristorante"><span class="place-dot" style="background:#d35400"></span> Grinzing Heuriger</div>
     <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> 7Stern Bräu</div>
@@ -179,6 +182,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Schweizerhaus" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Schweizerhaus</div>
     <div class="cat-header" data-cat="Souvenir" style="color:#f59e0b">Souvenir</div>
     <div class="place-item" data-name="Julius Meinl am Graben" data-cat="Souvenir" data-cat2="Ristorazione"><span class="place-dot" style="background:#f59e0b"></span> Julius Meinl am Graben</div>
+    <div class="cat-header" data-cat="Spiaggia" style="color:#0ea5e9">Spiaggia</div>
+    <div class="place-item" data-name="Grosse Bucht" data-cat="Spiaggia" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#0ea5e9"></span> Grosse Bucht</div>
+    <div class="place-item" data-name="Kaiserwasser" data-cat="Spiaggia" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#0ea5e9"></span> Kaiserwasser</div>
+    <div class="place-item" data-name="Lagerwiese Romaplatz" data-cat="Spiaggia" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#0ea5e9"></span> Lagerwiese Romaplatz</div>
+    <div class="place-item" data-name="Pier 22 Copa Beach" data-cat="Spiaggia" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#0ea5e9"></span> Pier 22 Copa Beach</div>
+    <div class="place-item" data-name="Strandbad Alte Donau" data-cat="Spiaggia" data-cat2="Attività all’aperto"><span class="place-dot" style="background:#0ea5e9"></span> Strandbad Alte Donau</div>
     <div class="cat-header" data-cat="Trasporti" style="color:#3b82f6">Trasporti</div>
     <div class="place-item" data-name="Allerheiligenplatz" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Allerheiligenplatz</div>
     <div class="place-item" data-name="Dresdner Straße" data-cat="Trasporti"><span class="place-dot" style="background:#3b82f6"></span> Dresdner Straße</div>
@@ -220,7 +229,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <script>
 var places = [
   {name: 'Appartamento', lat: 48.2380296, lng: 16.3863996, cat: 'Appartamento', type: 'home', emoji: '🏠', note: '📍 16 Allerheiligenplatz, 1200 Wien | 🚇 U6 Handelskai 180m, U6 Dresdner Straße 340m | 🚌 Bus 37A sulla piazza'},
-  {name: 'Donauinsel passeggiata', lat: 48.2265, lng: 16.422, cat: 'Parchi', type: 'default', emoji: '🏞', note: '📍 Donauinsel, 1210 Wien | Passeggiata sull\'isola del Danubio | 👥 Da Eleonora'},
+  {name: 'Donauinsel passeggiata', lat: 48.2265, lng: 16.422, cat: 'Parchi e giardini', type: 'default', emoji: '🌳', note: '📍 Donauinsel, 1210 Wien | Passeggiata sull\'isola del Danubio | 👥 Da Eleonora'},
   {name: 'Grinzing Heuriger', lat: 48.256, lng: 16.34181, cat: 'Ristorante', type: 'default', emoji: '🍜', note: '📍 Grinzing, 1190 Wien | Villaggio sulle colline viennesi, cantine di vino locale (Heuriger) | 👥 Da Eleonora'},
   {name: 'Dascafe', lat: 48.2053, lng: 16.3565, cat: 'Café', type: 'default', emoji: '☕', cat2: 'Ristorazione', note: '📍 Caffè carino e accogliente | 👥 Da Eleonora'},
   {name: 'Kombucha Manufaktur', lat: 48.1915364, lng: 16.347035, cat: 'Café', type: 'default', emoji: '☕', cat2: 'Ristorazione', note: '📍 Kombucha artigianale locale, produzione e degustazione'},
@@ -273,11 +282,11 @@ var places = [
   {name: 'Grünberger', lat: 48.210288, lng: 16.3463776, cat: 'Panificio', type: 'default', emoji: '🥯', cat2: 'Ristorazione', note: '📍 Grünberger Straße 65, 1020 Wien | Pane bio a lievitazione naturale | 🚇 U2 Karmeliterplatz'},
   {name: 'Joseph Brot', lat: 48.2102115, lng: 16.3675385, cat: 'Panificio', type: 'default', emoji: '🥯', cat2: 'Ristorazione', note: '📍 Wieden, 1040 Wien | Panificio artigianale d\'eccellenza, bio e sourdough'},
   {name: 'Siebensternbäckerei', lat: 48.2021286, lng: 16.3527253, cat: 'Panificio', type: 'default', emoji: '🥯', cat2: 'Ristorazione', note: '📍 Siebensterngasse 46, 1070 Wien | Forno a legna, bio, pane tradizionale viennese'},
-  {name: 'Grosse Bucht', lat: 48.2382709, lng: 16.4247729, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | 🚇 U6 Neue Donau | Panorama + balneazione, spiaggia sull\'isola'},
-  {name: 'Kaiserwasser', lat: 48.2322454, lng: 16.4212738, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Kaiserwasser, 1210 Wien | ⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato | 🚇 U6 da Handelskai (casa) → Neue Donau (3 fermate, ~6 min) | Zero cambi, zero traghetti | Ideale per Ada (4)'},
-  {name: 'Lagerwiese Romaplatz', lat: 48.2245, lng: 16.42, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | Balneazione naturale, prato relax | 🚇 U6 Neue Donau'},
-  {name: 'Pier 22 Copa Beach', lat: 48.2266, lng: 16.419, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | Piattaforme, fitness outdoor, balneazione | 🚇 U6 Neue Donau | Più affollato, Kaiserwasser meglio'},
-  {name: 'Strandbad Alte Donau', lat: 48.24285, lng: 16.41841, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Alte Donau, 1220 Wien | Bagno ramo morto Danubio | 👥 Da Eleonora'},
+  {name: 'Grosse Bucht', lat: 48.2382709, lng: 16.4247729, cat: 'Spiaggia', type: 'default', emoji: '🏖', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | 🚇 U6 Neue Donau | Panorama + balneazione, spiaggia sull\'isola'},
+  {name: 'Kaiserwasser', lat: 48.2322454, lng: 16.4212738, cat: 'Spiaggia', type: 'default', emoji: '🏖', cat2: 'Attività all’aperto', note: '📍 Kaiserwasser, 1210 Wien | ⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato | 🚇 U6 da Handelskai (casa) → Neue Donau (3 fermate, ~6 min) | Zero cambi, zero traghetti | Ideale per Ada (4)'},
+  {name: 'Lagerwiese Romaplatz', lat: 48.2245, lng: 16.42, cat: 'Spiaggia', type: 'default', emoji: '🏖', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | Balneazione naturale, prato relax | 🚇 U6 Neue Donau'},
+  {name: 'Pier 22 Copa Beach', lat: 48.2266, lng: 16.419, cat: 'Spiaggia', type: 'default', emoji: '🏖', cat2: 'Attività all’aperto', note: '📍 Neue Donau, 1210 Wien | Piattaforme, fitness outdoor, balneazione | 🚇 U6 Neue Donau | Più affollato, Kaiserwasser meglio'},
+  {name: 'Strandbad Alte Donau', lat: 48.24285, lng: 16.41841, cat: 'Spiaggia', type: 'default', emoji: '🏖', cat2: 'Attività all’aperto', note: '📍 Alte Donau, 1220 Wien | Bagno ramo morto Danubio | 👥 Da Eleonora'},
   {name: '7Stern Bräu', lat: 48.2021962, lng: 16.3535215, cat: 'Ristorante', type: 'default', emoji: '🍜', cat2: 'Ristorazione', note: '📍 Siebensterngasse 19, 1070 Wien | Micro birrificio artigianale, cucina austriaca | 🍺 Birra propria'},
   {name: 'Feuerwehr Wagner', lat: 48.2720184, lng: 16.3417133, cat: 'Ristorante', type: 'default', emoji: '🍜', cat2: 'Ristorazione', note: '📍 Grinzing, 1190 Wien | Heuriger (cantina di vino), vegetariano-friendly | Ambiente informale all\'aperto'},
   {name: 'Figlmüller', lat: 48.2094207, lng: 16.3748431, cat: 'Ristorante', type: 'default', emoji: '🍜', cat2: 'Ristorazione', note: '📍 Wollzeile 5, 1010 Wien | ⭐ 4.4/5 | Schnitzel viennese dal 1905, il più famoso di Vienna | 🌱 Schnitzel vegana (proteina di pisello) disponibile! | 👥 Da Eleonora'},
@@ -309,7 +318,7 @@ var places = [
   {name: 'Venuss', lat: 48.209, lng: 16.372, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', cat2: 'Ristorazione', note: '📍 Centro, 1010 Wien | Vegetariano con opzioni vegane | 💰 €€ | Cucina: austriaca bio | Goulash chanterelle, stufato fagioli, schnitzel vegetale | Buffet a mezzogiorno'},
   {name: 'Vevi', lat: 48.2035, lng: 16.3525, cat: 'Vegano / Vegetariano', type: 'default', emoji: '🍽', cat2: 'Ristorazione', note: '📍 Stollgasse 5, 1070 Wien | 100% vegano | 💰 € | Cucina: vietnamita | Bahn Mi, Pho | Pranzo sotto €10'},
   {name: 'Stephansdom (Santo Stefano)', lat: 48.208493, lng: 16.373118, cat: 'Monumenti', type: 'default', emoji: '🏛', note: '📍 Stephansplatz 1, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 | Duomo gotico simbolo di Vienna, tile colorate sul tetto | Torre Sud con vista panoramica | 💰 GRATIS navata, Torre a pagamento | Abbinare: Graben, Hotel Sacher 3min'},
-  {name: 'Wiener Prater', lat: 48.2167, lng: 16.3979, cat: 'Parchi', type: 'default', emoji: '🏞', cat2: 'Attività all’aperto', note: '📍 Prater Hauptallee, 1020 Wien | 🕐 Lun-Dom 24h (parco) | Parco storico con luna park, giostre, aree verdi, piste ciclabili lungo il Danubio | 🚂 U1/U2 Praterstern | 🎯 Per Nora: luna park, Spirit of London (simulateur), Prater Turm (torre panoramica 117m) | 💼 GRATIS ingresso parco, giostre a pagamento | 🤝 Abbinare: Riesenrad, Madame Tussauds, Donauinsel'},
+  {name: 'Wiener Prater', lat: 48.2167, lng: 16.3979, cat: 'Divertimenti', type: 'default', emoji: '🎢', cat2: 'Attività all’aperto', note: '📍 Prater Hauptallee, 1020 Wien | 🕐 Lun-Dom 24h (parco) | Parco storico con luna park, giostre, aree verdi, piste ciclabili lungo il Danubio | 🚂 U1/U2 Praterstern | 🎯 Per Nora: luna park, Spirit of London (simulateur), Prater Turm (torre panoramica 117m) | 💼 GRATIS ingresso parco, giostre a pagamento | 🤝 Abbinare: Riesenrad, Madame Tussauds, Donauinsel'},
   {name: 'Riesenrad (Ruota Panoramica)', lat: 48.21673, lng: 16.39558, cat: 'Attività', type: 'default', emoji: '🎯', cat2: 'Parchi', note: '📍 Riesenradplatz, 1020 Wien | ⭐ 4.5/5 | 🕐 10:00-21:45 (verificare orario estivo) | Ruota panoramica iconica del 1897, 65m di altezza, cabine panoramiche con vista su tutta Vienna | 🎡 Giro ~15 min | 💳 Adulti ~€14, Bambini ~€7 | 🚂 U2 Praterstern | 🤝 Abbinare: Prater luna park, Madame Tussauds'},
   {name: 'Carla Mittersteig (Caritas)', lat: 48.1913, lng: 16.3631, cat: 'Vintage', type: 'default', emoji: '👜', note: '📍 Mittersteig 10, 1050 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-17:00 | Charity shop Caritas — abiti donna, casa, libri, vinile | prezzi popolari, utile per bambine | 🚇 U4 Karlsplatz 10min'},
   {name: 'Carla Stephansplatz (Caritas)', lat: 48.2083, lng: 16.3742, cat: 'Vintage', type: 'default', emoji: '👜', note: '📍 Stephansplatz 5, 1010 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Charity shop Caritas in centro — abiti donna, accessori, casa, libri | dietro il Duomo, comodissimo'},
@@ -322,21 +331,23 @@ var places = [
   {name: 'Wolfmich', lat: 48.1978, lng: 16.3586, cat: 'Vintage', type: 'default', emoji: '👜', note: '📍 Gumpendorfer Straße 51, 1060 Wien | 🕐 Lun-Ven 13:00-19:00, Sab 11:00-18:00 | Vintage anni 80-90, casual e firmati | donna + uomo (ampio) | 🚇 U3 Zieglergasse / Tram 6'},
   {name: 'Marcy Vintage', lat: 48.2098, lng: 16.3714, cat: 'Vintage', type: 'default', emoji: '👜', note: '📍 Wipplingerstraße 8, 1010 Wien | 🕐 Lun-Ven 11:00-19:00, Sab 11:00-18:00 | Vintage con impegno sociale — dona abiti a chi ne ha bisogno | donna, prezzi accessibili | 🚇 U1/U3 Stephansplatz'},
   {name: 'Brunnenmarkt', lat: 48.21, lng: 16.4294, cat: 'Mercati', type: 'default', emoji: '🛒', note: '📍 Otto-Bauer-Gasse / Brunnenmarkt, 1160 Wien (16° distretto) | 🕐 Lun-Sab 6:00-19:30 (sab miglior giorno) | Il mercato più lungo di Vienna (1.6km) — street food multiculturale: stand turchi, balcanici, mediorientali | prezzi bassi, autentico | 🚇 U3 Ottakring'},
-  {name: 'Hochseilklettergarten Gänsehäufelbad', lat: 48.2315, lng: 16.431, cat: 'Parchi', type: 'default', emoji: '🏞', note: '📍 Moissigasse 21, 1220 Wien (Gänsehäufelbad, Donauinsel) | 🧗 Il parco avventura più grande di Vienna centrale — 79 piattaforme fino a 8m, 10 percorsi, 1500m totali, 26 flying fox | Da 6 anni | 🕐 1 apr-31 ott, Pick-up 11/13/15/17 (feriali), orario 10-17 (sab-dom) | 🚌 Bus 20A da Kagran | Vicino all\'appartamento! | Tel +43 699 8181 3039 | hochseilklettergarten.at'},
-  {name: 'Wasserspielplatz Donauinsel', lat: 48.228, lng: 16.423, cat: 'Parchi', type: 'default', emoji: '🏞', note: '💧 Parco giochi acquatico GRATUITO sulla Donauinsel | Pompe d\'acqua, canali, secchielli, mulini ad acqua | 🆓 Gratis | 🚇 U1 Donauinsel poi 5 min a piedi | ⭐ 4.5/5 TripAdvisor | Ideale per rinfrescarsi in agosto!'},
-  {name: 'Wasserspielplatz Wasserturm', lat: 48.1755, lng: 16.365, cat: 'Parchi', type: 'default', emoji: '🏞', note: '💧 Il parco giochi d\'acqua PIÙ GRANDE di Vienna — 15.000 m² attorno alla storica torre dell\'acqua (1898) | 🆓 Gratis | 🚇 U1 Keplerplatz | Fontane, sabbiera enorme, scivoli acqua | 📍 Windtenstraße 3, 1100 Wien'},
-  {name: 'Blumengärten Hirschstetten (Insektenspielplatz)', lat: 48.2285, lng: 16.475, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🦋 Giardini fioriti con parco giochi a tema INSETTI — unico a Vienna! | 🐑 Animali (pecore, capre) | 🌺 Giardini tematici (cinese, messicano, inglese) | 🆓 Gratis | 🚇 U1 Kagran | 📍 Gewerbeparkstraße 2, 1220 Wien | ⭐ Uno dei migliori per bambini'},
-  {name: 'Türkenschanzpark Wasserspielplatz', lat: 48.217, lng: 16.344, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🌳 Parco giochi con area acquatica nel bel parco Türkenschanzpark (18° distretto) | 🆓 Gratis | 🚇 U6 Alser Straße poi tram 40 | Cascate d\'acqua, ponti, torrenti | Zona ombreggiata, ideale per pause calde'},
-  {name: 'Robinson Insel (Parco avventura)', lat: 48.258, lng: 16.357, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt'},
-  {name: 'Karlsgarten (Giardino di Fischer von Erlach)', lat: 48.2055, lng: 16.382, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli'},
-  {name: 'Waldseilpark Kahlenberg', lat: 48.2776, lng: 16.3625, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at'},
-  {name: 'Donauinsel-Kletterpark', lat: 48.232, lng: 16.435, cat: 'Parchi', type: 'default', emoji: '🏞', note: '🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun'}
+  {name: 'Hochseilklettergarten Gänsehäufelbad', lat: 48.2315, lng: 16.431, cat: 'Avventura', type: 'default', emoji: '🧏', note: '📍 Moissigasse 21, 1220 Wien (Gänsehäufelbad, Donauinsel) | 🧗 Il parco avventura più grande di Vienna centrale — 79 piattaforme fino a 8m, 10 percorsi, 1500m totali, 26 flying fox | Da 6 anni | 🕐 1 apr-31 ott, Pick-up 11/13/15/17 (feriali), orario 10-17 (sab-dom) | 🚌 Bus 20A da Kagran | Vicino all\'appartamento! | Tel +43 699 8181 3039 | hochseilklettergarten.at'},
+  {name: 'Wasserspielplatz Donauinsel', lat: 48.228, lng: 16.423, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '💧 Parco giochi acquatico GRATUITO sulla Donauinsel | Pompe d\'acqua, canali, secchielli, mulini ad acqua | 🆓 Gratis | 🚇 U1 Donauinsel poi 5 min a piedi | ⭐ 4.5/5 TripAdvisor | Ideale per rinfrescarsi in agosto!'},
+  {name: 'Wasserspielplatz Wasserturm', lat: 48.1755, lng: 16.365, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '💧 Il parco giochi d\'acqua PIÙ GRANDE di Vienna — 15.000 m² attorno alla storica torre dell\'acqua (1898) | 🆓 Gratis | 🚇 U1 Keplerplatz | Fontane, sabbiera enorme, scivoli acqua | 📍 Windtenstraße 3, 1100 Wien'},
+  {name: 'Blumengärten Hirschstetten (Insektenspielplatz)', lat: 48.2285, lng: 16.475, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🦋 Giardini fioriti con parco giochi a tema INSETTI — unico a Vienna! | 🐑 Animali (pecore, capre) | 🌺 Giardini tematici (cinese, messicano, inglese) | 🆓 Gratis | 🚇 U1 Kagran | 📍 Gewerbeparkstraße 2, 1220 Wien | ⭐ Uno dei migliori per bambini'},
+  {name: 'Türkenschanzpark Wasserspielplatz', lat: 48.217, lng: 16.344, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🌳 Parco giochi con area acquatica nel bel parco Türkenschanzpark (18° distretto) | 🆓 Gratis | 🚇 U6 Alser Straße poi tram 40 | Cascate d\'acqua, ponti, torrenti | Zona ombreggiata, ideale per pause calde'},
+  {name: 'Robinson Insel (Parco avventura)', lat: 48.258, lng: 16.357, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt'},
+  {name: 'Karlsgarten (Giardino di Fischer von Erlach)', lat: 48.2055, lng: 16.382, cat: 'Parchi e giardini', type: 'default', emoji: '🌳', note: '🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli'},
+  {name: 'Waldseilpark Kahlenberg', lat: 48.2776, lng: 16.3625, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at'},
+  {name: 'Donauinsel-Kletterpark', lat: 48.232, lng: 16.435, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun'}
 ];
 
 var catColors = {
   'Appartamento': '#e74c3c',
   'Attività': '#ff6b35',
+  'Avventura': '#f97316',
   'Café': '#e67e22',
+  'Divertimenti': '#ef4444',
   'Dolci': '#e91e63',
   'Eventi': '#9b59b6',
   'Giro Tram 1/2': '#f59e0b',
@@ -345,9 +356,11 @@ var catColors = {
   'Monumenti': '#7f8c8d',
   'Musei': '#3498db',
   'Panificio': '#a0522d',
-  'Parchi': '#27ae60',
+  'Parchi e giardini': '#22c55e',
+  'Parchi giochi': '#06b6d4',
   'Ristorante': '#d35400',
   'Souvenir': '#f59e0b',
+  'Spiaggia': '#0ea5e9',
   'Trasporti': '#3b82f6',
   'Tè': '#d4a574',
   'Vegano / Vegetariano': '#27ae60',
@@ -605,6 +618,8 @@ document.getElementById('filter-all').addEventListener('click', function() {
   if (mr) { mr.checked = true; mr.indeterminate = false; }
   var ms = document.getElementById('macro-shop');
   if (ms) { ms.checked = true; ms.indeterminate = false; }
+  var mp = document.getElementById('macro-park');
+  if (mp) { mp.checked = true; mp.indeterminate = false; }
   applyFilters();
 });
 
@@ -614,6 +629,8 @@ document.getElementById('filter-none').addEventListener('click', function() {
   if (mr) { mr.checked = false; mr.indeterminate = false; }
   var ms = document.getElementById('macro-shop');
   if (ms) { ms.checked = false; ms.indeterminate = false; }
+  var mp = document.getElementById('macro-park');
+  if (mp) { mp.checked = false; mp.indeterminate = false; }
   applyFilters();
 });
 
@@ -658,6 +675,33 @@ document.querySelectorAll('.shop-sub').forEach(function(cb) {
     var checked = 0;
     subs.forEach(function(s) { if (s.checked) checked++; });
     var parent = document.getElementById('macro-shop');
+    if (checked === subs.length) {
+      parent.checked = true;
+      parent.indeterminate = false;
+    } else if (checked === 0) {
+      parent.checked = false;
+      parent.indeterminate = false;
+    } else {
+      parent.indeterminate = true;
+    }
+    applyFilters();
+  });
+});
+
+// Macro Parchi
+document.getElementById('macro-park').addEventListener('change', function() {
+  document.querySelectorAll('.park-sub').forEach(function(cb) {
+    cb.checked = this.checked;
+  }.bind(this));
+  applyFilters();
+});
+
+document.querySelectorAll('.park-sub').forEach(function(cb) {
+  cb.addEventListener('change', function() {
+    var subs = document.querySelectorAll('.park-sub');
+    var checked = 0;
+    subs.forEach(function(s) { if (s.checked) checked++; });
+    var parent = document.getElementById('macro-park');
     if (checked === subs.length) {
       parent.checked = true;
       parent.indeterminate = false;
