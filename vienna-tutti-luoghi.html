@@ -55,11 +55,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(5)</span></label>
-    <label class="filter-item macro-parent"><input type="checkbox" id="macro-park" checked><span style="font-size:14px">🏞</span> <b>Parchi</b> <span class="cat-count">(16)</span></label>
+    <label class="filter-item macro-parent"><input type="checkbox" id="macro-park" checked><span style="font-size:14px">🏞</span> <b>Parchi</b> <span class="cat-count">(21)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Spiaggia" checked><span class="place-dot" style="background:#0ea5e9"></span> Spiaggia <span class="cat-count">(5)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Divertimenti" checked><span class="place-dot" style="background:#ef4444"></span> Divertimenti <span class="cat-count">(1)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Avventura" checked><span class="place-dot" style="background:#f97316"></span> Avventura <span class="cat-count">(4)</span></label>
-    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(4)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(9)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi e giardini" checked><span class="place-dot" style="background:#22c55e"></span> Parchi e giardini <span class="cat-count">(2)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
@@ -173,6 +173,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Wasserspielplatz Wasserturm" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Wasserspielplatz Wasserturm</div>
     <div class="place-item" data-name="Blumengärten Hirschstetten (Insektenspielplatz)" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Blumengärten Hirschstetten (Insektenspielplatz)</div>
     <div class="place-item" data-name="Türkenschanzpark Wasserspielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Türkenschanzpark Wasserspielplatz</div>
+    <div class="place-item" data-name="Stadtpark Kinderpark" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Stadtpark Kinderpark</div>
+    <div class="place-item" data-name="Burggarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Burggarten Spielplatz</div>
+    <div class="place-item" data-name="Volksgarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Volksgarten Spielplatz</div>
+    <div class="place-item" data-name="Augarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Augarten Spielplatz</div>
+    <div class="place-item" data-name="Schönbrunn Irrgarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Schönbrunn Irrgarten Spielplatz</div>
     <div class="cat-header" data-cat="Ristorante" style="color:#d35400">Ristorante</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Ristorante"><span class="place-dot" style="background:#d35400"></span> Grinzing Heuriger</div>
     <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> 7Stern Bräu</div>
@@ -339,7 +344,12 @@ var places = [
   {name: 'Robinson Insel (Parco avventura)', lat: 48.258, lng: 16.357, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt'},
   {name: 'Karlsgarten (Giardino di Fischer von Erlach)', lat: 48.2055, lng: 16.382, cat: 'Parchi e giardini', type: 'default', emoji: '🌳', note: '🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli'},
   {name: 'Waldseilpark Kahlenberg', lat: 48.2776, lng: 16.3625, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at'},
-  {name: 'Donauinsel-Kletterpark', lat: 48.232, lng: 16.435, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun'}
+  {name: 'Donauinsel-Kletterpark', lat: 48.232, lng: 16.435, cat: 'Avventura', type: 'default', emoji: '🧏', note: '🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun'},
+  {name: 'Stadtpark Kinderpark', lat: 48.2025, lng: 16.3745, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Stadtpark (U4)'},
+  {name: 'Burggarten Spielplatz', lat: 48.2028, lng: 16.363, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Museumsquartier (U2/U5)'},
+  {name: 'Volksgarten Spielplatz', lat: 48.2075, lng: 16.3585, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Volkstheater (U2/U5)'},
+  {name: 'Augarten Spielplatz', lat: 48.2261, lng: 16.377, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'Tram: T1, T2 (Augarten)'},
+  {name: 'Schönbrunn Irrgarten Spielplatz', lat: 48.1845, lng: 16.3135, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Schönbrunn (U4)'}
 ];
 
 var catColors = {
