@@ -542,9 +542,23 @@ markers.eachLayer(function(m) {
 
 function getCheckedCats() {
   var checkedCats = {};
+  // Start: mark all known categories as false (unchecked)
   document.querySelectorAll('.cat-filter').forEach(function(cb) {
     checkedCats[cb.dataset.cat] = cb.checked;
   });
+  // When any subcategory of a macro is checked, the macro name is also "checked"
+  var ristoAny = false;
+  document.querySelectorAll('.risto-sub').forEach(function(cb) { if (cb.checked) ristoAny = true; });
+  checkedCats['Ristorazione'] = ristoAny;
+  var shopAny = false;
+  document.querySelectorAll('.shop-sub').forEach(function(cb) { if (cb.checked) shopAny = true; });
+  checkedCats['Shopping'] = shopAny;
+  var parkAny = false;
+  document.querySelectorAll('.park-sub').forEach(function(cb) { if (cb.checked) parkAny = true; });
+  checkedCats['Parchi'] = parkAny;
+  // Also check legacy macro names
+  var parkLegacyAny = parkAny;
+  checkedCats['Attività all'aperto'] = parkAny;
   return checkedCats;
 }
 
