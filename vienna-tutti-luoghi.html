@@ -55,11 +55,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(5)</span></label>
-    <label class="filter-item macro-parent"><input type="checkbox" id="macro-park" checked><span style="font-size:14px">🏞</span> <b>Parchi</b> <span class="cat-count">(21)</span></label>
+    <label class="filter-item macro-parent"><input type="checkbox" id="macro-park" checked><span style="font-size:14px">🏞</span> <b>Parchi</b> <span class="cat-count">(27)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Spiaggia" checked><span class="place-dot" style="background:#0ea5e9"></span> Spiaggia <span class="cat-count">(5)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Divertimenti" checked><span class="place-dot" style="background:#ef4444"></span> Divertimenti <span class="cat-count">(1)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Avventura" checked><span class="place-dot" style="background:#f97316"></span> Avventura <span class="cat-count">(4)</span></label>
-    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(9)</span></label>
+    <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(15)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi e giardini" checked><span class="place-dot" style="background:#22c55e"></span> Parchi e giardini <span class="cat-count">(2)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
@@ -178,6 +178,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Volksgarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Volksgarten Spielplatz</div>
     <div class="place-item" data-name="Augarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Augarten Spielplatz</div>
     <div class="place-item" data-name="Schönbrunn Irrgarten Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Schönbrunn Irrgarten Spielplatz</div>
+    <div class="place-item" data-name="Kinderpark Prater" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Kinderpark Prater</div>
+    <div class="place-item" data-name="Ernst-Happel-Spielplatz (Prater)" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Ernst-Happel-Spielplatz (Prater)</div>
+    <div class="place-item" data-name="Waldspielplatz Lainzer Tiergarten" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Waldspielplatz Lainzer Tiergarten</div>
+    <div class="place-item" data-name="Donaupark Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Donaupark Spielplatz</div>
+    <div class="place-item" data-name="Kurpark Oberlaa Spielplatz" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Kurpark Oberlaa Spielplatz</div>
+    <div class="place-item" data-name="Spielplatz Schweizergarten" data-cat="Parchi giochi"><span class="place-dot" style="background:#06b6d4"></span> Spielplatz Schweizergarten</div>
     <div class="cat-header" data-cat="Ristorante" style="color:#d35400">Ristorante</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Ristorante"><span class="place-dot" style="background:#d35400"></span> Grinzing Heuriger</div>
     <div class="place-item" data-name="7Stern Bräu" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> 7Stern Bräu</div>
@@ -349,7 +355,13 @@ var places = [
   {name: 'Burggarten Spielplatz', lat: 48.2028, lng: 16.363, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Museumsquartier (U2/U5)'},
   {name: 'Volksgarten Spielplatz', lat: 48.2075, lng: 16.3585, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Volkstheater (U2/U5)'},
   {name: 'Augarten Spielplatz', lat: 48.2261, lng: 16.377, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'Tram: T1, T2 (Augarten)'},
-  {name: 'Schönbrunn Irrgarten Spielplatz', lat: 48.1845, lng: 16.3135, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Schönbrunn (U4)'}
+  {name: 'Schönbrunn Irrgarten Spielplatz', lat: 48.1845, lng: 16.3135, cat: 'Parchi giochi', type: 'default', emoji: '🎡', vcc: 'U-Bahn: Schönbrunn (U4)'},
+  {name: 'Kinderpark Prater', lat: 48.2167, lng: 16.3944, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Prater, 1020 Wien | Grande parco giochi nel Prater con scivoli e altalene | 👥 Da Nora e Ada'},
+  {name: 'Ernst-Happel-Spielplatz (Prater)', lat: 48.2125, lng: 16.3978, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Praterstadion, 1020 Wien | Parco giochi vicino allo stadio | 👥 Da Nora e Ada'},
+  {name: 'Waldspielplatz Lainzer Tiergarten', lat: 48.17, lng: 16.2383, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Lainzer Tiergarten, 1130 Wien | Parco giochi nel bosco, natura pura | 👥 Gita'},
+  {name: 'Donaupark Spielplatz', lat: 48.2198, lng: 16.4131, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Donaupark, 1220 Wien | Parco giochi con area coperta e fontana | 👥 Da Nora e Ada'},
+  {name: 'Kurpark Oberlaa Spielplatz', lat: 48.1533, lng: 16.4294, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Kurpark Oberlaa, 1100 Wien | Parco giochi con minirail | 👥 Gita con bambine'},
+  {name: 'Spielplatz Schweizergarten', lat: 48.1645, lng: 16.4933, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Schweizergarten, 1220 Wien | Parco giochi moderno vicino Donau City'}
 ];
 
 var catColors = {
