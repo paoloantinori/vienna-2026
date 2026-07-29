@@ -55,7 +55,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="filter-title">Filtra categorie</div>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(5)</span></label>
-    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività all’aperto" checked><span class="place-dot" style="background:#2ecc71"></span> Attività all’aperto <span class="cat-count">(3)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività all’aperto" checked><span class="place-dot" style="background:#2ecc71"></span> Attività all’aperto <span class="cat-count">(5)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(31)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Café" checked><span class="place-dot" style="background:#e67e22"></span> Café <span class="cat-count">(4)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter risto-sub" data-cat="Dolci" checked><span class="place-dot" style="background:#e91e63"></span> Dolci <span class="cat-count">(5)</span></label>
@@ -98,6 +98,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Donauinsel passeggiata" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Donauinsel passeggiata</div>
     <div class="place-item" data-name="Grinzing Heuriger" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Grinzing Heuriger</div>
     <div class="place-item" data-name="Hochseilklettergarten Gänsehäufelbad" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Hochseilklettergarten Gänsehäufelbad</div>
+    <div class="place-item" data-name="Waldseilpark Kahlenberg" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Waldseilpark Kahlenberg</div>
+    <div class="place-item" data-name="Donauinsel-Kletterpark" data-cat="Attività all’aperto"><span class="place-dot" style="background:#2ecc71"></span> Donauinsel-Kletterpark</div>
     <div class="cat-header" data-cat="Café" style="color:#e67e22">Café</div>
     <div class="place-item" data-name="Dascafe" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Dascafe</div>
     <div class="place-item" data-name="Kombucha Manufaktur" data-cat="Café" data-cat2="Ristorazione"><span class="place-dot" style="background:#e67e22"></span> Kombucha Manufaktur</div>
@@ -330,7 +332,9 @@ var places = [
   {name: 'Blumengärten Hirschstetten (Insektenspielplatz)', lat: 48.2285, lng: 16.475, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🦋 Giardini fioriti con parco giochi a tema INSETTI — unico a Vienna! | 🐑 Animali (pecore, capre) | 🌺 Giardini tematici (cinese, messicano, inglese) | 🆓 Gratis | 🚇 U1 Kagran | 📍 Gewerbeparkstraße 2, 1220 Wien | ⭐ Uno dei migliori per bambini'},
   {name: 'Türkenschanzpark Wasserspielplatz', lat: 48.217, lng: 16.344, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🌳 Parco giochi con area acquatica nel bel parco Türkenschanzpark (18° distretto) | 🆓 Gratis | 🚇 U6 Alser Straße poi tram 40 | Cascate d\'acqua, ponti, torrenti | Zona ombreggiata, ideale per pause calde'},
   {name: 'Robinson Insel (Parco avventura)', lat: 48.258, lng: 16.357, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt'},
-  {name: 'Karlsgarten (Giardino di Fischer von Erlach)', lat: 48.2055, lng: 16.382, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli'}
+  {name: 'Karlsgarten (Giardino di Fischer von Erlach)', lat: 48.2055, lng: 16.382, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli'},
+  {name: 'Waldseilpark Kahlenberg', lat: 48.2776, lng: 16.3625, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at'},
+  {name: 'Donauinsel-Kletterpark', lat: 48.232, lng: 16.435, cat: 'Attività all’aperto', type: 'default', emoji: '🏃', note: '🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun'}
 ];
 
 var catColors = {
