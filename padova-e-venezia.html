@@ -8,40 +8,43 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Segoe UI',system-ui,sans-serif; background:#0f172a; color:#cbd5e1; }
-.header { background:#1a1a2e; padding:20px 24px; border-bottom:2px solid #0f3460; }
-.header h1 { font-size:24px; color:#f1f5f9; margin-bottom:4px; }
-.header .sub { color:#94a3b8; font-size:14px; }
-.header .sub span { color:#f59e0b; }
-.tabs { display:flex; background:#0f3460; }
-.tab { flex:1; padding:12px; text-align:center; cursor:pointer; font-weight:600; font-size:14px; color:#94a3b8; border-bottom:3px solid transparent; transition:all .2s; }
-.tab.active { color:#f1f5f9; border-bottom-color:#f59e0b; background:#1a1a2e; }
-.tab:hover { color:#e2e8f0; }
-.layout { display:flex; height:calc(100vh - 112px); }
-.sidebar { width:420px; min-width:320px; background:#1a1a2e; overflow-y:auto; padding:16px; border-right:1px solid #0f3460; }
-.map-container { flex:1; }
+body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; background:#f8fafc; color:#334155; }
+.header { background:#1e40af; padding:20px 24px; }
+.header h1 { font-size:24px; color:#fff; margin-bottom:4px; }
+.header .sub { color:#bfdbfe; font-size:14px; }
+.header .sub span { color:#fbbf24; font-weight:700; }
+.tabs { display:flex; background:#eff6ff; border-bottom:2px solid #bfdbfe; }
+.tab { flex:1; padding:14px; text-align:center; cursor:pointer; font-weight:600; font-size:15px; color:#64748b; border-bottom:3px solid transparent; transition:all .2s; }
+.tab.active { color:#1e40af; border-bottom-color:#1e40af; background:#fff; }
+.tab:hover { color:#1e3a5f; }
+.layout { display:flex; height:calc(100vh - 116px); }
+.sidebar { width:440px; min-width:320px; background:#fff; overflow-y:auto; padding:16px; border-right:1px solid #e2e8f0; box-shadow:2px 0 8px rgba(0,0,0,.04); }
+.map-container { flex:1; background:#e8eef4; }
 #map { height:100%; width:100%; }
 .section { margin-bottom:20px; }
-.section-title { font-size:15px; font-weight:700; color:#e2e8f0; padding:8px 12px; background:#0f3460; border-radius:6px; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
-.place { background:#16213e; border:1px solid #0f3460; border-radius:8px; padding:12px; margin-bottom:8px; cursor:pointer; transition:border-color .2s; }
-.place:hover { border-color:#f59e0b; }
-.place-name { font-weight:600; color:#f1f5f9; font-size:14px; margin-bottom:4px; }
-.place-desc { font-size:12px; color:#94a3b8; line-height:1.5; }
-.place-tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:3px; margin-top:4px; margin-right:4px; font-weight:600; }
-.tag-passeggiata { background:#10b981; color:#fff; }
-.tag-mangiare { background:#ef4444; color:#fff; }
-.tag-monumento { background:#f59e0b; color:#1a1a2e; }
-.tag-logistica { background:#3b82f6; color:#fff; }
-.tag-fresco { background:#06b6d4; color:#fff; }
-.tip { background:#1e293b; border-left:3px solid #f59e0b; padding:10px 12px; margin:8px 0; border-radius:0 6px 6px 0; font-size:12px; color:#94a3b8; line-height:1.5; }
-.tip b { color:#f59e0b; }
-.day-header { font-size:18px; font-weight:700; color:#f59e0b; padding:12px; background:#16213e; border-radius:8px; margin-bottom:16px; text-align:center; }
-.leaflet-popup-content-wrapper { background:#1a1a2e; color:#cbd5e1; border-radius:8px; }
-.leaflet-popup-tip { background:#1a1a2e; }
-.leaflet-popup-content { margin:10px 14px; font-size:13px; }
-.leaflet-popup-content b { color:#e2e8f0; }
-.panel-padova { display:none; }
-.panel-venezia { display:block; }
+.section-title { font-size:15px; font-weight:700; color:#1e40af; padding:10px 14px; background:#eff6ff; border-radius:8px; margin-bottom:10px; border-left:4px solid #1e40af; }
+.place { background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:14px; margin-bottom:10px; cursor:pointer; transition:all .2s; }
+.place:hover { border-color:#3b82f6; box-shadow:0 2px 8px rgba(59,130,246,.15); transform:translateX(2px); }
+.place-name { font-weight:700; color:#1e293b; font-size:14px; margin-bottom:4px; }
+.place-desc { font-size:13px; color:#475569; line-height:1.6; }
+.place-tag { display:inline-block; font-size:10px; padding:2px 8px; border-radius:12px; margin-top:6px; margin-right:4px; font-weight:600; }
+.tag-passeggiata { background:#dcfce7; color:#166534; }
+.tag-mangiare { background:#fee2e2; color:#991b1b; }
+.tag-monumento { background:#fef3c7; color:#92400e; }
+.tag-logistica { background:#dbeafe; color:#1e40af; }
+.tag-fresco { background:#cffafe; color:#155e75; }
+.tag-traghetto { background:#f3e8ff; color:#7e22ce; }
+.tag-gratis { background:#dcfce7; color:#166534; }
+.tag-bambini { background:#fce7f3; color:#9d174d; }
+.tip { background:#fffbeb; border-left:4px solid #f59e0b; padding:12px 14px; margin:10px 0; border-radius:0 8px 8px 0; font-size:13px; color:#78350f; line-height:1.6; }
+.tip b { color:#b45309; }
+.day-header { font-size:20px; font-weight:800; color:#1e40af; padding:16px; background:linear-gradient(135deg,#eff6ff,#dbeafe); border-radius:10px; margin-bottom:20px; text-align:center; letter-spacing:-.3px; }
+.source-tag { display:inline-block; font-size:10px; padding:1px 6px; border-radius:4px; background:#f1f5f9; color:#64748b; font-style:italic; margin-left:4px; }
+.leaflet-popup-content-wrapper { background:#fff; color:#334155; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,.15); }
+.leaflet-popup-tip { background:#fff; }
+.leaflet-popup-content { margin:12px 16px; font-size:13px; line-height:1.5; }
+.leaflet-popup-content b { color:#1e293b; }
+.leaflet-popup-content small { color:#64748b; }
 @media (max-width:768px) {
   .layout { flex-direction:column-reverse; }
   .sidebar { width:100%; max-height:55vh; }
@@ -55,250 +58,280 @@ body { font-family:'Segoe UI',system-ui,sans-serif; background:#0f172a; color:#c
   <div class="sub">Itinerario viaggio · <span>consigli raccolti</span></div>
 </div>
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('padova')">🏛️ 4 Agosto — Padova</div>
-  <div class="tab" onclick="switchTab('venezia')">🛥️ 5 Agosto — Venezia</div>
+  <div class="tab active" onclick="switchTab('padova')">🏛️ 4 Ago — Padova</div>
+  <div class="tab" onclick="switchTab('venezia')">🛥️ 5 Ago — Venezia</div>
 </div>
 <div class="layout">
   <div class="sidebar">
-    <!-- PADOVA PANEL -->
-    <div id="panel-padova" class="panel-padova">
+    <!-- PADOVA -->
+    <div id="panel-padova">
       <div class="day-header">🏛️ 4 Agosto — Pomeriggio / Sera a Padova</div>
-      <div class="tip"><b>📍 Pernottamento a Padova</b> — sicuro per il 4 agosto sera. Se arrivate presto potete già visitare, altrimenti esplorate la mattina del 5 prima di decidere: Padova o direttamente Venezia.</div>
-
+      <div class="tip"><b>📍 Alloggio:</b> Via Porciglia, 18 — pernottamento sicuro. Se arrivate presto potete visitare, altrimenti esplorate il 5 mattina.</div>
       <div class="section">
         <div class="section-title">⛪ Cosa vedere</div>
         <div class="place" onclick="flyTo(45.4075,11.8775)">
-          <div class="place-name">Cappella degli Scrovegni</div>
-          <div class="place-desc">Gli affreschi di Giotto — capolavoro assoluto dell'arte occidentale. Prenotazione obbligatoria. La cappella è piccola, visita di ~30 min, ma vi cambia il viaggio.</div>
-          <span class="place-tag tag-monumento">prento</span>
-          <span class="place-tag tag-monumento">Giotto</span>
+          <div class="place-name">Cappella degli Scrovegni <span class="source-tag">suggerito</span></div>
+          <div class="place-desc">Affreschi di Giotto — capolavoro assoluto. Prenotazione obbligatoria, visita ~30 min.</div>
+          <span class="place-tag tag-monumento">prenotare</span>
         </div>
         <div class="place" onclick="flyTo(45.4084,11.8771)">
           <div class="place-name">Basilica di Sant'Antonio</div>
-          <div class="place-desc">Chiesa imponente, il cuore di Padova. Con le bambine: i cavalli bronzei all'esterno le incuriosiscono. Gratuita.</div>
-          <span class="place-tag tag-monumento">gratuita</span>
-          <span class="place-tag tag-fresco">bambini</span>
+          <div class="place-desc">Cuore di Padova. I cavalli bronzei incuriosiscono le bambine. Gratuita.</div>
+          <span class="place-tag tag-gratis">gratuita</span>
+          <span class="place-tag tag-bambini">🧒 bambini</span>
         </div>
         <div class="place" onclick="flyTo(45.4063,11.8764)">
           <div class="place-name">Prato della Valle</div>
-          <div class="place-desc">L'isola pedonale più grande d'Europa. Passeggiata perfetta con bambine — spaziosa, ombreggiata, canali, statue. Animata la sera.</div>
+          <div class="place-desc">Isola pedonale più grande d'Europa. Spaziosa, ombreggiata, canali e statue. Animata la sera.</div>
           <span class="place-tag tag-passeggiata">passeggiata</span>
-          <span class="place-tag tag-fresco">sera</span>
+          <span class="place-tag tag-bambini">🧒 bambini</span>
         </div>
         <div class="place" onclick="flyTo(45.4089,11.8769)">
           <div class="place-name">Palazzo della Ragione</div>
-          <div class="place-desc">Salone medievale enorme al piano superiore — il "sottosuolo" è un mercato coperto con ottimo cibo. Due esperienze in uno.</div>
-          <span class="place-tag tag-monumento">mercato</span>
-          <span class="place-tag tag-mangiare">sottosuolo</span>
+          <div class="place-desc">Salone medievale enorme + mercato coperto nel loggiato sottostante. Due esperienze in uno.</div>
+          <span class="place-tag tag-monumento">medievale</span>
+          <span class="place-tag tag-mangiare">mercato</span>
         </div>
         <div class="place" onclick="flyTo(45.4072,11.8779)">
           <div class="place-name">Piazza delle Erbe</div>
-          <div class="place-desc">Piazza pittoresca con palazzo comunale medievale e fresie. Atmosfera bella la sera.</div>
+          <div class="place-desc">Piazza pittoresca con palazzo medievale. Atmosfera bella la sera, bar per aperitivo.</div>
           <span class="place-tag tag-passeggiata">piazza</span>
-          <span class="place-tag tag-fresco">sera</span>
         </div>
         <div class="place" onclick="flyTo(45.4094,11.8761)">
           <div class="place-name">Orto Botanico (UNESCO)</div>
-          <div class="place-desc">Il più antico orto botanico del mondo ancora in sede originale (1545). Bello per una passeggiata tranquilla con le bambine, alberi enormi.</div>
+          <div class="place-desc">Più antico del mondo (1545), ancora in sede originale. Piante enormi, perfetto con bambine.</div>
           <span class="place-tag tag-passeggiata">UNESCO</span>
-          <span class="place-tag tag-fresco">bambini</span>
+          <span class="place-tag tag-bambini">🧒 bambini</span>
         </div>
       </div>
-
       <div class="section">
         <div class="section-title">🍽️ Dove mangiare</div>
-        <div class="tip"><b>Padova è terra di spritz e cicchetti</b> — come Venezia ma meno turistica. I prezzi sono più bassi.</div>
+        <div class="tip"><b>Terra di spritz e cicchetti</b> — come Venezia ma meno turistica e più economica.</div>
         <div class="place" onclick="flyTo(45.4074,11.8769)">
-          <div class="place-name">Pedrocchi (Caffè storico)</div>
-          <div class="place-desc">Il "caffè senza porta" dal 1830 — storico, bellissimo dentro. Più un'esperienza che un pasto, ma ci fanno anche aperitivo. Da vedere anche senza consumare.</div>
+          <div class="place-name">Caffè Pedrocchi</div>
+          <div class="place-desc">"Caffè senza porta" dal 1830 — storico e bellissimo. Più un'esperienza che un pasto.</div>
           <span class="place-tag tag-mangiare">storico</span>
           <span class="place-tag tag-mangiare">aperitivo</span>
         </div>
         <div class="place" onclick="flyTo(45.4076,11.8767)">
-          <div class="place-name">Sotto il Salone (Palazzo della Ragione)</div>
-          <div class="place-desc">Mercato coperto nel loggiato del Palazzo della Ragione — ottimo per spuntini, piatti veloci, e pizza al taglio. Perfetto per cena leggera con bambine.</div>
+          <div class="place-name">Sotto il Salone</div>
+          <div class="place-desc">Mercato coperto sotto Palazzo della Ragione — spuntini, pizza al taglio. Perfetto con bambine.</div>
           <span class="place-tag tag-mangiare">mercato</span>
-          <span class="place-tag tag-mangiare">rapido</span>
-        </div>
-        <div class="place" onclick="flyTo(45.4070,11.8782)">
-          <div class="place-name">Piazza delle Erbe (aperitivo)</div>
-          <div class="place-desc">Diversi bar intorno alla piazza — ottima atmosfera per un aperitivo serale dopo la passeggiata.</div>
-          <span class="place-tag tag-mangiare">spritz</span>
-          <span class="place-tag tag-fresco">sera</span>
+          <span class="place-tag tag-bambini">🧒 bambini</span>
         </div>
       </div>
-
       <div class="section">
         <div class="section-title">🚂 Logistica</div>
-        <div class="tip"><b>Treno Padova → Venezia</b>: ~25 minuti, frequenza alta (ogni 10-15 min), biglietto ~€3. Se il 5 mattina decidete di andare direttamente a Venezia, il treno è veloce e facile.</div>
-        <div class="tip"><b>📱 Disponibile per consigli live</b>: scrivete il 4 agosto se arrivate presto e volete suggerimenti in tempo reale.</div>
+        <div class="tip"><b>Treno Padova → Venezia:</b> ~25 min, ogni 10-15 min, biglietto ~€3.</div>
+        <div class="tip"><b>📍 Via Porciglia 18</b> — alloggio in centro, vicino Prato della Valle e Basilica del Santo.</div>
       </div>
     </div>
 
-    <!-- VENEZIA PANEL -->
-    <div id="panel-venezia" class="panel-venezia" style="display:none">
+    <!-- VENEZIA -->
+    <div id="panel-venezia" style="display:none">
       <div class="day-header">🛥️ 5 Agosto — Giornata a Venezia</div>
-      <div class="tip"><b>📱 Consigli live disponibili</b> il 5 agosto (allestimento ma scrivete senza problemi) e il 12 (ha un aereo ma legge i messaggi).</div>
+      <div class="tip"><b>📱 Consigli live:</b> 5 agosto (allestimento ma scrivete) · 12 agosto (ha un aereo ma legge i messaggi)</div>
 
       <div class="section">
-        <div class="section-title">🚶 Passeggiate "no stress"</div>
-        <div class="tip">Percorsa Strada Nova (il suo inferno), poi inoltratevi in zona Fondamenta Nove — la sua zona preferita.</div>
+        <div class="section-title">🚶 Passeggiate "no stress" <span class="source-tag">Giada</span></div>
+        <div class="tip">Percorsa Strada Nova, poi deviate verso Fondamenta Nove — zona preferita, tranquilla.</div>
         <div class="place" onclick="flyTo(45.4450,12.3430)">
-          <div class="place-name">Fondamenta Nove → San Giovanni e Paolo</div>
-          <div class="place-desc">Passeggiata tranquilla con vista sull'acqua. Merenda o colazione da RosaSalva qui vicino.</div>
+          <div class="place-name">Fondamenta Nove → S. Giovanni e Paolo <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Passeggiata tranquilla con vista acqua. Merenda/colazione da RosaSalva.</div>
           <span class="place-tag tag-passeggiata">passeggiata</span>
           <span class="place-tag tag-fresco">fresco</span>
         </div>
         <div class="place" onclick="flyTo(45.4430,12.3480)">
-          <div class="place-name">San Francesco della Vigna → Arsenale</div>
-          <div class="place-desc">Da San Giovanni e Paolo, continuare verso San Francesco della Vigna fino all'Arsenale. Zona tranquilla, meno turisti.</div>
-          <span class="place-tag tag-passeggiata">passeggiata</span>
+          <div class="place-name">S. Francesco della Vigna → Arsenale <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Zona tranquilla, meno turisti. Continuazione ideale dopo Fondamenta Nove.</div>
+          <span class="place-tag tag-passeggiata">tranquilla</span>
         </div>
         <div class="place" onclick="flyTo(45.4280,12.3220)">
-          <div class="place-name">Le Zattere</div>
-          <div class="place-desc">Zona bellissima vicino all'Accademia. Vista sul Canale della Giudecca. Freschetto, e da qui si esplorano le calli. Palazzo Franchetti qui vicino.</div>
-          <span class="place-tag tag-passeggiata">passeggiata</span>
-          <span class="place-tag tag-fresco">fresco</span>
+          <div class="place-name">Le Zattere <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Vista sul Canale della Giudecca. Freschetto, migliaia di calli. Palazzo Franchetti vicino.</div>
+          <span class="place-tag tag-passeggiata">freschetto</span>
         </div>
         <div class="place" onclick="flyTo(45.4325,12.3210)">
-          <div class="place-name">Punta della Dogana</div>
-          <div class="place-desc">Punto panoramico incredibile: San Marco a sinistra, Canale della Giudecca a destra. Freschetto garantito. Non serve entrare al museo.</div>
+          <div class="place-name">Punta della Dogana <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Panorama incredibile: San Marco a sx, Giudecca a dx. Freschetto. Non serve il museo.</div>
           <span class="place-tag tag-passeggiata">panorama</span>
           <span class="place-tag tag-fresco">fresco</span>
         </div>
         <div class="place" onclick="flyTo(45.4285,12.3470)">
-          <div class="place-name">Padiglioni Biennale (esterni, gratis)</div>
-          <div class="place-desc">Mostre gratuite nei padiglioni esterni della Biennale, zona Giardini e Arsenale.</div>
-          <span class="place-tag tag-monumento">arte gratis</span>
+          <div class="place-name">Biennale — padiglioni esterni (gratis) <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Mostre gratuite nei padiglioni esterni, zona Giardini e Arsenale.</div>
+          <span class="place-tag tag-gratis">gratuito</span>
         </div>
       </div>
 
       <div class="section">
-        <div class="section-title">⛪ Da vedere</div>
+        <div class="section-title">⛪ Da vedere <span class="source-tag">Giada</span></div>
         <div class="place" onclick="flyTo(45.4373,12.3247)">
-          <div class="place-name">Scuola Grande di San Rocco</div>
-          <div class="place-desc">Bellissima da vedere all'interno. Nella stessa zona dei Frari — zona molto tranquilla.</div>
+          <div class="place-name">Scuola Grande di San Rocco <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Bellissima dentro. Zona tranquilla. Vicina ai Frari.</div>
           <span class="place-tag tag-monumento">arte</span>
-          <span class="place-tag tag-fresco">tranquillo</span>
         </div>
         <div class="place" onclick="flyTo(45.4373,12.3245)">
-          <div class="place-name">Chiesa dei Frari</div>
-          <div class="place-desc">Affianco a San Rocco. Costa solo €3. Zona tranquilla, c'è un posto per fare colazione accanto alla chiesa.</div>
+          <div class="place-name">Chiesa dei Frari <span class="source-tag">Giada</span></div>
+          <div class="place-desc">€3. Affianco a San Rocco. Colazione accanto alla chiesa.</div>
           <span class="place-tag tag-monumento">€3</span>
           <span class="place-tag tag-mangiare">colazione</span>
         </div>
       </div>
 
       <div class="section">
-        <div class="section-title">🍷 Cicchetti &amp; Mangiare</div>
-        <div class="tip">Tutti in piedi, stile bacaro veneziano. Perfetti con le bambine!</div>
+        <div class="section-title">🍷 Cicchetti &amp; Mangiare <span class="source-tag">Giada + Michela</span></div>
+        <div class="tip">Stile bacaro: tutti in piedi, crostini con topping. Perfetti per assaggiare con le bambine!</div>
         <div class="place" onclick="flyTo(45.4395,12.3290)">
-          <div class="place-name">Sepa</div>
-          <div class="place-desc">Cicchetti super buoni, anche vegano. Il loro prosecco è buonissimo.</div>
+          <div class="place-name">Sepa <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Cicchetti super buoni, anche vegano 🌱. Prosecco eccellente.</div>
           <span class="place-tag tag-mangiare">cicchetti</span>
-          <span class="place-tag tag-mangiare">veg 🌱</span>
+          <span class="place-tag tag-fresco">veg</span>
         </div>
         <div class="place" onclick="flyTo(45.4380,12.3280)">
-          <div class="place-name">Ai Zemei</div>
+          <div class="place-name">Ai Zemei <span class="source-tag">Giada</span></div>
           <div class="place-desc">Cicchetti eccellenti, tradizionali.</div>
           <span class="place-tag tag-mangiare">cicchetti</span>
         </div>
         <div class="place" onclick="flyTo(45.4385,12.3320)">
-          <div class="place-name">All'Arco</div>
+          <div class="place-name">All'Arco <span class="source-tag">Giada</span></div>
           <div class="place-desc">Cicchetti classici, posizione centrale.</div>
           <span class="place-tag tag-mangiare">cicchetti</span>
         </div>
         <div class="place" onclick="flyTo(45.4400,12.3260)">
-          <div class="place-name">Osteria alla Frasca</div>
+          <div class="place-name">Osteria alla Frasca <span class="source-tag">Giada</span></div>
           <div class="place-desc">Osteria con ottima reputazione.</div>
           <span class="place-tag tag-mangiare">osteria</span>
         </div>
         <div class="place" onclick="flyTo(45.4360,12.3250)">
-          <div class="place-name">Osteria ai Promessi Sposi</div>
-          <div class="place-desc">Osteria con cicchetti e ombra.</div>
+          <div class="place-name">Osteria ai Promessi Sposi <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Cicchetti e ombra.</div>
           <span class="place-tag tag-mangiare">osteria</span>
         </div>
         <div class="place" onclick="flyTo(45.4390,12.3300)">
-          <div class="place-name">Oriental Experience</div>
-          <div class="place-desc">Non veneziano ma buono — alternativa se volete qualcosa di diverso.</div>
+          <div class="place-name">Oriental Experience <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Non veneziano ma buono — alternativa.</div>
           <span class="place-tag tag-mangiare">ristorante</span>
         </div>
         <div class="place" onclick="flyTo(45.4370,12.3320)">
-          <div class="place-name">RosaSalva</div>
-          <div class="place-desc">Fondamenta Nove — perfetto per merenda o colazione dopo la passeggiata.</div>
+          <div class="place-name">RosaSalva <span class="source-tag">Giada</span></div>
+          <div class="place-desc">Fondamenta Nove — merenda o colazione dopo la passeggiata.</div>
           <span class="place-tag tag-mangiare">colazione</span>
-          <span class="place-tag tag-mangiare">merenda</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4350,12.3375)">
+          <div class="place-name">Cicchetti &amp; Mozzarelle in Carrozza <span class="source-tag">Michela</span></div>
+          <div class="place-desc">Le mozzarelle in carrozza sono SUPER! Sfornano continuamente da mattina a sera. Un must.</div>
+          <span class="place-tag tag-mangiare">cicchetti</span>
+          <span class="place-tag tag-mangiare">🧀 mozzarelle</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">🚣 Traghetti — Canal Grande <span class="source-tag">Michela</span></div>
+        <div class="tip"><b>Traghetto = mini-gondola pubblica</b> che attraversa il Canal Grande. Costa ~€2, dura 2 minuti ma è un'esperienza bellissima! Si va in piedi.</div>
+        <div class="place" onclick="flyTo(45.4411,12.3186)">
+          <div class="place-name">Fondamenta S. Lucia ↔ Stazione</div>
+          <div class="place-desc">All'altezza della stazione ferroviaria.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4408,12.3230)">
+          <div class="place-name">San Marcuola ↔ Fondaco dei Turchi</div>
+          <div class="place-desc">Zona mercato e Rialto.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4345,12.3325)">
+          <div class="place-name">San Samuele ↔ Ca' Rezzonico</div>
+          <div class="place-desc">Zona Dorsoduro, elegante.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4327,12.3348)">
+          <div class="place-name">Campo S.M. del Giglio ↔ Salute</div>
+          <div class="place-desc">Vista su Punta della Dogana. Una delle più panoramiche.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4335,12.3305)">
+          <div class="place-name">San Tomà ↔ Santo Stefano</div>
+          <div class="place-desc">Traversata tranquilla, zona centrale.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4380,12.3360)">
+          <div class="place-name">Rialto Mercato ↔ Ca' d'Oro ⭐</div>
+          <div class="place-desc">La più famosa! Vicino al mercato di Rialto.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto ⭐</span>
+        </div>
+        <div class="place" onclick="flyTo(45.4375,12.3350)">
+          <div class="place-name">Riva del Carbon ↔ Fondamente del Vin</div>
+          <div class="place-desc">Breve, comoda vicino Rialto.</div>
+          <span class="place-tag tag-traghetto">🚣 traghetto</span>
         </div>
       </div>
 
       <div class="section">
         <div class="section-title">🚢 Logistica</div>
-        <div class="tip"><b>Vaporetto Linea 1</b> — fa tutto il Canal Grande. Giro bellissimo, biglietto €10 (non residenti). Affollati in questo periodo ma l'esperienza vale.</div>
-        <div class="tip"><b>Zattere</b> come punto di partenza per esplorare — migliaia di calli bellissime da scoprire.</div>
+        <div class="tip"><b>Vaporetto Linea 1:</b> tutto il Canal Grande, €10 (non residenti). Affollati ma bellissimo. <span class="source-tag">Giada</span></div>
+        <div class="tip"><b>Strada Nova</b> è il percorso iniziale, poi deviate verso Fondamenta Nove per la passeggiata tranquilla. <span class="source-tag">Giada</span></div>
       </div>
     </div>
   </div>
   <div class="map-container"><div id="map"></div></div>
 </div>
 <script>
-var map = L.map('map',{zoomControl:true}).setView([45.407,11.877],15);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+var map=L.map('map',{zoomControl:true}).setView([45.407,11.877],15);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',{
   attribution:'&copy; CARTO',maxZoom:19
 }).addTo(map);
 
-var placesPadova = [
-  {name:'Cappella degli Scrovegni',lat:45.4075,lng:11.8775,emoji:'🎨',desc:'Affreschi di Giotto — capolavoro assoluto'},
-  {name:'Basilica di Sant\'Antonio',lat:45.4084,lng:11.8771,emoji:'⛪',desc:'Cuore di Padova, gratuita'},
-  {name:'Prato della Valle',lat:45.4063,lng:11.8764,emoji:'🌳',desc:'Isola pedonale più grande d\'Europa'},
-  {name:'Palazzo della Ragione',lat:45.4089,lng:11.8769,emoji:'🏛️',desc:'Salone medievale + mercato coperto'},
+var placesPadova=[
+  {name:'Scrovegni',lat:45.4075,lng:11.8775,emoji:'🎨',desc:'Affreschi di Giotto'},
+  {name:'Sant\'Antonio',lat:45.4084,lng:11.8771,emoji:'⛪',desc:'Basilica, gratuita'},
+  {name:'Prato della Valle',lat:45.4063,lng:11.8764,emoji:'🌳',desc:'Isola pedonale più grande Europa'},
+  {name:'Palazzo della Ragione',lat:45.4089,lng:11.8769,emoji:'🏛️',desc:'Medievale + mercato'},
   {name:'Piazza delle Erbe',lat:45.4072,lng:11.8779,emoji:'🌸',desc:'Piazza pittoresca'},
-  {name:'Orto Botanico',lat:45.4094,lng:11.8761,emoji:'🌿',desc:'Più antico del mondo, UNESCO'},
-  {name:'Caffè Pedrocchi',lat:45.4074,lng:11.8769,emoji:'☕',desc:'Caffè storico dal 1830'},
-  {name:'Sotto il Salone',lat:45.4076,lng:11.8767,emoji:'🍕',desc:'Mercato coperto, cena veloce'}
+  {name:'Orto Botanico',lat:45.4094,lng:11.8761,emoji:'🌿',desc:'UNESCO 1545'},
+  {name:'Pedrocchi',lat:45.4074,lng:11.8769,emoji:'☕',desc:'Caffè storico 1830'},
+  {name:'Sotto il Salone',lat:45.4076,lng:11.8767,emoji:'🍕',desc:'Mercato coperto'}
 ];
-var placesVenezia = [
-  {name:'Fondamenta Nove',lat:45.4450,lng:12.3430,emoji:'🚶',desc:'Passeggiata no stress'},
-  {name:'San Francesco della Vigna',lat:45.4430,lng:12.3480,emoji:'🌳',desc:'Verso Arsenale, tranquilla'},
-  {name:'Le Zattere',lat:45.4280,lng:12.3220,emoji:'🌊',desc:'Freschetto, vista Giudecca'},
-  {name:'Punta della Dogana',lat:45.4325,lng:12.3210,emoji:'📸',desc:'Panorama San Marco + Giudecca'},
-  {name:'Biennale (esterni)',lat:45.4285,lng:12.3470,emoji:'🎨',desc:'Padiglioni esterni gratis'},
-  {name:'Scuola Grande di San Rocco',lat:45.4373,lng:12.3247,emoji:'⛪',desc:'Bellissima dentro'},
-  {name:'Chiesa dei Frari',lat:45.4373,lng:12.3245,emoji:'⛪',desc:'€3, zona tranquilla'},
-  {name:'Sepa',lat:45.4395,lng:12.3290,emoji:'🍷',desc:'Cicchetti + veg + prosecco'},
-  {name:'Ai Zemei',lat:45.4380,lng:12.3280,emoji:'🍷',desc:'Cicchetti tradizionali'},
-  {name:'All\'Arco',lat:45.4385,lng:12.3320,emoji:'🍷',desc:'Cicchetti classici'},
-  {name:'Osteria alla Frasca',lat:45.4400,lng:12.3260,emoji:'🍽',desc:'Osteria'},
-  {name:'Osteria ai Promessi Sposi',lat:45.4360,lng:12.3250,emoji:'🍽',desc:'Cicchetti e ombra'},
-  {name:'Oriental Experience',lat:45.4390,lng:12.3300,emoji:'🥢',desc:'Non veneziano ma buono'},
-  {name:'RosaSalva',lat:45.4370,lng:12.3320,emoji:'🥐',desc:'Colazione/merenda'}
+var placesVenezia=[
+  {name:'Fondamenta Nove',lat:45.4450,lng:12.3430,emoji:'🚶',desc:'Passeggiata no stress (Giada)'},
+  {name:'S. Francesco della Vigna',lat:45.4430,lng:12.3480,emoji:'🌳',desc:'→ Arsenale (Giada)'},
+  {name:'Le Zattere',lat:45.4280,lng:12.3220,emoji:'🌊',desc:'Freschetto (Giada)'},
+  {name:'Punta della Dogana',lat:45.4325,lng:12.3210,emoji:'📸',desc:'Panorama (Giada)'},
+  {name:'Biennale (esterni)',lat:45.4285,lng:12.3470,emoji:'🎨',desc:'Gratis (Giada)'},
+  {name:'Scuola S. Rocco',lat:45.4373,lng:12.3247,emoji:'⛪',desc:'Bellissima (Giada)'},
+  {name:'Frari',lat:45.4373,lng:12.3245,emoji:'⛪',desc:'€3 (Giada)'},
+  {name:'Sepa',lat:45.4395,lng:12.3290,emoji:'🍷',desc:'Cicchetti+veg (Giada)'},
+  {name:'Ai Zemei',lat:45.4380,lng:12.3280,emoji:'🍷',desc:'Cicchetti (Giada)'},
+  {name:'All\'Arco',lat:45.4385,lng:12.3320,emoji:'🍷',desc:'Cicchetti (Giada)'},
+  {name:'Ost. alla Frasca',lat:45.4400,lng:12.3260,emoji:'🍽',desc:'Osteria (Giada)'},
+  {name:'Ost. Promessi Sposi',lat:45.4360,lng:12.3250,emoji:'🍽',desc:'Cicchetti (Giada)'},
+  {name:'Oriental Experience',lat:45.4390,lng:12.3300,emoji:'🥢',desc:'(Giada)'},
+  {name:'RosaSalva',lat:45.4370,lng:12.3320,emoji:'🥐',desc:'Colazione (Giada)'},
+  {name:'Mozzarelle in Carrozza',lat:45.4350,lng:12.3375,emoji:'🧀',desc:'SUPER! (Michela)'},
+  {name:'Traghetto S.Lucia',lat:45.4411,lng:12.3186,emoji:'🚣',desc:'↔ Stazione'},
+  {name:'Traghetto S. Marcuola',lat:45.4408,lng:12.3230,emoji:'🚣',desc:'↔ Fondaco Turchi'},
+  {name:'Traghetto S. Samuele',lat:45.4345,lng:12.3325,emoji:'🚣',desc:'↔ Ca\' Rezzonico'},
+  {name:'Traghetto Giglio',lat:45.4327,lng:12.3348,emoji:'🚣',desc:'↔ Salute'},
+  {name:'Traghetto S. Tomà',lat:45.4335,lng:12.3305,emoji:'🚣',desc:'↔ S. Stefano'},
+  {name:'Traghetto Rialto',lat:45.4380,lng:12.3360,emoji:'🚣',desc:'↔ Ca\' d\'Oro ⭐'},
+  {name:'Traghetto Carbon',lat:45.4375,lng:12.3350,emoji:'🚣',desc:'↔ Fond. Vin'}
 ];
 
-var colors = {'🚶':'#10b981','🌳':'#10b981','🌊':'#06b6d4','📸':'#f59e0b','🎨':'#f59e0b','⛪':'#f59e0b','🍷':'#ef4444','🍽':'#ef4444','🥢':'#ef4444','🥐':'#ef4444','☀':'#10b981','🌸':'#10b981','🌿':'#10b981','🏛️':'#f59e0b','☕':'#f59e0b','🍕':'#ef4444'};
-var markerLayer = L.layerGroup().addTo(map);
-
-function addMarkers(places) {
-  markerLayer.clearLayers();
-  places.forEach(function(p){
-    var c = colors[p.emoji]||'#95a5a6';
-    var svg='<svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" viewBox="0 0 28 34"><path d="M14 0C7.4 0 2 5.4 2 12c0 9 12 22 12 22s12-13 12-22C26 5.4 20.6 0 14 0z" fill="'+c+'" stroke="#fff" stroke-width="1.5"/><text x="14" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13">'+p.emoji+'</text></svg>';
-    var icon=L.divIcon({html:svg,className:'marker-icon',iconSize:[28,34],iconAnchor:[14,34]});
-    L.marker([p.lat,p.lng],{icon:icon}).bindPopup('<b>'+p.emoji+' '+p.name+'</b><br><small>'+p.desc+'</small>').addTo(markerLayer);
-  });
+var ml=L.layerGroup().addTo(map);
+function mkIcon(emoji){
+  var s='<svg xmlns="http://www.w3.org/2000/svg" width="30" height="36" viewBox="0 0 30 36"><path d="M15 1C7.8 1 2 6.8 2 14c0 10 13 21 13 21s13-11 13-21C28 6.8 22.2 1 15 1z" fill="#1e40af" stroke="#fff" stroke-width="2"/><text x="15" y="16" text-anchor="middle" dominant-baseline="middle" font-size="13">'+emoji+'</text></svg>';
+  return L.divIcon({html:s,className:'',iconSize:[30,36],iconAnchor:[15,36],popupAnchor:[0,-36]});
 }
+function addM(arr){ml.clearLayers();arr.forEach(function(p){L.marker([p.lat,p.lng],{icon:mkIcon(p.emoji)}).bindPopup('<b>'+p.emoji+' '+p.name+'</b><br><small>'+p.desc+'</small>').addTo(ml);});}
+addM(placesPadova);
 
-var currentCity = 'padova';
-addMarkers(placesPadova);
-
-function switchTab(city) {
-  currentCity = city;
-  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', (city==='padova'?i===0:i===1)); });
-  document.getElementById('panel-padova').style.display = city==='padova' ? 'block' : 'none';
-  document.getElementById('panel-venezia').style.display = city==='venezia' ? 'block' : 'none';
-  if (city==='padova') { map.setView([45.407,11.877],15); addMarkers(placesPadova); }
-  else { map.setView([45.437,12.332],15); addMarkers(placesVenezia); }
+function switchTab(c){
+  document.querySelectorAll('.tab').forEach(function(t,i){t.classList.toggle('active',(c==='padova'?i===0:i===1));});
+  document.getElementById('panel-padova').style.display=c==='padova'?'block':'none';
+  document.getElementById('panel-venezia').style.display=c==='venezia'?'block':'none';
+  if(c==='padova'){map.setView([45.407,11.877],15);addM(placesPadova);}
+  else{map.setView([45.437,12.332],15);addM(placesVenezia);}
 }
-
-function flyTo(lat,lng){ map.flyTo([lat,lng],17,{duration:1}); }
+function flyTo(lat,lng){map.flyTo([lat,lng],17,{duration:1});}
 </script>
 </body>
 </html>
