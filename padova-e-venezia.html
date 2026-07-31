@@ -63,6 +63,7 @@ body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; background:#f8
 <div class="tabs">
   <div class="tab active" onclick="switchTab('padova')">🏛️ 4 Ago — Padova</div>
   <div class="tab" onclick="switchTab('venezia')">🛥️ 5 Ago — Venezia</div>
+  <div class="tab" onclick="switchTab('vienna')">🎭 Eventi Vienna</div>
 </div>
 <div class="layout">
   <div class="sidebar">
@@ -283,6 +284,81 @@ body { font-family:'Segoe UI',system-ui,-apple-system,sans-serif; background:#f8
         <div class="tip"><b>Strada Nova</b> è il percorso iniziale, poi deviate verso Fondamenta Nove per la passeggiata tranquilla. <span class="source-tag source-giada">💡 Giada</span></div>
       </div>
     </div>
+
+    <!-- VIENNA EVENTI -->
+    <div id="panel-vienna" style="display:none">
+      <div class="day-header">🎭 Vienna — Eventi &amp; Festival Estivi</div>
+      <div class="tip"><b>📅 Periodo:</b> 2 luglio – 16 agosto 2026 · <b>Ingresso gratuito</b> · ~500 acts in 9 sedi</div>
+
+      <div class="section">
+        <div class="section-title">🎶 Kultursommer Wien 2026</div>
+        <div class="place" onclick="flyTo(48.2258,16.3696)">
+          <div class="place-name">Nordwestbahnhof — 20° distretto</div>
+          <div class="place-desc">Sede principale con <b>induction loop per audioprotesi</b>. Musica, cabaret, teatro, danza. Gio-ven 18:30-21:00. 📍 Nordwestbahnstraße 16.</div>
+          <span class="place-tag tag-gratis">gratuito</span>
+          <span class="place-tag tag-bambini">🧒 bambini</span>
+          <span class="place-tag tag-fresco">♿ induction loop</span>
+        </div>
+        <div class="place" onclick="flyTo(48.2080,16.3738)">
+          <div class="place-name">Schrödingerplatz — 22° distretto</div>
+          <div class="place-desc">Anche qui <b>induction loop</b> per audioprotesi. Programma serale.</div>
+          <span class="place-tag tag-gratis">gratuito</span>
+          <span class="place-tag tag-fresco">♿ induction loop</span>
+        </div>
+        <div class="place" onclick="flyTo(48.1920,16.3630)">
+          <div class="place-name">Waldmüllerpark — 10° distretto</div>
+          <div class="place-desc">Una delle 9 sedi del festival. Parco con palco.</div>
+          <span class="place-tag tag-gratis">gratuito</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">📋 Tutte le sedi (9)</div>
+        <div class="tip"><b>Orari:</b> serali gio-ven 18:30-21:00. Concerti giardini, brunch jazz domenica al Rathausplatz. Festival certificato ÖKOEvent Plus (eco-sostenibile).</div>
+        <div class="place">
+          <div class="place-name">10° — Waldmüllerpark</div>
+          <div class="place-desc">Tram 49/62</div>
+        </div>
+        <div class="place">
+          <div class="place-name">11° — Hyblerpark</div>
+          <div class="place-desc">U1 Alte Donau</div>
+        </div>
+        <div class="place">
+          <div class="place-name">12° — Wilhelmsdorfer Park</div>
+        </div>
+        <div class="place">
+          <div class="place-name">15° — Reithofferpark</div>
+        </div>
+        <div class="place">
+          <div class="place-name">16° — Kongreßpark</div>
+        </div>
+        <div class="place">
+          <div class="place-name">20° — Nordwestbahnhof ⭐</div>
+          <div class="place-desc">U6 Dresdner Straße · <b>Induction loop</b></div>
+        </div>
+        <div class="place">
+          <div class="place-name">21° — Fußballverein 1210</div>
+        </div>
+        <div class="place">
+          <div class="place-name">22° — Schrödingerplatz</div>
+          <div class="place-desc"><b>Induction loop</b></div>
+        </div>
+        <div class="place">
+          <div class="place-name">23° — Stadtpark Atzgersdorf</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">🎵 Kultursommer Plus</div>
+        <div class="tip"><b>Workshop e formati partecipativi:</b> Connection Kiosk (scambio), Digital Detox (stampa arte senza AI), picknick condivisi. Programma: <a href="https://www.kultursommer.wien/kultursommerplus" target="_blank" style="color:#1e40af">kultursommer.wien/kultursommerplus</a></div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">ℹ️ Accessibilità</div>
+        <div class="tip"><b>♿ Servizi:</b> Induction loop al Nordwestbahnhof e Schrödingerplatz · Traduzione in lingua dei segni austriaca in alcuni spettacoli · Schriftdolmetschung (sottotitoli) via app · Cani ammessi · WC pubblici · Area no-fumo</div>
+        <div class="tip"><b>🔗 Link:</b> Programma completo su <a href="https://www.kultursommer.wien/" target="_blank" style="color:#1e40af">kultursommer.wien</a></div>
+      </div>
+    </div>
   </div>
   <div class="map-container"><div id="map"></div></div>
 </div>
@@ -327,6 +403,17 @@ var placesVenezia=[
   {name:'Traghetto Rialto',lat:45.4380,lng:12.3360,emoji:'🚣',desc:'↔ Ca\' d\'Oro ⭐'},
   {name:'Traghetto Carbon',lat:45.4375,lng:12.3350,emoji:'🚣',desc:'↔ Fond. Vin'}
 ];
+var placesVienna=[
+  {name:'Nordwestbahnhof ⭐',lat:48.2258,lng:16.3696,emoji:'🎭',desc:'Kultursommer · Induction loop · U6 Dresdner Str.'},
+  {name:'Schrödingerplatz',lat:48.2080,lng:16.3738,emoji:'🎭',desc:'Kultursommer · Induction loop'},
+  {name:'Waldmüllerpark',lat:48.1920,lng:16.3630,emoji:'🎭',desc:'Kultursommer · 10° distretto'},
+  {name:'Hyblerpark',lat:48.2150,lng:16.4230,emoji:'🎭',desc:'Kultursommer · 11° distretto · U1 Alte Donau'},
+  {name:'Wilhelmsdorfer Park',lat:48.1400,lng:16.3300,emoji:'🎭',desc:'Kultursommer · 12° distretto'},
+  {name:'Reithofferpark',lat:48.1750,lng:16.3200,emoji:'🎭',desc:'Kultursommer · 15° distretto'},
+  {name:'Kongreßpark',lat:48.1650,lng:16.3750,emoji:'🎭',desc:'Kultursommer · 16° distretto'},
+  {name:'Fußballverein 1210',lat:48.2360,lng:16.4050,emoji:'🎭',desc:'Kultursommer · 21° distretto'},
+  {name:'Stadtpark Atzgersdorf',lat:48.1450,lng:16.3050,emoji:'🎭',desc:'Kultursommer · 23° distretto'}
+];
 
 var ml=L.layerGroup().addTo(map);
 function mkIcon(emoji){
@@ -337,11 +424,13 @@ function addM(arr){ml.clearLayers();arr.forEach(function(p){L.marker([p.lat,p.ln
 addM(placesPadova);
 
 function switchTab(c){
-  document.querySelectorAll('.tab').forEach(function(t,i){t.classList.toggle('active',(c==='padova'?i===0:i===1));});
+  document.querySelectorAll('.tab').forEach(function(t,i){t.classList.toggle('active',(c==='padova'?i===0:c==='venezia'?i===1:i===2));});
   document.getElementById('panel-padova').style.display=c==='padova'?'block':'none';
   document.getElementById('panel-venezia').style.display=c==='venezia'?'block':'none';
+  document.getElementById('panel-vienna').style.display=c==='vienna'?'block':'none';
   if(c==='padova'){map.setView([45.407,11.877],15);addM(placesPadova);}
-  else{map.setView([45.437,12.332],15);addM(placesVenezia);}
+  else if(c==='venezia'){map.setView([45.437,12.332],15);addM(placesVenezia);}
+  else{map.setView([48.19,16.37],12);addM(placesVienna);}
 }
 function flyTo(lat,lng){map.flyTo([lat,lng],17,{duration:1});}
 </script>
