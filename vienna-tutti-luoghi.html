@@ -14,7 +14,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 #search { width:100%; padding:8px 12px; margin-bottom:10px; background:#16213e; border:1px solid #0f3460; border-radius:6px; color:#f1f5f9; font-size:16px; }
 #search::placeholder { color:#64748b; }
 #filter-panel { background:#16213e; border:1px solid #0f3460; border-radius:6px; padding:8px 10px; margin-bottom:10px; }
-.filter-title { font-size:11px; text-transform:uppercase; letter-spacing:1px; font-weight:700; color:#94a3b8; margin-bottom:6px; }
+.filter-title { font-size:11px; text-transform:uppercase; letter-spacing:1px; font-weight:700; color:#94a3b8; margin-bottom:6px; cursor:pointer; user-select:none; display:flex; justify-content:space-between; align-items:center; }
+#filter-chevron { font-size:10px; transition:transform .2s; }
+#filter-chevron.collapsed { transform:rotate(-90deg); }
+#filter-collapsible { overflow:hidden; transition:max-height .3s ease-out, opacity .2s; max-height:2000px; opacity:1; }
+#filter-collapsible.collapsed { max-height:0; opacity:0; }
 .filter-item { display:flex; align-items:center; gap:6px; padding:3px 0; font-size:12px; cursor:pointer; color:#cbd5e1; }
 .filter-item input { accent-color:#f59e0b; }
 .cat-count { color:#64748b; font-size:11px; }
@@ -52,7 +56,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 <div id="sidebar">
   <input type="text" id="search" placeholder="Cerca luogo...">
   <div id="filter-panel">
-    <div class="filter-title">Filtra categorie</div>
+    <div class="filter-title" id="filter-toggle" onclick="toggleFilterPanel()">Filtra categorie <span id="filter-chevron">&#9660;</span></div>
+    <div id="filter-collapsible">
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Appartamento" checked><span class="place-dot" style="background:#e74c3c"></span> Appartamento <span class="cat-count">(1)</span></label>
     <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Attività" checked><span class="place-dot" style="background:#ff6b35"></span> Attività <span class="cat-count">(6)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-risto" checked><span style="font-size:14px">🍽</span> <b>Ristorazione</b> <span class="cat-count">(32)</span></label>
@@ -86,6 +91,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" id="toggle-tram-cw"><span class="place-dot" style="background:#1b5e20"></span><span style="font-size:12px">🚋 Tram oraria</span></label>
     <label class="filter-item"><input type="checkbox" id="toggle-tram-ccw"><span class="place-dot" style="background:#1565c0"></span><span style="font-size:12px">🚋 Tram antioraria</span></label>
     <div style="text-align:center;padding:8px 0"><a href="vienna-itinerario.html" style="color:#94a3b8;font-size:12px;text-decoration:none;border:1px solid #0f3460;padding:4px 10px;border-radius:4px">📋 Itinerario 6 giorni</a></div>
+  </div>
   </div>
   <div id="place-list">
     <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">Appartamento</div>
@@ -487,6 +493,13 @@ function updateSmartLabels() {
 }
 
 map.on('zoomend moveend', updateSmartLabels);
+
+function toggleFilterPanel() {
+  var c = document.getElementById('filter-collapsible');
+  var ch = document.getElementById('filter-chevron');
+  c.classList.toggle('collapsed');
+  ch.classList.toggle('collapsed');
+}
 
 document.getElementById('toggle-labels').addEventListener('change', function() {
   labelsVisible = this.checked;
