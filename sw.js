@@ -4,11 +4,10 @@ const ASSETS=[
   'vienna-tutti-luoghi.html',
   'padova-e-venezia.html',
   'vienna-itinerario.html',
-  'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'
+  'sw.js'
 ];
 self.addEventListener('install',e=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)));
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS).catch(()=>{})));
   self.skipWaiting();
 });
 self.addEventListener('activate',e=>{
@@ -32,8 +31,7 @@ self.addEventListener('fetch',e=>{
     return;
   }
   e.respondWith(fetch(e.request).then(r=>{
-    const cl=r.clone();
-    caches.open(CACHE).then(c=>c.put(e.request,cl));
+    if(r&&r.ok){const cl=r.clone();caches.open(CACHE).then(c=>c.put(e.request,cl));}
     return r;
   }).catch(()=>caches.match(e.request)));
 });
