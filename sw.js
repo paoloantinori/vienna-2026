@@ -1,7 +1,8 @@
 const CACHE='vienna-v1',TILES='vienna-tiles-v1';
+const VERSIONS=new Set([CACHE,TILES]);
 self.addEventListener('install',e=>{self.skipWaiting()});
 self.addEventListener('activate',e=>{
-  e.waitUntil(caches.keys().then(ks=>Promise.all(ks.map(k=>caches.delete(k)))));
+  e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>!VERSIONS.has(k)).map(k=>caches.delete(k)))));
   self.clients.claim();
 });
 self.addEventListener('fetch',e=>{
@@ -16,11 +17,8 @@ self.addEventListener('fetch',e=>{
     })));
     return;
   }
-  if(u.hostname.includes('cdnjs.cloudflare.com')||u.hostname.includes('paoloantinori.github.io')){
-    e.respondWith(fetch(e.request).then(r=>{
-      if(r&&r.ok){const cl=r.clone();caches.open(CACHE).then(c=>c.put(e.request,cl));}
-      return r;
-    }).catch(()=>caches.match(e.request)));
-    return;
-  }
+  e.respondWith(fetch(e.request).then(r=>{
+    if(r&&r.ok){const cl=r.clone();caches.open(CACHE).then(c=>c.put(e.request,cl));}
+    return r;
+  }).catch(()=>caches.match(e.request)));
 });
