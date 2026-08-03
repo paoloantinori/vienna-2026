@@ -11,7 +11,7 @@ self.addEventListener('fetch',e=>{
     e.respondWith(caches.open(TILES).then(c=>c.match(e.request).then(r=>{
       if(r)return r;
       return fetch(e.request).then(resp=>{
-        if(resp&&resp.ok)c.put(e.request,resp.clone());
+        if(resp&&resp.ok){c.put(e.request,resp.clone());}
         return resp;
       }).catch(()=>new Response('',{status:204}));
     })));
