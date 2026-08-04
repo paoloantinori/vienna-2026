@@ -77,6 +77,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi avventura" checked><span class="place-dot" style="background:#f97316"></span> Parchi avventura <span class="cat-count">(4)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi giochi" checked><span class="place-dot" style="background:#06b6d4"></span> Parchi giochi <span class="cat-count">(16)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter park-sub" data-cat="Parchi e giardini" checked><span class="place-dot" style="background:#22c55e"></span> Parchi e giardini <span class="cat-count">(1)</span></label>
+    <label class="filter-item"><input type="checkbox" class="cat-filter" data-cat="Servizi" checked><span class="place-dot" style="background:#95a5a6"></span> Servizi <span class="cat-count">(1)</span></label>
     <label class="filter-item macro-parent"><input type="checkbox" id="macro-shop" checked><span style="font-size:14px">🛍</span> <b>Shopping</b> <span class="cat-count">(14)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter shop-sub" data-cat="Tè" checked><span class="place-dot" style="background:#d4a574"></span> Tè <span class="cat-count">(3)</span></label>
     <label class="filter-item macro-child"><input type="checkbox" class="cat-filter shop-sub" data-cat="Vintage" checked><span class="place-dot" style="background:#c8a2c8"></span> Vintage <span class="cat-count">(10)</span></label>
@@ -91,7 +92,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <label class="filter-item"><input type="checkbox" id="toggle-tram-cw"><span class="place-dot" style="background:#1b5e20"></span><span style="font-size:12px">🚋 Tram oraria</span></label>
     <label class="filter-item"><input type="checkbox" id="toggle-tram-ccw"><span class="place-dot" style="background:#1565c0"></span><span style="font-size:12px">🚋 Tram antioraria</span></label>
     <div style="text-align:center;padding:8px 0"><a href="vienna-itinerario.html" style="color:#94a3b8;font-size:12px;text-decoration:none;border:1px solid #0f3460;padding:4px 10px;border-radius:4px">📋 Itinerario 6 giorni</a></div>
-  </div>
+    </div>
   </div>
   <div id="place-list">
     <div class="cat-header" data-cat="Appartamento" style="color:#e74c3c">Appartamento</div>
@@ -195,6 +196,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
     <div class="place-item" data-name="Figlmüller" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Figlmüller</div>
     <div class="place-item" data-name="Plachutta" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Plachutta</div>
     <div class="place-item" data-name="Schweizerhaus" data-cat="Ristorante" data-cat2="Ristorazione"><span class="place-dot" style="background:#d35400"></span> Schweizerhaus</div>
+    <div class="cat-header" data-cat="Servizi" style="color:#95a5a6">Servizi</div>
+    <div class="place-item" data-name="LIZ-Lederwaren" data-cat="Servizi"><span class="place-dot" style="background:#95a5a6"></span> LIZ-Lederwaren</div>
     <div class="cat-header" data-cat="Souvenir" style="color:#f59e0b">Souvenir</div>
     <div class="place-item" data-name="Julius Meinl am Graben" data-cat="Souvenir" data-cat2="Ristorazione"><span class="place-dot" style="background:#f59e0b"></span> Julius Meinl am Graben</div>
     <div class="cat-header" data-cat="Spiaggia" style="color:#0ea5e9">Spiaggia</div>
@@ -365,7 +368,8 @@ var places = [
   {name: 'Waldspielplatz Lainzer Tiergarten', lat: 48.17, lng: 16.2383, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Lainzer Tiergarten, 1130 Wien | Parco giochi nel bosco, natura pura | 👥 Gita'},
   {name: 'Donaupark Spielplatz', lat: 48.2198, lng: 16.4131, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Donaupark, 1220 Wien | Parco giochi con area coperta e fontana | 👥 Da Nora e Ada'},
   {name: 'Kurpark Oberlaa Spielplatz', lat: 48.1533, lng: 16.4294, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Kurpark Oberlaa, 1100 Wien | Parco giochi con minirail | 👥 Gita con bambine'},
-  {name: 'Spielplatz Schweizergarten', lat: 48.1645, lng: 16.4933, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Schweizergarten, 1220 Wien | Parco giochi moderno vicino Donau City'}
+  {name: 'Spielplatz Schweizergarten', lat: 48.1645, lng: 16.4933, cat: 'Parchi giochi', type: 'default', emoji: '🎡', note: '📍 Schweizergarten, 1220 Wien | Parco giochi moderno vicino Donau City'},
+  {name: 'LIZ-Lederwaren', lat: 48.18308, lng: 16.32433, cat: 'Servizi', type: 'service', emoji: '📍', note: '🔧 Riparazione valigie Samsonite | Schönbrunner Str. 242, 1120 Wien | Lun-Ven 9-18 Sab 9-12 | +43 1 8131263 | U6 Meidling'}
 ];
 
 var catColors = {
@@ -384,6 +388,7 @@ var catColors = {
   'Parchi e giardini': '#22c55e',
   'Parchi giochi': '#06b6d4',
   'Ristorante': '#d35400',
+  'Servizi': '#95a5a6',
   'Souvenir': '#f59e0b',
   'Spiaggia': '#0ea5e9',
   'Trasporti': '#3b82f6',
