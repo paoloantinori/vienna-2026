@@ -309,7 +309,8 @@ function popupContent(place) {
   var metro = place.metro ? ' <span class="metro-badge">🚇 ' + place.metro + '</span>' : '';
   var ring = place.type === 'ring_tram' ? ' <span class="ring-badge">Giro Tram 1/2</span>' : '';
   var note = place.note ? '<br><small>' + place.note + '</small>' : '';
-  return (place.emoji ? place.emoji + ' ' : '') + '<b>' + place.name + '</b>' + metro + ring + note;
+  var hours = place.hours ? '<br><small>🕐 ' + place.hours + '</small>' : '';
+  return (place.emoji ? place.emoji + ' ' : '') + '<b>' + place.name + '</b>' + metro + ring + hours + note;
 }
 
 function createMarker(place) {

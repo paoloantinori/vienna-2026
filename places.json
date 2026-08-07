@@ -21,7 +21,8 @@
     "lng": 16.34181,
     "cat": "Ristorante",
     "type": "default",
-    "note": "📍 Grinzing, 1190 Wien | Villaggio sulle colline viennesi, cantine di vino locale (Heuriger) | 👥 Da Eleonora"
+    "note": "📍 Grinzing, 1190 Wien | Villaggio sulle colline viennesi, cantine di vino locale (Heuriger) | 👥 Da Eleonora",
+    "hours": "Tipicamente 16:00-23:00"
   },
   {
     "name": "Dascafe",
@@ -30,7 +31,8 @@
     "cat": "Café",
     "type": "default",
     "note": "📍 Caffè carino e accogliente | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 08:00-22:00"
   },
   {
     "name": "Kombucha Manufaktur",
@@ -39,7 +41,8 @@
     "cat": "Café",
     "type": "default",
     "note": "📍 Kombucha artigianale locale, produzione e degustazione",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 10:00-19:00, Dom chiuso"
   },
   {
     "name": "Museumsquartier bars",
@@ -48,7 +51,8 @@
     "cat": "Café",
     "type": "default",
     "note": "📍 Museumsquartier, 1070 Wien | Bar all'aperto nel cortile del MQ | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Orari variabili per locale"
   },
   {
     "name": "Palmenhaus Burggarten",
@@ -58,7 +62,8 @@
     "type": "default",
     "note": "📍 Burggarten 1, 1010 Wien | 🕐 Lun-Dom 10:00-24:00 | Serra Art Nouveau ristorante, atmosfera magica | 🔑 VCC –€1 | 💰 Cocktail + piatto ~€20 | 👥 Da Eleonora",
     "cat2": "Ristorazione",
-    "metro": "–€1 / –11%"
+    "metro": "–€1 / –11%",
+    "hours": "Lun-Dom 10:00-22:00 (cucina 11:30-21:30)"
   },
   {
     "name": "Demel",
@@ -67,7 +72,8 @@
     "cat": "Dolci",
     "type": "default",
     "note": "📍 Kohlmarkt 14, 1010 Wien | 🕐 Lun-Sab 9:00-19:00 | Pasticceria imperiale dal 1788, Sachertorte e dolci esposti come gioielli | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 10:00-18:00"
   },
   {
     "name": "Hotel Sacher",
@@ -76,7 +82,8 @@
     "cat": "Dolci",
     "type": "default",
     "note": "📍 Philharmoniker Str. 4, 1010 Wien | 🕐 Lun-Dom 8:00-20:00 | Sachertorte originale (ricetta segreta dal 1832) | 🎵 Vivaldi morì qui il 28/7/1741 (targa sulla facciata) | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Café Lun-Dom 08:00-23:45"
   },
   {
     "name": "Julius Meinl am Graben",
@@ -85,7 +92,8 @@
     "cat": "Souvenir",
     "type": "default",
     "note": "📍 Graben 19, 1010 Wien | 🕐 Lun-Sab 8:00-20:00 | Souvenir edibili viennesi: Manner Wafers, Staud's sottaceti & composta, caffè Meinl, cacao | Perfetto per regali da portare a casa",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 08:00-20:00, Dom 09:00-20:00"
   },
   {
     "name": "Konditorei Aida",
@@ -94,7 +102,8 @@
     "cat": "Dolci",
     "type": "default",
     "note": "📍 varie sedi centro | 🕐 Lun-Sab 7:00-19:00 | Catena storica di pasticceria viennese, torte e caffè | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 07:00-19:30, Dom 08:00-19:30"
   },
   {
     "name": "Film Festival Rathausplatz",
@@ -102,7 +111,8 @@
     "lng": 16.3586105,
     "cat": "Eventi",
     "type": "default",
-    "note": "📍 Rathausplatz, 1010 Wien | 🕐 4 lug-6 set 2026 | Maxischermo + decine bancarelle cibo internazionale davanti al Municipio | Cinema gratis, sedute proprie | Abbinare: Rathaus, Burgtheater"
+    "note": "📍 Rathausplatz, 1010 Wien | 🕐 4 lug-6 set 2026 | Maxischermo + decine bancarelle cibo internazionale davanti al Municipio | Cinema gratis, sedute proprie | Abbinare: Rathaus, Burgtheater",
+    "hours": "Lun-Dom, cinema dalle 20:00 (estate)"
   },
   {
     "name": "ImPulsTanz Public Moves",
@@ -110,7 +120,8 @@
     "lng": 16.3593419,
     "cat": "Eventi",
     "type": "default",
-    "note": "📍 varie sedi | 🕐 Fino al 9 agosto 2026 | Lezioni di danza gratuite all'aperto, tutti i livelli"
+    "note": "📍 varie sedi | 🕐 Fino al 9 agosto 2026 | Lezioni di danza gratuite all'aperto, tutti i livelli",
+    "hours": "Eventi estivi, orari variabili"
   },
   {
     "name": "Kultursommer Wien",
@@ -118,7 +129,8 @@
     "lng": 16.3565728,
     "cat": "Eventi",
     "type": "default",
-    "note": "📍 vari quartieri | 🕐 Fino al 16 agosto 2026 | Concerti gratuiti nei quartieri, 7 eventi 6-11 agosto | Vedi elenco separato"
+    "note": "📍 vari quartieri | 🕐 Fino al 16 agosto 2026 | Concerti gratuiti nei quartieri, 7 eventi 6-11 agosto | Vedi elenco separato",
+    "hours": "Eventi estivi (fino 16 ago)"
   },
   {
     "name": "MQ Summer Stage",
@@ -126,7 +138,8 @@
     "lng": 16.3583461,
     "cat": "Eventi",
     "type": "default",
-    "note": "📍 Museumsquartier, 1070 Wien | Eventi all'aperto, mini-golf, cinema nel MQ"
+    "note": "📍 Museumsquartier, 1070 Wien | Eventi all'aperto, mini-golf, cinema nel MQ",
+    "hours": "Lun-Dom 10:00-24:00 (estate)"
   },
   {
     "name": "Museum of Change",
@@ -134,7 +147,8 @@
     "lng": 16.3679,
     "cat": "Eventi",
     "type": "default",
-    "note": "📍 varie sedi | 🕐 19:00-22:00 | Spettacolo immersivo gratuito"
+    "note": "📍 varie sedi | 🕐 19:00-22:00 | Spettacolo immersivo gratuito",
+    "hours": "Mar-Dom 10:00-19:00"
   },
   {
     "name": "Albertina Museum",
@@ -144,7 +158,8 @@
     "type": "ring_tram",
     "note": "📍 Albertinaplatz 3, 1010 Wien | ⭐ 4.6/5 | 🕐 Lun-Dom 10:00-18:00 (Mer fino 21:00) | Dürer, Monet, Picasso, 22 Sale Asburgiche | ⏱ 1.5-2h, con bimbe 45min | 🔑 VCC –10% (€20→€18 adulto) | 💰 Bimbe gratis <19 | Prenotazione: no | Abbinare: Staatsoper 3min, Hofburg 5min",
     "cat2": "Musei",
-    "metro": "–25%"
+    "metro": "–25%",
+    "hours": "Lun-Dom 10:00-18:00, Mer fino 21:00"
   },
   {
     "name": "Ankeruhr (Orologio Anker)",
@@ -153,7 +168,8 @@
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
     "note": "📍 Hoher Markt 10-11, 1010 Wien | 🕐 Show ore 12:00 | Orologio Liberty (1914) di Franz Matsch, 12m di altezza | Alle 12:00 parata di 12 personaggi storici con musica: Giuseppe Haydn, Marco Aurelio, Carlomagno, Leopoldo VI, Babenberg, Walther von der Vogelweide, Rudolf IV, Ernesto d'Austria, Maria Teresa, Joseph Haydn | Spettacolo gratuito di ~10min | Abbinare: Minoritenkirche, St. Stephans",
-    "cat2": "Attività"
+    "cat2": "Attività",
+    "hours": "Sempre visibile (animazione ogni ora 11-21)"
   },
   {
     "name": "Burgtheater",
@@ -161,7 +177,8 @@
     "lng": 16.3577778,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Universitätsring 2, 1010 Wien | 🚊 Tram 'Burgring' o 'Rathaus' | Teatro di Corte, uno dei più prestigiosi al mondo | Esterni imponenti, affreschi di Klimt | Abbinare: Rathaus, Universität"
+    "note": "📍 Universitätsring 2, 1010 Wien | 🚊 Tram 'Burgring' o 'Rathaus' | Teatro di Corte, uno dei più prestigiosi al mondo | Esterni imponenti, affreschi di Klimt | Abbinare: Rathaus, Universität",
+    "hours": "Biglietteria 10:00-18:00"
   },
   {
     "name": "Börse (Vecchia Borsa)",
@@ -169,7 +186,8 @@
     "lng": 16.3738889,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Schottenring 16, 1010 Wien | Palazzo della Borsa di Vienna su Stubenring, architettura neoclassica | Attaccata alla Postsparkasse (3 min a piedi) | Abbinare: Postsparkasse, Votivkirche"
+    "note": "📍 Schottenring 16, 1010 Wien | Palazzo della Borsa di Vienna su Stubenring, architettura neoclassica | Attaccata alla Postsparkasse (3 min a piedi) | Abbinare: Postsparkasse, Votivkirche",
+    "hours": "Visite esterne solo"
   },
   {
     "name": "Hofburg (Residenza Imperiale)",
@@ -177,7 +195,8 @@
     "lng": 16.3646111,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Michaelerplatz 1, 1010 Wien | 🚊 Tram 'Burgring' poi 7min a piedi | Palazzo imperiale degli Asburgo | Sissi Museum, Kaiserappartements, Silberkammer all'interno | Abbinare: Albertina, Spanish Riding School"
+    "note": "📍 Michaelerplatz 1, 1010 Wien | 🚊 Tram 'Burgring' poi 7min a piedi | Palazzo imperiale degli Asburgo | Sissi Museum, Kaiserappartements, Silberkammer all'interno | Abbinare: Albertina, Spanish Riding School",
+    "hours": "Lun-Dom 09:00-17:30"
   },
   {
     "name": "Kunsthistorisches Museum",
@@ -186,7 +205,8 @@
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
     "note": "📍 Maria-Theresien-Platz, 1010 Wien | 🚊 Tram 'Burgring' | Museo di Storia dell'Arte, Bruegel, Vermeer, Raffaello | Davanti: NHM e Maria-Theresien-Denkmal | Abbinare: NHM, Parlamento",
-    "cat2": "Musei"
+    "cat2": "Musei",
+    "hours": "Lun-Dom 10:00-18:00 (Gio fino 21:00 fino 31 ago)"
   },
   {
     "name": "Naturhistorisches Museum",
@@ -196,7 +216,8 @@
     "type": "ring_tram",
     "note": "📍 Burgring 7, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Dom 9:00-18:30 | Dinosauri, meteore, animaletti, Venere di Willendorf | ⏱ 2-3h | 🔑 VCC –22% | 💰 Famiglia VCC: €28 (bimbe gratis <19) | Prenotazione: no | Abbinare: ZOOM Kindermuseum MQ 5min, KHM di fronte",
     "cat2": "Musei",
-    "metro": "–€4 / –22%"
+    "metro": "–€4 / –22%",
+    "hours": "Lun-Dom 09:00-18:30 (Gio fino 21:00 fino 31 ago)"
   },
   {
     "name": "Parlamento Austriaco",
@@ -204,7 +225,8 @@
     "lng": 16.3589028,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Dr.-Karl-Renner-Ring 3, 1010 Wien | 🚊 Tram 'Dr.-Karl-Renner-Ring' | Palazzo neogreco con quadriga di Athena | Visita gratuita con audioguida | Abbinare: Hofburg, Rathaus"
+    "note": "📍 Dr.-Karl-Renner-Ring 3, 1010 Wien | 🚊 Tram 'Dr.-Karl-Renner-Ring' | Palazzo neogreco con quadriga di Athena | Visita gratuita con audioguida | Abbinare: Hofburg, Rathaus",
+    "hours": "Visite guidate, prenotare online"
   },
   {
     "name": "Postsparkasse (Otto Wagner)",
@@ -212,7 +234,8 @@
     "lng": 16.3729167,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Georg-Coch-Platz 2, 1010 Wien | Capolavoro Jugendstil di Otto Wagner (1906) | Esterni spettacolari con rivetti in alluminio | Abbinare: Ankeruhr 3min, Börse 5min"
+    "note": "📍 Georg-Coch-Platz 2, 1010 Wien | Capolavoro Jugendstil di Otto Wagner (1906) | Esterni spettacolari con rivetti in alluminio | Abbinare: Ankeruhr 3min, Börse 5min",
+    "hours": "Lun-Ven 09:00-17:00, Sab-Dom chiuso"
   },
   {
     "name": "Sisi Museum",
@@ -222,7 +245,8 @@
     "type": "ring_tram",
     "note": "📍 Michaelerplatz 1, 1010 Wien (Hofburg) | ⭐ 4.3/5 | 🕐 Lun-Dom 9:00-17:30 | Storia di Sissi + Appartamenti Imperiali Hofburg | ⏱ 1.5-2h, più per adulti | 🔑 VCC –10% | 💰 Famiglia VCC: €70.20 (Nora 9 paga €34.20, Ada 4 gratis) | Prenotazione: no",
     "cat2": "Musei",
-    "metro": "–10%"
+    "metro": "–10%",
+    "hours": "Lun-Dom 09:00-17:30"
   },
   {
     "name": "Universität Wien",
@@ -230,7 +254,8 @@
     "lng": 16.3613056,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Universitätsring 1, 1010 Wien | 🚊 Tram 'Rathaus' o 'Schottentor' | Università di Vienna (1365), più antica del mondo germanofono | Hauptgebäude neoclassico, cortile aulico | Abbinare: Votivkirche, Burgtheater"
+    "note": "📍 Universitätsring 1, 1010 Wien | 🚊 Tram 'Rathaus' o 'Schottentor' | Università di Vienna (1365), più antica del mondo germanofono | Hauptgebäude neoclassico, cortile aulico | Abbinare: Votivkirche, Burgtheater",
+    "hours": "Cortile 09:00-18:00"
   },
   {
     "name": "Votivkirche (Chiesa Votiva)",
@@ -238,7 +263,8 @@
     "lng": 16.358611,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Rooseveltplatz 8, 1090 Wien | 🚊 Tram 'Schottentor' | Chiesa neogotica sulla Ringstraße, costruita dopo il fallito attentato a Franz Joseph nel 1853 | Facciata imponente con guglie gemelle | Abbinare: Universität, Rathaus"
+    "note": "📍 Rooseveltplatz 8, 1090 Wien | 🚊 Tram 'Schottentor' | Chiesa neogotica sulla Ringstraße, costruita dopo il fallito attentato a Franz Joseph nel 1853 | Facciata imponente con guglie gemelle | Abbinare: Universität, Rathaus",
+    "hours": "Lun-Sab 09:00-18:00, Dom 09:00-13:00"
   },
   {
     "name": "Wiener Staatsoper",
@@ -246,7 +272,8 @@
     "lng": 16.3687996,
     "cat": "Giro Tram 1/2",
     "type": "ring_tram",
-    "note": "📍 Opernring 2, 1010 Wien | 🚊 Tram 'Oper/Karlsplatz' | Teatro dell'Opera di Vienna (1869) | 💰 Esterni e standing room gratis, a sedere da ~€10 | Abbinare: Albertina, Karlskirche"
+    "note": "📍 Opernring 2, 1010 Wien | 🚊 Tram 'Oper/Karlsplatz' | Teatro dell'Opera di Vienna (1869) | 💰 Esterni e standing room gratis, a sedere da ~€10 | Abbinare: Albertina, Karlskirche",
+    "hours": "Biglietteria 10:00-18:00"
   },
   {
     "name": "Kurpark Oberlaa",
@@ -254,7 +281,8 @@
     "lng": 16.407221,
     "cat": "Gite fuori Vienna",
     "type": "default",
-    "note": "📍 Kurpark Oberlaa, 1100 Wien | 🕐 Giardino Giapponese solo Mer-Sab | Parco terme e giardini, U1 Oberlaa | 👥 Da Eleonora"
+    "note": "📍 Kurpark Oberlaa, 1100 Wien | 🕐 Giardino Giapponese solo Mer-Sab | Parco terme e giardini, U1 Oberlaa | 👥 Da Eleonora",
+    "hours": "Lun-Dom 09:00-22:00"
   },
   {
     "name": "Schloss Hof",
@@ -263,7 +291,8 @@
     "cat": "Gite fuori Vienna",
     "type": "default",
     "note": "📍 Schlosshof 1, 2294 Schlosshof | 🚗 ~1h da Vienna | Adventure path, petting zoo, castello barocco | 🔑 VCC –20% | Ideale giornata fuori porta",
-    "metro": "–20%"
+    "metro": "–20%",
+    "hours": "Mar-Dom 10:00-18:00, Lun chiuso"
   },
   {
     "name": "Thermalbad Bad Vöslau",
@@ -271,7 +300,8 @@
     "lng": 16.2103357,
     "cat": "Gite fuori Vienna",
     "type": "default",
-    "note": "📍 Bad Vöslau, Niederösterreich | 🚗 ~30 min da Vienna | Sorgente termale fredda, parco relax"
+    "note": "📍 Bad Vöslau, Niederösterreich | 🚗 ~30 min da Vienna | Sorgente termale fredda, parco relax",
+    "hours": "Lun-Dom 09:00-22:00"
   },
   {
     "name": "Therme Wien",
@@ -279,7 +309,8 @@
     "lng": 16.40062,
     "cat": "Gite fuori Vienna",
     "type": "default",
-    "note": "📍 Kurbadstraße 14, 1100 Wien | 🕐 Lun-Dom 9:00-22:00 | 🚇 U1 Oberlaa | Terme coperte e all'aperto, scivoli, saune | 💰 Adulto ~€28, bimbe sconti | Alternativa meteo avverso"
+    "note": "📍 Kurbadstraße 14, 1100 Wien | 🕐 Lun-Dom 9:00-22:00 | 🚇 U1 Oberlaa | Terme coperte e all'aperto, scivoli, saune | 💰 Adulto ~€28, bimbe sconti | Alternativa meteo avverso",
+    "hours": "Lun-Dom 09:00-23:00"
   },
   {
     "name": "Gemma Market — Open Air Painting",
@@ -287,7 +318,8 @@
     "lng": 16.372,
     "cat": "Mercati",
     "type": "default",
-    "note": "📍 Bauernmarkt 21, 1010 Wien | 🕐 Mer-Dom 14:00-22:00 (chiuso lun-mar) | Pittura open air, perfetto per Nora | Prenotazione solo gruppi 8+"
+    "note": "📍 Bauernmarkt 21, 1010 Wien | 🕐 Mer-Dom 14:00-22:00 (chiuso lun-mar) | Pittura open air, perfetto per Nora | Prenotazione solo gruppi 8+",
+    "hours": "Gio-Sab 14:00-20:00 (estate, meteo permettendo)"
   },
   {
     "name": "Karmelitermarkt",
@@ -295,7 +327,8 @@
     "lng": 16.3763,
     "cat": "Mercati",
     "type": "place",
-    "note": "📍 Karmelitermarkt, 1020 Wien | 🕐 Mercato contadino Ven+Sab (feriali solo ristoranti) | 🚇 U2 Karmeliterplatz | 2° distretto Leopoldstadt | Abbinare: Prater 15min, Karmeliterviertel"
+    "note": "📍 Karmelitermarkt, 1020 Wien | 🕐 Mercato contadino Ven+Sab (feriali solo ristoranti) | 🚇 U2 Karmeliterplatz | 2° distretto Leopoldstadt | Abbinare: Prater 15min, Karmeliterviertel",
+    "hours": "Sab 10:00-18:00 (banchi); ristoranti Lun-Dom"
   },
   {
     "name": "Griechisch-Orthodoxe Kathedrale (Hl. Dreifaltigkeit)",
@@ -303,7 +336,8 @@
     "lng": 16.375,
     "cat": "Monumenti",
     "type": "default",
-    "note": "📍 Fleischmarkt 13, 1010 Wien | 💰 GRATIS | Chiesa ortodossa greca, cupole dorate, atmosfera unica | 🚇 U3 Stubentor | Abbinare: St. Stephans 5min, Hotel Sacher"
+    "note": "📍 Fleischmarkt 13, 1010 Wien | 💰 GRATIS | Chiesa ortodossa greca, cupole dorate, atmosfera unica | 🚇 U3 Stubentor | Abbinare: St. Stephans 5min, Hotel Sacher",
+    "hours": "Lun-Sab 07:00-19:00, Dom 08:00-13:00"
   },
   {
     "name": "MQ Libelle",
@@ -311,7 +345,8 @@
     "lng": 16.3592037,
     "cat": "Attività",
     "type": "default",
-    "note": "📍 Museumsquartier, 1070 Wien (Leopold Museum) | 💰 GRATIS | Terrazza panoramica sul tetto del Leopold Museum | Vista su MQ e Hofburg"
+    "note": "📍 Museumsquartier, 1070 Wien (Leopold Museum) | 💰 GRATIS | Terrazza panoramica sul tetto del Leopold Museum | Vista su MQ e Hofburg",
+    "hours": "Lun-Dom 10:00-24:00 (estate)"
   },
   {
     "name": "Memoriale Antonio Vivaldi",
@@ -319,7 +354,8 @@
     "lng": 16.3686,
     "cat": "Monumenti",
     "type": "default",
-    "note": "📍 Tiefer Graben, 1010 Wien (targa) | 💰 GRATIS | Il compositore delle «Quattro Stagioni» si trasferì a Vienna nel 1740 su invito di Carlo VI | Morì qui il 28/7/1741 | Abbinare: Minoritenkirche, Ankeruhr"
+    "note": "📍 Tiefer Graben, 1010 Wien (targa) | 💰 GRATIS | Il compositore delle «Quattro Stagioni» si trasferì a Vienna nel 1740 su invito di Carlo VI | Morì qui il 28/7/1741 | Abbinare: Minoritenkirche, Ankeruhr",
+    "hours": "Lun-Dom 09:00-12:00/13:00-16:00"
   },
   {
     "name": "Minoritenkirche",
@@ -327,7 +363,8 @@
     "lng": 16.3617,
     "cat": "Monumenti",
     "type": "default",
-    "note": "📍 Minoritenplatz 2A, 1010 Wien | 💰 GRATIS | Chiesa gotica (1276-1350) | Mosaico più accurato dell'Ultima Cena di Leonardo, opera di Giacomo Raffaelli (XIX sec) — life-size! | Abbinare: Hofburg 3min, Ankeruhr 5min"
+    "note": "📍 Minoritenplatz 2A, 1010 Wien | 💰 GRATIS | Chiesa gotica (1276-1350) | Mosaico più accurato dell'Ultima Cena di Leonardo, opera di Giacomo Raffaelli (XIX sec) — life-size! | Abbinare: Hofburg 3min, Ankeruhr 5min",
+    "hours": "Lun-Sab 09:00-18:00, Dom 09:00-13:00"
   },
   {
     "name": "Apple Strudel Studio",
@@ -335,7 +372,8 @@
     "lng": 16.31291,
     "cat": "Attività",
     "type": "default",
-    "note": "📍 Schönbrunn, 1130 Wien | 🕐 Tutti i giorni | Corso di strudel per famiglie | Abbinare: Kindermuseum, Schönbrunn parco"
+    "note": "📍 Schönbrunn, 1130 Wien | 🕐 Tutti i giorni | Corso di strudel per famiglie | Abbinare: Kindermuseum, Schönbrunn parco",
+    "hours": "10:00-17:00 (demo 11:00/14:00)"
   },
   {
     "name": "Belvedere — Il Bacio di Klimt",
@@ -344,7 +382,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Prinz-Eugen-Straße 27, 1030 Wien | ⭐ 4.6/5 | 🕐 Lun-Dom 9:00-18:00 | Il Bacio di Klimt (180×180cm, oro e argento) — Galleria Austriaca nell'Oberes Belvedere | 🔑 VCC –€1.50 adulto/–€2.50 famiglia | 💰 Adulto ~€16, bimbe <19 gratis | Abbinare: Schloss Schönbrunn",
-    "metro": "–€1.50 singolo / –€2.50 2in1"
+    "metro": "–€1.50 singolo / –€2.50 2in1",
+    "hours": "Lun-Dom 09:00-18:00 (fino 31 ago: 09:00-19:00)"
   },
   {
     "name": "Haus der Musik",
@@ -353,7 +392,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Seilerstätte 30, 1010 Wien | ⭐ 4.5/5 | 🕐 Lun-Dom 10:00-22:00 | Dirigere orchestra virtuale, scale musicali, comporre | ⏱ 1.5-2h | 🔑 VCC –€4 (–21%) | 💰 Famiglia VCC: €40.80 | Nora 9 adorerà, Ada 4 si diverte | Prenotazione: no | Abbinare: Staatsoper 5min",
-    "metro": "–€4 / –21%"
+    "metro": "–€4 / –21%",
+    "hours": "Lun-Dom 10:00-22:00"
   },
   {
     "name": "Heindl SchokoMuseum",
@@ -362,7 +402,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Wilhelmstraße 87, 1120 Wien | ⭐ 4.2/5 | ⚠️ CHIUSO fino al 10 agosto (ferie), riapre 11 agosto | 🕐 Mar-Ven 9:00-16:00, Sab 9:00-17:00 | Laboratorio cioccolato, workshop bambini | 🔑 VCC –10% | Abbinare: Schönbrunn",
-    "metro": "–10%"
+    "metro": "–10%",
+    "hours": "Lun-Sab 10:00-17:30, Dom chiuso"
   },
   {
     "name": "Kindermuseum Schönbrunn",
@@ -371,7 +412,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Schönbrunn, 1130 Wien | ⭐ 4.5/5 | 🕐 Tutti i giorni 10:00-17:00 (orario estivo) | Bimbi 3-12 anni, giochi interattivi | 🔑 VCC –8% (€12→€11 adulto/bimbo) | 💰 Famiglia: €9.20/adulto, bimbe 3-12 anni | Prenotazione consigliata | Abbinare: Schönbrunn parco, Marionettentheater",
-    "metro": "–€1 / –8%"
+    "metro": "–€1 / –8%",
+    "hours": "Mar-Dom 09:00-16:30"
   },
   {
     "name": "Marionettentheater Schönbrunn",
@@ -380,7 +422,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Schönbrunn, 1130 Wien | ⭐ 4.5/5 | Flauto Magico con marionette | ⏱ 1h | 🔑 VCC –20% (solo spettacoli serali, prenotazione tel/email) | 💰 Biglietti da €15-€39 | Prenotazione: consigliata | Nora 9 e Ada 4 incantate | Abbinare: Kindermuseum",
-    "metro": "–20%"
+    "metro": "–20%",
+    "hours": "Mar-Dom 10:00-17:00, serali 20:00"
   },
   {
     "name": "Museum der Illusionen",
@@ -389,7 +432,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Wallnerstraße 14, 1010 Wien | ⭐ 4.4/5 | 🕐 Lun-Dom 10:00-20:00 | Illusioni ottiche, ologrammi, stanza obliqua | Ok senza tedesco | 🔑 VCC –20% (€19→€15 adulto) | Abbinare: Hofburg 3min",
-    "metro": "–19%"
+    "metro": "–19%",
+    "hours": "Lun-Dom 10:00-22:00"
   },
   {
     "name": "Schloss Schönbrunn",
@@ -399,7 +443,8 @@
     "type": "default",
     "note": "📍 Schönbrunner Schlossstraße 47, 1130 Wien | ⭐ 4.6/5 | Opzione senza interni: parco GRATIS + labirinto + Gloriette | 🔑 VCC –5% (Classic Pass €49→€42) | 💰 Parco gratis, interni a pagamento | Prenotazione: SI se Classic Pass, no solo parco | Abbinare: Kindermuseum, Marionettentheater, Heindl",
     "cat2": "Parchi e giardini",
-    "metro": "–€2/–5% (Classic)"
+    "metro": "–€2/–5% (Classic)",
+    "hours": "Lun-Dom 08:30-17:30 (giardini 06:30-tramonto)"
   },
   {
     "name": "Schmetterlinghaus",
@@ -408,7 +453,8 @@
     "cat": "Attività",
     "type": "default",
     "note": "📍 Burggarten, 1010 Wien | ⭐ 4.0/5 | 🕐 Tutti i giorni 10:00-16:45 (apr-ott, ultima entrata 16:45) | ~400 farfalle tropicali in serra Art Nouveau | 🔑 VCC –€1 (–11%) (€10→€9 adulto) | Abbinare: Palmenhaus Burggarten, Albertina",
-    "metro": "–€1 / –11%"
+    "metro": "–€1 / –11%",
+    "hours": "Lun-Dom 10:00-16:45"
   },
   {
     "name": "Technisches Museum",
@@ -417,7 +463,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Mariahilfer Straße 212, 1140 Wien | ⭐ 4.7/5 | 🕐 Lun-Dom 9:00-18:00 | Scienza interattiva, miniera, locomotive, volo VR Birdly | 🔑 VCC –€3.60 (–20%) | Vedi anche Technisches Museum Wien per dettagli",
-    "metro": "–€3.60 / –20%"
+    "metro": "–€3.60 / –20%",
+    "hours": "Lun-Dom 09:00-18:00 (Gio fino 21:00 fino 31 ago)"
   },
   {
     "name": "Technisches Museum Wien",
@@ -426,7 +473,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Mariahilfer Straße 212, 1140 Wien | ⭐ 4.7/5 | 🕐 Lun-Dom 9:00-18:00 | 22.000mq: treni, aerei, satelliti, miniera | minTi (1.5-5 anni, Ada 4), miniXplore + In Motion (Nora 9) | ⏱ 2-3h | 🔑 VCC –€3.60 (–20%) | Prenotazione: slot minTi | Abbinare: Schönbrunn 10min",
-    "metro": "–€3.60 / –20%"
+    "metro": "–€3.60 / –20%",
+    "hours": "Lun-Dom 09:00-18:00 (Gio fino 21:00 fino 31 ago)"
   },
   {
     "name": "ZOOM Kindermuseum",
@@ -435,7 +483,8 @@
     "cat": "Musei",
     "type": "default",
     "note": "📍 Museumsquartier, 1070 Wien | ⭐ 4.6/5 | ZOOM Ocean per Ada 4 (0-6 anni), laboratori per Nora 9 (6-12) | Niente tedesco necessario | ⏱ 1h a slot | 🔑 VCC –7% (€8.50→€8 Studio, €6.50→€6 Ocean) | 💰 Prenotazione: fortemente consigliata | Abbinare: NHM 5min, MQ",
-    "metro": "–€0.50 / fino a –7%"
+    "metro": "–€0.50 / fino a –7%",
+    "hours": "Mar-Dom 10:00-16:00"
   },
   {
     "name": "Grünberger",
@@ -444,7 +493,8 @@
     "cat": "Panificio",
     "type": "default",
     "note": "📍 Grünberger Straße 65, 1020 Wien | Pane bio a lievitazione naturale | 🚇 U2 Karmeliterplatz",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-23:00"
   },
   {
     "name": "Joseph Brot",
@@ -453,7 +503,8 @@
     "cat": "Panificio",
     "type": "default",
     "note": "📍 Wieden, 1040 Wien | Panificio artigianale d'eccellenza, bio e sourdough",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 07:00-19:00, Dom 08:00-15:00"
   },
   {
     "name": "Siebensternbäckerei",
@@ -462,7 +513,8 @@
     "cat": "Panificio",
     "type": "default",
     "note": "📍 Siebensterngasse 46, 1070 Wien | Forno a legna, bio, pane tradizionale viennese",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 07:00-19:30, Dom 08:00-15:00"
   },
   {
     "name": "Grosse Bucht",
@@ -471,7 +523,8 @@
     "cat": "Spiaggia",
     "type": "default",
     "note": "📍 Neue Donau, 1210 Wien | 🚇 U6 Neue Donau | Panorama + balneazione, spiaggia sull'isola",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Lun-Dom 11:00-23:00 (stagionale)"
   },
   {
     "name": "Kaiserwasser",
@@ -480,7 +533,8 @@
     "cat": "Spiaggia",
     "type": "default",
     "note": "📍 Kaiserwasser, 1210 Wien | ⭐ DA PREFERIRE per le bimbe: acqua calma, poca profondità, meno affollato | 🚇 U6 da Handelskai (casa) → Neue Donau (3 fermate, ~6 min) | Zero cambi, zero traghetti | Ideale per Ada (4)",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Lun-Dom 11:00-23:00"
   },
   {
     "name": "Lagerwiese Romaplatz",
@@ -489,7 +543,8 @@
     "cat": "Spiaggia",
     "type": "default",
     "note": "📍 Neue Donau, 1210 Wien | Balneazione naturale, prato relax | 🚇 U6 Neue Donau",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Lun-Dom 11:00-23:00"
   },
   {
     "name": "Pier 22 Copa Beach",
@@ -498,7 +553,8 @@
     "cat": "Spiaggia",
     "type": "default",
     "note": "📍 Neue Donau, 1210 Wien | Piattaforme, fitness outdoor, balneazione | 🚇 U6 Neue Donau | Più affollato, Kaiserwasser meglio",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Lun-Dom 10:00-24:00 (stagionale)"
   },
   {
     "name": "Strandbad Alte Donau",
@@ -507,7 +563,8 @@
     "cat": "Spiaggia",
     "type": "default",
     "note": "📍 Alte Donau, 1220 Wien | Bagno ramo morto Danubio | 👥 Da Eleonora",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Maggio-Set 09:00-19:00"
   },
   {
     "name": "7Stern Bräu",
@@ -516,7 +573,8 @@
     "cat": "Ristorante",
     "type": "default",
     "note": "📍 Siebensterngasse 19, 1070 Wien | Micro birrificio artigianale, cucina austriaca | 🍺 Birra propria",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-01:00"
   },
   {
     "name": "Feuerwehr Wagner",
@@ -525,7 +583,8 @@
     "cat": "Ristorante",
     "type": "default",
     "note": "📍 Grinzing, 1190 Wien | Heuriger (cantina di vino), vegetariano-friendly | Ambiente informale all'aperto",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 11:00-22:00, Dom chiuso"
   },
   {
     "name": "Figlmüller",
@@ -534,7 +593,8 @@
     "cat": "Ristorante",
     "type": "default",
     "note": "📍 Wollzeile 5, 1010 Wien | ⭐ 4.4/5 | Schnitzel viennese dal 1905, il più famoso di Vienna | 🌱 Schnitzel vegana (proteina di pisello) disponibile! | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Naschmarkt",
@@ -543,7 +603,8 @@
     "cat": "Mercati",
     "type": "default",
     "note": "📍 Naschmarkt, 1060 Wien | 🕐 Mercato alimentare Lun-Sab | MERCATINO PULCI SABATO ONLY 6:30-14:00 | 🚇 U4 Kettenbrückengasse | 💰 GRATIS | Abbinare: Haus der Musik, Secession",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Banchi Lun-Sam 06:00-18:00, Dom 09:00-18:00; Ristoranti fino 23:00"
   },
   {
     "name": "Plachutta",
@@ -552,7 +613,8 @@
     "cat": "Ristorante",
     "type": "default",
     "note": "📍 Wollzeile 38, 1010 Wien | ⭐ 4.5/5 | Tafelspitz (bollito di manzo), piatto nazionale austriaco | Prenotazione consigliata | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-23:00"
   },
   {
     "name": "Schweizerhaus",
@@ -561,7 +623,8 @@
     "cat": "Ristorante",
     "type": "default",
     "note": "📍 Prater, 1020 Wien (Zentralschweizerhaus) | ⭐ 4.4/5 | Specialità viennesi nel Prater | Schweinsbraten, Stelze | 🚇 U1/U2 Praterstern | 👥 Da Eleonora",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Mar-Dom 11:00-23:00"
   },
   {
     "name": "Veganista Ice Cream",
@@ -570,7 +633,8 @@
     "cat": "Dolci",
     "type": "default",
     "note": "📍 Museumsquartier, 1070 Wien | Gelato 100% vegano artigianale | Must per Chiara | Papavero, nocciola, matcha",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 11:00-22:00, Dom 12:00-20:00"
   },
   {
     "name": "Vollpension",
@@ -580,7 +644,8 @@
     "type": "default",
     "note": "📍 Amerlingstraße 6, 1060 Wien | 🕐 Lun-Dom 9:00-20:00 | Caffè con nonne che cucinano torte, atmosfera casa | Anche ristorante | 🔑 VCC –20% | Abbinare: Naschmarkt 5min",
     "cat2": "Ristorazione",
-    "metro": "–20% consumazioni"
+    "metro": "–20% consumazioni",
+    "hours": "Lun-Dom 09:00-19:00"
   },
   {
     "name": "Demmer's Teehaus — Hauptbahnhof",
@@ -588,7 +653,8 @@
     "lng": 16.3804,
     "cat": "Tè",
     "type": "default",
-    "note": "📍 BahnhofCity Wien Hauptbahnhof (Shop 00.102) | 🕐 Lun-Dom 5:00-23:00 | Tè sfuso + mini Trzesniewski (brötchen viennesi) | Perfetto per souvenir tè prima di partire"
+    "note": "📍 BahnhofCity Wien Hauptbahnhof (Shop 00.102) | 🕐 Lun-Dom 5:00-23:00 | Tè sfuso + mini Trzesniewski (brötchen viennesi) | Perfetto per souvenir tè prima di partire",
+    "hours": "Lun-Dom 06:30-21:00"
   },
   {
     "name": "Demmer’s Teehaus — Donauzentrum",
@@ -613,7 +679,8 @@
     "cat": "Attività",
     "type": "default",
     "note": "📍 Michaelerplatz 1, 1010 Wien (Hofburg) | ⭐ 4.7/5 | Morning Exercise o Performance con Lipizzani | 🕐 Morning Exercise: mar-sab 10:00-12:00 (varia) | 🔑 VCC –€2 (–11%, solo per il training) | Prenotazione: consigliata | Abbinare: Hofburg, Sisi Museum",
-    "metro": "–€2 / –11%"
+    "metro": "–€2 / –11%",
+    "hours": "Training 10:00-12:00, Biglietteria 09:00-16:00"
   },
   {
     "name": "Allerheiligenplatz",
@@ -645,7 +712,8 @@
     "lng": 16.38,
     "cat": "Trasporti",
     "type": "transport",
-    "note": "📍 Am Hauptbahnhof 1, 1100 Wien | 🚇 U1 Südtiroler Platz | Stazione centrale (2015): RailJet, Nightjet, EuroCity | Shopping, deposito bagagli KiBag (€6/bagaglio, piano -1)"
+    "note": "📍 Am Hauptbahnhof 1, 1100 Wien | 🚇 U1 Südtiroler Platz | Stazione centrale (2015): RailJet, Nightjet, EuroCity | Shopping, deposito bagagli KiBag (€6/bagaglio, piano -1)",
+    "hours": "Lun-Dom 04:30-00:30"
   },
   {
     "name": "Cafe Harvest",
@@ -654,7 +722,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Karmeliterplatz 1, 1020 Wien | 100% vegano | 💰 € | Cucina: brunch/soul food | Jackfruit BBQ, tagliatelle polpette vegetali | 🕐 Aperto fino a mezzanotte",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 08:00-16:00"
   },
   {
     "name": "Gorilla Kitchen",
@@ -663,7 +732,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Karlskirche, 1040 Wien | 100% vegano | 💰 €€ | Cucina: messicana/fusion | Burritos e bowl (tofu lotus, chard chickpeas), 4 salse | Self-service",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Karma",
@@ -672,7 +742,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 2° distretto, 1020 Wien | Vegetariano con opzioni vegane | 💰 €€ | Cucina: indiano-fusion/all-day breakfast | Thali indiano, vegan salmon sandwich, daal della settimana",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Maran",
@@ -681,7 +752,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Stumpergasse 57, 1060 Wien | 100% vegano | 💰 € | Cucina: bistro/alimentari | Menu rotante, sandwich, dolci | Vendita alimentari vegani",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-23:00"
   },
   {
     "name": "Pepper & Ginny",
@@ -690,7 +762,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Ballgasse 5, 1010 Wien | 100% vegano | 💰 €€ | Cucina: delicatessen internazionale | Lox di carota con cream cheese di anacardi",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Pizzi's & Cream",
@@ -699,7 +772,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Burggasse 25, 1070 Wien | 100% vegano | 💰 €€ | Cucina: pizza/gelato | Mozzarella di anacardi, impasto 2 giorni | Gelato vegano",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-22:00"
   },
   {
     "name": "Swing Kitchen",
@@ -708,7 +782,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Operngasse 24, 1040 Wien | 100% vegano | 💰 €€ | Cucina: burger/schnitzel | Kraut Pleaser: schnitzel vegano con crauti | Nugget, salse homemade",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 11:00-22:00, Dom 12:00-20:00"
   },
   {
     "name": "TIAN",
@@ -717,7 +792,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Himmelpfortgasse 23, 1010 Wien | Vegetariano (menu vegano) | 💰 €€€ | Cucina: fine dining stellato Michelin | Degustazione 8 portate | Prenotazione obbligatoria",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-22:00"
   },
   {
     "name": "TIAN Bistro",
@@ -726,7 +802,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Centro, 1010 Wien | Vegetariano (menu vegano) | 💰 €€ | Cucina: bistro | Versione bistro del TIAN stellato | Giardino/conservatorio | Polenta, tarte flambée",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-22:00"
   },
   {
     "name": "Tau",
@@ -735,7 +812,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Erzherzog-Karl-Str. 38, 1220 Wien | 100% vegano | 💰 €€ | Cucina: asian-fusion | Spring rolls, dumplings, crispy duck vegetale",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-22:00"
   },
   {
     "name": "Veganista",
@@ -744,7 +822,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Margaretenstraße 51, 1050 Wien | 100% vegano | 💰 €€ | Cucina: gelato artigianale | Papavero, nocciola, matcha | Inbetwiener sandwich",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Sab 11:00-22:00, Dom 12:00-20:00"
   },
   {
     "name": "Veggiezz",
@@ -753,7 +832,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Salzgries 9, 1010 Wien | 100% vegano | 💰 € | Cucina: bowl/insalate | Crunchy Pumpkin: zucca, quinoa, senape arancia",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Venuss",
@@ -762,7 +842,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Centro, 1010 Wien | Vegetariano con opzioni vegane | 💰 €€ | Cucina: austriaca bio | Goulash chanterelle, stufato fagioli, schnitzel vegetale | Buffet a mezzogiorno",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:30-23:00"
   },
   {
     "name": "Vevi",
@@ -771,7 +852,8 @@
     "cat": "Vegano / Vegetariano",
     "type": "default",
     "note": "📍 Stollgasse 5, 1070 Wien | 100% vegano | 💰 € | Cucina: vietnamita | Bahn Mi, Pho | Pranzo sotto €10",
-    "cat2": "Ristorazione"
+    "cat2": "Ristorazione",
+    "hours": "Lun-Dom 11:00-22:00"
   },
   {
     "name": "Stephansdom (Santo Stefano)",
@@ -779,7 +861,8 @@
     "lng": 16.373118,
     "cat": "Monumenti",
     "type": "default",
-    "note": "📍 Stephansplatz 1, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 | Duomo gotico simbolo di Vienna, tile colorate sul tetto | Torre Sud con vista panoramica | 💰 GRATIS navata, Torre a pagamento | Abbinare: Graben, Hotel Sacher 3min"
+    "note": "📍 Stephansplatz 1, 1010 Wien | ⭐ 4.7/5 | 🕐 Lun-Sab 6:00-22:00, Dom 7:00-22:00 | Duomo gotico simbolo di Vienna, tile colorate sul tetto | Torre Sud con vista panoramica | 💰 GRATIS navata, Torre a pagamento | Abbinare: Graben, Hotel Sacher 3min",
+    "hours": "Lun-Sab 06:00-22:00, Dom 07:00-22:00"
   },
   {
     "name": "Wiener Prater",
@@ -788,7 +871,8 @@
     "lat": 48.2167,
     "lng": 16.3979,
     "emoji": "🎠",
-    "note": "📍 Prater Hauptallee, 1020 Wien | 🕐 Lun-Dom 24h (parco) | Parco storico con luna park, giostre, aree verdi, piste ciclabili lungo il Danubio | 🚂 U1/U2 Praterstern | 🎯 Per Nora: luna park, Spirit of London (simulateur), Prater Turm (torre panoramica 117m) | 💼 GRATIS ingresso parco, giostre a pagamento | 🤝 Abbinare: Riesenrad, Madame Tussauds, Donauinsel"
+    "note": "📍 Prater Hauptallee, 1020 Wien | 🕐 Lun-Dom 24h (parco) | Parco storico con luna park, giostre, aree verdi, piste ciclabili lungo il Danubio | 🚂 U1/U2 Praterstern | 🎯 Per Nora: luna park, Spirit of London (simulateur), Prater Turm (torre panoramica 117m) | 💼 GRATIS ingresso parco, giostre a pagamento | 🤝 Abbinare: Riesenrad, Madame Tussauds, Donauinsel",
+    "hours": "Parco: sempre aperto"
   },
   {
     "name": "Riesenrad (Ruota Panoramica)",
@@ -797,7 +881,8 @@
     "lat": 48.21673,
     "lng": 16.39558,
     "emoji": "🎡",
-    "note": "📍 Riesenradplatz, 1020 Wien | ⭐ 4.5/5 | 🕐 10:00-21:45 (verificare orario estivo) | Ruota panoramica iconica del 1897, 65m di altezza, cabine panoramiche con vista su tutta Vienna | 🎡 Giro ~15 min | 💳 Adulti ~€14, Bambini ~€7 | 🚂 U2 Praterstern | 🤝 Abbinare: Prater luna park, Madame Tussauds"
+    "note": "📍 Riesenradplatz, 1020 Wien | ⭐ 4.5/5 | 🕐 10:00-21:45 (verificare orario estivo) | Ruota panoramica iconica del 1897, 65m di altezza, cabine panoramiche con vista su tutta Vienna | 🎡 Giro ~15 min | 💳 Adulti ~€14, Bambini ~€7 | 🚂 U2 Praterstern | 🤝 Abbinare: Prater luna park, Madame Tussauds",
+    "hours": "Lun-Dom 10:00-22:00 (estate, weekend fino 01:00)"
   },
   {
     "name": "Carla Mittersteig (Caritas)",
@@ -805,7 +890,8 @@
     "lng": 16.3631,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Mittersteig 10, 1050 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-17:00 | Charity shop Caritas — abiti donna, casa, libri, vinile | prezzi popolari, utile per bambine | 🚇 U4 Karlsplatz 10min"
+    "note": "📍 Mittersteig 10, 1050 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-17:00 | Charity shop Caritas — abiti donna, casa, libri, vinile | prezzi popolari, utile per bambine | 🚇 U4 Karlsplatz 10min",
+    "hours": "Lun-Sab 09:00-18:00, Dom chiuso"
   },
   {
     "name": "Carla Stephansplatz (Caritas)",
@@ -813,7 +899,8 @@
     "lng": 16.3742,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Stephansplatz 5, 1010 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Charity shop Caritas in centro — abiti donna, accessori, casa, libri | dietro il Duomo, comodissimo"
+    "note": "📍 Stephansplatz 5, 1010 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Charity shop Caritas in centro — abiti donna, accessori, casa, libri | dietro il Duomo, comodissimo",
+    "hours": "Lun-Sab 09:00-18:00, Dom chiuso"
   },
   {
     "name": "Carla Nord (Caritas)",
@@ -821,7 +908,8 @@
     "lng": 16.4123,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Steinheilgasse 3, 1210 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-17:00 | Charity shop Caritas — 4000m², enorme scelta abiti + casa + mobili | ottimo per bambine | 🚇 U6 Floridsdorf"
+    "note": "📍 Steinheilgasse 3, 1210 Wien | 🕐 Lun-Ven 9:00-18:00, Sab 9:00-17:00 | Charity shop Caritas — 4000m², enorme scelta abiti + casa + mobili | ottimo per bambine | 🚇 U6 Floridsdorf",
+    "hours": "Lun-Sab 09:00-18:00, Dom chiuso"
   },
   {
     "name": "Humana — Landstraße",
@@ -829,7 +917,8 @@
     "lng": 16.3858,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Landstraße Hauptstraße 21, 1030 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Catena second-hand economica — poca selezione ma prezzi bassi | donna, uomo, bambine | 🚇 U4 Rochusgasse"
+    "note": "📍 Landstraße Hauptstraße 21, 1030 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Catena second-hand economica — poca selezione ma prezzi bassi | donna, uomo, bambine | 🚇 U4 Rochusgasse",
+    "hours": "Lun-Sab 09:30-18:30, Dom chiuso"
   },
   {
     "name": "Humana — Neubaugasse",
@@ -837,7 +926,8 @@
     "lng": 16.3517,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Lerchenfelder Straße 45 / Neubaugasse, 1070 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Uno dei migliori Humana di Vienna — ampia scelta donna | reparto bambine | 🚇 U3 Zieglergasse"
+    "note": "📍 Lerchenfelder Straße 45 / Neubaugasse, 1070 Wien | 🕐 Lun-Ven 10:00-19:00, Sab 10:00-18:00 | Uno dei migliori Humana di Vienna — ampia scelta donna | reparto bambine | 🚇 U3 Zieglergasse",
+    "hours": "Lun-Sab 09:30-18:30, Dom chiuso"
   },
   {
     "name": "48er-Tandler",
@@ -845,7 +935,8 @@
     "lng": 16.4081,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Percostraße 2, 1220 Wien | 🕐 Lun-Ven 9:00-19:00, Sab 9:00-17:00 | Thrift shop del comune (MA48) — ben curato, economico | abiti donna, uomo, bambine, casa, giochi | eventi per famiglie | 🚇 U1 Kagran"
+    "note": "📍 Percostraße 2, 1220 Wien | 🕐 Lun-Ven 9:00-19:00, Sab 9:00-17:00 | Thrift shop del comune (MA48) — ben curato, economico | abiti donna, uomo, bambine, casa, giochi | eventi per famiglie | 🚇 U1 Kagran",
+    "hours": "Mar-Sab 10:00-18:00, Lun-Dom chiuso"
   },
   {
     "name": "Polyklamott",
@@ -853,7 +944,8 @@
     "lng": 16.3547,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Mollardgasse 13, 1060 Wien | 🕐 Lun-Ven 12:00-19:30, Sab 11:00-18:00 | Vintage anni 60-90, colorato, economico | donna + uomo, anche stilisti viennesi giovani | 🚇 U3 Zieglergasse"
+    "note": "📍 Mollardgasse 13, 1060 Wien | 🕐 Lun-Ven 12:00-19:30, Sab 11:00-18:00 | Vintage anni 60-90, colorato, economico | donna + uomo, anche stilisti viennesi giovani | 🚇 U3 Zieglergasse",
+    "hours": "Mar-Sab 10:00-18:00, Lun-Dom chiuso"
   },
   {
     "name": "Burggasse 24",
@@ -861,7 +953,8 @@
     "lng": 16.3523,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Burggasse 24, 1070 Wien | 🕐 Lun-Ven 11:00-19:00, Sab 11:00-18:00 | Vintage economico e trendy, concept store | donna + uomo | 🚇 U3 Zieglergasse / Tram 49"
+    "note": "📍 Burggasse 24, 1070 Wien | 🕐 Lun-Ven 11:00-19:00, Sab 11:00-18:00 | Vintage economico e trendy, concept store | donna + uomo | 🚇 U3 Zieglergasse / Tram 49",
+    "hours": "Lun-Sab 10:00-18:00, Dom chiuso"
   },
   {
     "name": "Wolfmich",
@@ -869,7 +962,8 @@
     "lng": 16.3586,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Gumpendorfer Straße 51, 1060 Wien | 🕐 Lun-Ven 13:00-19:00, Sab 11:00-18:00 | Vintage anni 80-90, casual e firmati | donna + uomo (ampio) | 🚇 U3 Zieglergasse / Tram 6"
+    "note": "📍 Gumpendorfer Straße 51, 1060 Wien | 🕐 Lun-Ven 13:00-19:00, Sab 11:00-18:00 | Vintage anni 80-90, casual e firmati | donna + uomo (ampio) | 🚇 U3 Zieglergasse / Tram 6",
+    "hours": "Mar-Sab 10:00-18:00, Lun-Dom chiuso"
   },
   {
     "name": "Marcy Vintage",
@@ -877,7 +971,8 @@
     "lng": 16.3714,
     "cat": "Vintage",
     "type": "default",
-    "note": "📍 Wipplingerstraße 8, 1010 Wien | 🕐 Lun-Ven 11:00-19:00, Sab 11:00-18:00 | Vintage con impegno sociale — dona abiti a chi ne ha bisogno | donna, prezzi accessibili | 🚇 U1/U3 Stephansplatz"
+    "note": "📍 Wipplingerstraße 8, 1010 Wien | 🕐 Lun-Ven 11:00-19:00, Sab 11:00-18:00 | Vintage con impegno sociale — dona abiti a chi ne ha bisogno | donna, prezzi accessibili | 🚇 U1/U3 Stephansplatz",
+    "hours": "Lun-Sab 11:00-19:00, Dom chiuso"
   },
   {
     "name": "Brunnenmarkt",
@@ -885,7 +980,8 @@
     "lng": 16.4294,
     "cat": "Mercati",
     "type": "default",
-    "note": "📍 Otto-Bauer-Gasse / Brunnenmarkt, 1160 Wien (16° distretto) | 🕐 Lun-Sab 6:00-19:30 (sab miglior giorno) | Il mercato più lungo di Vienna (1.6km) — street food multiculturale: stand turchi, balcanici, mediorientali | prezzi bassi, autentico | 🚇 U3 Ottakring"
+    "note": "📍 Otto-Bauer-Gasse / Brunnenmarkt, 1160 Wien (16° distretto) | 🕐 Lun-Sab 6:00-19:30 (sab miglior giorno) | Il mercato più lungo di Vienna (1.6km) — street food multiculturale: stand turchi, balcanici, mediorientali | prezzi bassi, autentico | 🚇 U3 Ottakring",
+    "hours": "Mar-Sab 06:00-18:00 (banchi); ristoranti Lun-Dom"
   },
   {
     "name": "Hochseilklettergarten Gänsehäufelbad",
@@ -893,7 +989,8 @@
     "lng": 16.431,
     "cat": "Parchi avventura",
     "type": "default",
-    "note": "📍 Moissigasse 21, 1220 Wien (Gänsehäufelbad, Donauinsel) | 🧗 Il parco avventura più grande di Vienna centrale — 79 piattaforme fino a 8m, 10 percorsi, 1500m totali, 26 flying fox | Da 6 anni | 🕐 1 apr-31 ott, Pick-up 11/13/15/17 (feriali), orario 10-17 (sab-dom) | 🚌 Bus 20A da Kagran | Vicino all'appartamento! | Tel +43 699 8181 3039 | hochseilklettergarten.at"
+    "note": "📍 Moissigasse 21, 1220 Wien (Gänsehäufelbad, Donauinsel) | 🧗 Il parco avventura più grande di Vienna centrale — 79 piattaforme fino a 8m, 10 percorsi, 1500m totali, 26 flying fox | Da 6 anni | 🕐 1 apr-31 ott, Pick-up 11/13/15/17 (feriali), orario 10-17 (sab-dom) | 🚌 Bus 20A da Kagran | Vicino all'appartamento! | Tel +43 699 8181 3039 | hochseilklettergarten.at",
+    "hours": "Maggio-Set 09:00-18:00"
   },
   {
     "name": "Wasserspielplatz Donauinsel",
@@ -933,7 +1030,8 @@
     "lng": 16.357,
     "cat": "Parchi avventura",
     "type": "default",
-    "note": "🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt"
+    "note": "🏝️ Parco avventura con ANIMATORI — uno dei migliori di Vienna! | 🐰 Piccoli animali (contatto) | Natura selvaggia nel cuore della città | Attività guidate per bambini | 🆓 Gratis | 📍 19° distretto Döbling | 🚇 U4 Heiligenstadt",
+    "hours": "Maggio-Set 10:00-18:00"
   },
   {
     "name": "Karlsgarten (Giardino di Fischer von Erlach)",
@@ -942,7 +1040,8 @@
     "cat": "Parchi giochi",
     "type": "default",
     "note": "🏛️ Giardino storico barocco con area giochi | 🐢 Fontana con tartarughe | 🆓 Gratis | 🚇 U4 Stadtpark | 📍 1030 Wien | Atmosfera unica, giardino recintato perfetto per i più piccoli",
-    "cat2": "Parchi e giardini"
+    "cat2": "Parchi e giardini",
+    "hours": "Lun-Dom 09:00-18:00 (estate)"
   },
   {
     "name": "Waldseilpark Kahlenberg",
@@ -950,7 +1049,8 @@
     "lng": 16.3625,
     "cat": "Parchi avventura",
     "type": "default",
-    "note": "🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at"
+    "note": "🧍 Uno dei più grandi parchi corde d’Austria — 14 parcours, 135 ostacoli, 1.8km su 30.000m² nel Wienerwald | Da 110cm (5 parcours 3.5-7m), da 130cm (5 parcours 3.5-10m) | GRATIS Wichtelparcours + Slackline | Happy Hour 17-18 (giu-ago) -25% | 📍 Josefsdorf 47, 1190 Wien | D + bus 38A da Grinzing | waldseilpark.at",
+    "hours": "Maggio-Set 10:00-18:00"
   },
   {
     "name": "Donauinsel-Kletterpark",
@@ -958,7 +1058,8 @@
     "lng": 16.435,
     "cat": "Parchi avventura",
     "type": "default",
-    "note": "🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun"
+    "note": "🧍 13 stazioni fino a 12m + flying fox 60m sulla Donauinsel | Da 110cm | Casco e imbracatura, doppia sicurezza | Guida esperta inclusa | 📍 Donauinsel | U1 Donauinsel | Operato da Sport and Fun",
+    "hours": "Maggio-Set 10:00-18:00"
   },
   {
     "name": "Stadtpark Kinderpark",
@@ -1065,6 +1166,7 @@
     "lng": 16.32433,
     "cat": "Servizi",
     "type": "service",
-    "note": "🔧 Riparazione valigie Samsonite | Schönbrunner Str. 242, 1120 Wien | Lun-Ven 9-18 Sab 9-12 | +43 1 8131263 | U6 Meidling"
+    "note": "🔧 Riparazione valigie Samsonite | Schönbrunner Str. 242, 1120 Wien | Lun-Ven 9-18 Sab 9-12 | +43 1 8131263 | U6 Meidling",
+    "hours": "Lun-Ven 09:00-18:00, Sab 09:00-12:00, Dom chiuso"
   }
 ]
