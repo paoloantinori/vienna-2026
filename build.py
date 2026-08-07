@@ -283,8 +283,9 @@ locBtn.onAdd = function(m) {
       if (window._locCircle) window._locCircle.setLatLng([lat,lng]).setRadius(acc);
       else window._locCircle = L.circle([lat,lng],{radius:acc,fillOpacity:0.1,color:'#3b82f6',weight:1}).addTo(map);
       if (window._locMarker) window._locMarker.setLatLng([lat,lng]);
-      else window._locMarker = L.circleMarker([lat,lng],{radius:6,fillColor:'#3b82f6',fillOpacity:1,color:'#fff',weight:2}).addTo(map);
-      map.setView([lat,lng],15);
+      else window._locMarker = L.circleMarker([lat,lng],{radius:8,fillColor:'#3b82f6',fillOpacity:1,color:'#fff',weight:3,className:'loc-marker'}).addTo(map);
+      window._locMarker.bringToFront();
+      if (!window._locCentered) { map.setView([lat,lng],16); window._locCentered = true; }
       a.innerHTML = '🔵';
       a.style.backgroundColor = '#1e40af';
     },function(err){
