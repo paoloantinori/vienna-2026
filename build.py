@@ -710,6 +710,11 @@ document.getElementById('toggle-tram-ccw').addEventListener('change', function()
     tramStopsCCW = [];
   }
 });
+// Auto-start geolocation
+setTimeout(function(){
+  var btn = document.querySelector('.loc-btn');
+  if (btn) btn.click();
+}, 1000);
 </script>
 </body>
 <script>if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');</script>

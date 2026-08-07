@@ -439,8 +439,6 @@ locBtn.onAdd = function(m) {
   return d;
 };
 locBtn.addTo(map);
-// Auto-start geolocation after map is ready
-map.whenReady(function(){ setTimeout(function(){ a.click(); }, 500); });
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',{
   attribution:'&copy; <a href="https://carto.com/">CARTO</a>',
   maxZoom:19
@@ -853,6 +851,11 @@ document.getElementById('toggle-tram-ccw').addEventListener('change', function()
     tramStopsCCW = [];
   }
 });
+// Auto-start geolocation
+setTimeout(function(){
+  var btn = document.querySelector('.loc-btn');
+  if (btn) btn.click();
+}, 1000);
 </script>
 </body>
 <script>if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');</script>
