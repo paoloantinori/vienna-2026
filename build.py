@@ -257,7 +257,7 @@ CATCOLORS_PLACEHOLDER
 var map = L.map('map',{zoomControl:true}).setView([48.2082,16.3738],13);
 
 // Geolocation button
-var locBtn = L.control({position:'topleft'});
+var locBtn = L.control({position:'topright'});
 locBtn.onAdd = function(m) {
   var d = L.DomUtil.create('div','leaflet-bar');
   var a = L.DomUtil.create('a','loc-btn',d);
@@ -267,19 +267,30 @@ locBtn.onAdd = function(m) {
   L.DomEvent.on(a,'click',function(e){
     e.preventDefault();
     if (!navigator.geolocation) { alert('Geolocalizzazione non disponibile'); return; }
-    a.innerHTML='⏳';
-    navigator.geolocation.getCurrentPosition(function(pos){
+    // Toggle tracking
+    if (window._locWatchId != null) {
+      navigator.geolocation.clearWatch(window._locWatchId);
+      window._locWatchId = null;
+      if (window._locCircle) { map.removeLayer(window._locCircle); window._locCircle = null; }
+      if (window._locMarker) { map.removeLayer(window._locMarker); window._locMarker = null; }
+      a.innerHTML = '📍';
+      a.style.backgroundColor = '';
+      return;
+    }
+    a.innerHTML = '⏳';
+    window._locWatchId = navigator.geolocation.watchPosition(function(pos){
       var lat=pos.coords.latitude, lng=pos.coords.longitude, acc=pos.coords.accuracy;
-      if (window._locCircle) map.removeLayer(window._locCircle);
-      if (window._locMarker) map.removeLayer(window._locMarker);
-      window._locCircle = L.circle([lat,lng],{radius:acc,fillOpacity:0.1,color:'#3b82f6',weight:1}).addTo(map);
-      window._locMarker = L.circleMarker([lat,lng],{radius:6,fillColor:'#3b82f6',fillOpacity:1,color:'#fff',weight:2}).addTo(map);
-      map.setView([lat,lng],15);
-      a.innerHTML='📍';
+      if (window._locCircle) window._locCircle.setLatLng([lat,lng]).setRadius(acc);
+      else window._locCircle = L.circle([lat,lng],{radius:acc,fillOpacity:0.1,color:'#3b82f6',weight:1}).addTo(map);
+      if (window._locMarker) window._locMarker.setLatLng([lat,lng]);
+      else window._locMarker = L.circleMarker([lat,lng],{radius:6,fillColor:'#3b82f6',fillOpacity:1,color:'#fff',weight:2}).addTo(map);
+      if (!window._locCentered) { map.setView([lat,lng],15); window._locCentered = true; }
+      a.innerHTML = '🔵';
+      a.style.backgroundColor = '#1e40af';
     },function(err){
-      a.innerHTML='📍';
-      alert('Impossibile ottenere la posizione: '+err.message);
-    },{enableHighAccuracy:true,maxAge:10000});
+      if (err.code !== 1) a.innerHTML = '📍';
+      else { navigator.geolocation.clearWatch(window._locWatchId); window._locWatchId = null; }
+    },{enableHighAccuracy:true,maxAge:5000});
   });
   return d;
 };
