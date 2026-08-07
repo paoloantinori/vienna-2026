@@ -425,9 +425,9 @@ locBtn.onAdd = function(m) {
       var lat=pos.coords.latitude, lng=pos.coords.longitude, acc=pos.coords.accuracy;
       if (window._locCircle) window._locCircle.setLatLng([lat,lng]).setRadius(acc);
       else window._locCircle = L.circle([lat,lng],{radius:acc,fillOpacity:0.1,color:'#3b82f6',weight:1}).addTo(map);
+      var locIcon = L.divIcon({className:'',html:'<div style="width:22px;height:22px;background:#3b82f6;border:3px solid #fff;border-radius:50%;box-shadow:0 0 8px rgba(59,130,246,0.7);"></div>',iconSize:[22,22],iconAnchor:[11,11]});
       if (window._locMarker) window._locMarker.setLatLng([lat,lng]);
-      else window._locMarker = L.circleMarker([lat,lng],{radius:8,fillColor:'#3b82f6',fillOpacity:1,color:'#fff',weight:3,className:'loc-marker'}).addTo(map);
-      window._locMarker.bringToFront();
+      else window._locMarker = L.marker([lat,lng],{icon:locIcon,zIndexOffset:10000,pane:'markerPane'}).addTo(map);
       if (!window._locCentered) { map.setView([lat,lng],16); window._locCentered = true; }
       a.innerHTML = '🔵';
       a.style.backgroundColor = '#1e40af';
