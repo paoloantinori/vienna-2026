@@ -622,7 +622,7 @@
     "lng": 16.401556,
     "cat": "Ristorante",
     "type": "default",
-    "note": "📍 Prater, 1020 Wien (Zentralschweizerhaus) | ⭐ 4.4/5 | Specialità viennesi nel Prater | Schweinsbraten, Stelze | 🚇 U1/U2 Praterstern | 👥 Da Eleonora",
+    "note": "📍 Prater, 1020 Wien (Zentralschweizerhaus) | ⭐ 4.4/5 | Specialità viennesi nel Prater | Schweinsbraten, Stelze | 🚇 U1/U2 Praterstern | 👥 Da Eleonora Anche ottimo Wurstelstand — Frankfurter e salsicce per i bambini.",
     "cat2": "Ristorazione",
     "hours": "Mar-Dom 11:00-23:00"
   },
@@ -1168,5 +1168,101 @@
     "type": "service",
     "note": "🔧 Riparazione valigie Samsonite | Schönbrunner Str. 242, 1120 Wien | Lun-Ven 9-18 Sab 9-12 | +43 1 8131263 | U6 Meidling",
     "hours": "Lun-Ven 09:00-18:00, Sab 09:00-12:00, Dom chiuso"
+  },
+  {
+    "name": "Bitzinger's Wurstelstand",
+    "lat": 48.2045802,
+    "lng": 16.3685697,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 1° distretto, accanto Albertina. Iconico ma code lunghe. Ordinare: Käsekrainer (formaggio filante, bambini lo adorano) o Frankfurter (più semplice). Anche Leberkäse in panino.",
+    "hours": "Lun-Dom 10:00-02:00",
+    "kids": "⭐⭐⭐ Käsekrainer = salsiccia con formaggio filante. Frankfurter = classica e semplice."
+  },
+  {
+    "name": "Wurstelstand LEO",
+    "lat": 48.2319169,
+    "lng": 16.3543251,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 19° distretto, IL PIÙ VECCHIO di Vienna (1928). Famoso per 'Big Mama' (Käsekrainer gigante su vassoio d'argento con 5 salse). Proprietaria Vera. Ordinare: Käsekrainer hot dog, Frankfurter, o Leberkäse sandwich. Opzioni vegane.",
+    "hours": "Lun-Sab 10:00-01:00, Dom 12:00-24:00",
+    "kids": "⭐⭐⭐⭐ Big Mama è spettacolare per bambini. Frankfurter semplice. Atmosfera unica. Fuori centro."
+  },
+  {
+    "name": "Zum scharfen René",
+    "lat": 48.200345,
+    "lng": 16.3745899,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Schwarzenbergplatz (centro). Specialità piccante. Vicino parco giochi Falco! Ordinare: Burenwurst (salsiccia di manzo, gustosa ma NON piccante se chiedi senza salsa), o Frankfurter. Vicino Karlsplatz/Karlskirche.",
+    "hours": "Lun-Ven 11:00-04:00, Sab-Dom CHIUSO",
+    "kids": "⭐⭐ Vicino playground Falco! Chiedere Burenwurst SENZA salsa piccante per bambini."
+  },
+  {
+    "name": "Alles Wurscht",
+    "lat": 48.2143208,
+    "lng": 16.3667367,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Börseplatz (centro). Regionale e sostenibile. Vicino parco giochi! Ordinare: Frankfurter, Currywurst mit Pommes (con patatine, bambini adorano). Ottimo per famiglie, panchine nel parco.",
+    "hours": "Lun-Dom 11:00-22:00 (estate)",
+    "kids": "⭐⭐⭐⭐ Il MIGLIORE per bambini! Frankfurter semplice + patatine. Panchine e parco giochi nel parco Börseplatz. Atmosfera rilassata."
+  },
+  {
+    "name": "Wurstelstand Südtirolerplatz",
+    "lat": 48.1856443,
+    "lng": 16.37309,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Südtirolerplatz (10° distretto). Autentico, orari lunghi, prezzi bassi. Ordinare: Käsekrainer nach 'Art des Hauses' (con cipolla e curry). Fanno anche Kartoffelpuffer (frittelle di patate).",
+    "hours": "Lun-Dom 09:00-04:00",
+    "kids": "⭐⭐⭐ Prezzi bassi, Kartoffelpuffer piace ai bambini."
+  },
+  {
+    "name": "Hermann's Wurstelstand",
+    "lat": 48.2009233,
+    "lng": 16.3552647,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Stiftgasse (7° distretto, centro). Speciale per Bosna (bratwurst nel pane tostato con senape e cipolla). Ordinare: Frankfurter per i bambini, Bosna per i coraggiosi. Atmosfera accogliente.",
+    "hours": "Lun-Dom 10:00-22:00",
+    "kids": "⭐⭐⭐ Frankfurter semplice. Stiftgasse è carina per passeggiare."
+  },
+  {
+    "name": "Alles Walzer, alles Wurst",
+    "lat": 48.1757956,
+    "lng": 16.3731019,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Quellenstraße (10° distretto). Leggenda: qui sarebbe nato il Käsekrainer. Ordinare: Käsekrainer o Currywurst (salsa piccante homemade). Più lontano dal centro.",
+    "hours": "Lun-Dom 20:00-01:00",
+    "kids": "⭐ Solo sera, troppo lontano per bambini piccoli."
+  },
+  {
+    "name": "Wurstelwaggon",
+    "lat": 48.1729151,
+    "lng": 16.4248161,
+    "emoji": "🌭",
+    "cat": "wurstelstand",
+    "type": "default",
+    "source": "bot",
+    "note": "📍 Ravelinstraße (3° distretto). In un vecchio vagone ferroviario di 50+ anni! Esperienza autentica e unica. Ordinare: qualunque salsiccia, il cuoco la prepara 'ganz frisch'. Solo per chi vuole un'esperienza.",
+    "hours": "Lun-Dom 08:00-21:00",
+    "kids": "⭐⭐ Esperienza divertente (vagone ferroviario!), ma lontano dal centro."
   }
 ]

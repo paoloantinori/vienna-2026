@@ -27,6 +27,7 @@ cat_colors = {
     'Tè': '#d4a574',
     'Vintage': '#c8a2c8',
     'Souvenir': '#f59e0b',
+    'Wurstelstand': '#dc2626',
     'Trasporti': '#3b82f6',
     'Vegano / Vegetariano': '#27ae60',
 }
@@ -53,9 +54,10 @@ cat_emoji = {
     'Ristorante': '\U0001F35C',
     'Shopping': '\U0001F6CD',
     'Tè': '\u2618',
-    'Vintage': '\U0001F45C',
-    'Souvenir': '\U0001F9F7',
-    'Trasporti': '\U0001F687',
+    'Vintage': '\\U0001F45C',
+    'Souvenir': '\\U0001F9F7',
+    'Wurstelstand': '\\U0001F36F',
+    'Trasporti': '\\U0001F687',
     'Vegano / Vegetariano': '\U0001F37D',
 }
 
